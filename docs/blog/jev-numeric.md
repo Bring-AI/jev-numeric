@@ -123,7 +123,7 @@ There is more work to do here. Raw threshold probabilities were nonmonotone in 2
 
 ## Try it
 
-Run the included stock-price example:
+The repository currently requires organization access. With access, run the included stock-price example:
 
 ```bash
 git clone https://github.com/Bring-AI/jev-numeric.git
