@@ -1,0 +1,135 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "1 + 1"
+    },
+    "questions": {
+      "direct": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Choose its numerical result.",
+        "criteria": {
+          "15.0": "15.0",
+          "14.0": "14.0",
+          "13.0": "13.0",
+          "12.0": "12.0",
+          "11.0": "11.0",
+          "10.0": "10.0",
+          "9.0": "9.0",
+          "8.0": "8.0",
+          "7.0": "7.0",
+          "6.0": "6.0",
+          "5.0": "5.0",
+          "4.0": "4.0",
+          "3.0": "3.0",
+          "2.0": "2.0",
+          "1.0": "1.0",
+          "0.0": "0.0"
+        }
+      },
+      "bit1": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as exactly four unsigned binary digits b1b2b3b4, with weights 8, 4, 2, 1. The result is an integer from 0 through 15. What is bit b1, counting from the left (most significant first)?",
+        "criteria": {
+          "1": "This bit is one.",
+          "0": "This bit is zero."
+        }
+      },
+      "bit2": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as exactly four unsigned binary digits b1b2b3b4, with weights 8, 4, 2, 1. The result is an integer from 0 through 15. What is bit b2, counting from the left (most significant first)?",
+        "criteria": {
+          "1": "This bit is one.",
+          "0": "This bit is zero."
+        }
+      },
+      "bit3": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as exactly four unsigned binary digits b1b2b3b4, with weights 8, 4, 2, 1. The result is an integer from 0 through 15. What is bit b3, counting from the left (most significant first)?",
+        "criteria": {
+          "1": "This bit is one.",
+          "0": "This bit is zero."
+        }
+      },
+      "bit4": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as exactly four unsigned binary digits b1b2b3b4, with weights 8, 4, 2, 1. The result is an integer from 0 through 15. What is bit b4, counting from the left (most significant first)?",
+        "criteria": {
+          "1": "This bit is one.",
+          "0": "This bit is zero."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "direct": {
+        "type": "choice",
+        "choice": "2.0",
+        "probabilities": {
+          "5.0": 0,
+          "15.0": 0,
+          "12.0": 0,
+          "8.0": 0,
+          "3.0": 0,
+          "11.0": 0,
+          "14.0": 0,
+          "2.0": 1,
+          "7.0": 0,
+          "6.0": 0,
+          "13.0": 0,
+          "0.0": 0,
+          "1.0": 0,
+          "4.0": 0,
+          "10.0": 0,
+          "9.0": 0
+        },
+        "confidence": 1
+      },
+      "bit1": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.99,
+          "1": 0.01
+        },
+        "confidence": 0.99
+      },
+      "bit2": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.93,
+          "1": 0.07
+        },
+        "confidence": 0.87
+      },
+      "bit3": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.94,
+          "1": 0.06
+        },
+        "confidence": 0.88
+      },
+      "bit4": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.96,
+          "1": 0.04
+        },
+        "confidence": 0.92
+      }
+    },
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "id": "gen-dec-1790150190-K5HcxNR8kfNWilRyTkTo",
+    "provider": "TypeSafe"
+  }
+}

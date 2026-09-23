@@ -1,0 +1,73 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "1 / 2"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.5625? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.5625",
+          "no": "x > 0.5625"
+        }
+      },
+      "decimal": {
+        "type": "choice",
+        "instructions": "Compute the exact arithmetic result x, which is in [0,1) and has at most four decimal places. Write it as 0.d1d2d3d4, appending trailing zeros if needed. Select decimal digit d3, counting after the decimal point. The previously selected decimal prefix is 0.50.",
+        "criteria": {
+          "0": "The requested decimal digit is 0.",
+          "1": "The requested decimal digit is 1.",
+          "2": "The requested decimal digit is 2.",
+          "3": "The requested decimal digit is 3.",
+          "4": "The requested decimal digit is 4.",
+          "5": "The requested decimal digit is 5.",
+          "6": "The requested decimal digit is 6.",
+          "7": "The requested decimal digit is 7.",
+          "8": "The requested decimal digit is 8.",
+          "9": "The requested decimal digit is 9."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "decimal": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.99,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "confidence": 0.99
+      }
+    },
+    "usage": {
+      "input_tokens": 633,
+      "output_tokens": 116,
+      "cost": 2.6586e-05
+    },
+    "id": "gen-dec-1790150531-CFuNsEDo4EivOdZAfWRw",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.2600926160812378
+}

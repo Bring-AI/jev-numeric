@@ -1,0 +1,68 @@
+{
+  "cases": [
+    [
+      "1 + 1",
+      "2",
+      "integer"
+    ],
+    [
+      "2 + 3",
+      "5",
+      "integer"
+    ],
+    [
+      "7 - 4",
+      "3",
+      "integer"
+    ],
+    [
+      "3 * 4",
+      "12",
+      "integer"
+    ],
+    [
+      "12 / 3",
+      "4",
+      "integer"
+    ],
+    [
+      "7 + 8",
+      "15",
+      "integer"
+    ],
+    [
+      "1 / 2",
+      "1/2",
+      "fraction"
+    ],
+    [
+      "1 / 4 + 1 / 8",
+      "3/8",
+      "fraction"
+    ],
+    [
+      "3 / 4 - 1 / 4",
+      "1/2",
+      "fraction"
+    ],
+    [
+      "3 / 8 + 5 / 16",
+      "11/16",
+      "fraction"
+    ],
+    [
+      "(1 / 2) * (1 / 2)",
+      "1/4",
+      "fraction"
+    ],
+    [
+      "7 / 8 - 1 / 16",
+      "13/16",
+      "fraction"
+    ]
+  ],
+  "gateway": "openrouter",
+  "model": "typesafe/jev-1.13",
+  "max_requests": 12,
+  "method": "Four independent bit questions and a 16-option direct control per case; no autoregressive conditioning."
+}

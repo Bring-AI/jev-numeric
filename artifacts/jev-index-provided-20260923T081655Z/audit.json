@@ -1,0 +1,6 @@
+{
+  "requests_verified": 72,
+  "initial_questions_identical_to_baseline": true,
+  "only_state_addition": "closing_level_index_points",
+  "all_72_selected_intervals_contain_truth": true
+}

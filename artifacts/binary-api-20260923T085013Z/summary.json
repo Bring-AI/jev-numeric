@@ -1,0 +1,12 @@
+{
+  "closed_book": {
+    "n": 6,
+    "mape": 31.16791962022465,
+    "exact": 0
+  },
+  "oracle_input": {
+    "n": 6,
+    "mape": 0.0,
+    "exact": 6
+  }
+}

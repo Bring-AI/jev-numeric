@@ -1,0 +1,66 @@
+{
+  "direct": {
+    "correct": 40,
+    "total": 48,
+    "forward_correct": 20,
+    "reverse_correct": 20,
+    "integer_correct": 24,
+    "fraction_correct": 16
+  },
+  "explicit_bits": {
+    "correct": 28,
+    "total": 48,
+    "forward_correct": 14,
+    "reverse_correct": 14,
+    "integer_correct": 16,
+    "fraction_correct": 12
+  },
+  "explicit_groups": {
+    "correct": 38,
+    "total": 48,
+    "forward_correct": 19,
+    "reverse_correct": 19,
+    "integer_correct": 24,
+    "fraction_correct": 14
+  },
+  "adaptive_bisection": {
+    "correct": 28,
+    "total": 48,
+    "forward_correct": 14,
+    "reverse_correct": 14,
+    "integer_correct": 24,
+    "fraction_correct": 4
+  },
+  "parallel_thresholds": {
+    "correct": 28,
+    "total": 48,
+    "forward_correct": 14,
+    "reverse_correct": 14,
+    "integer_correct": 24,
+    "fraction_correct": 4
+  },
+  "decimal_digits": {
+    "correct": 32,
+    "total": 48,
+    "forward_correct": 16,
+    "reverse_correct": 16,
+    "integer_correct": 24,
+    "fraction_correct": 8
+  },
+  "interval_selection": {
+    "correct": 39,
+    "total": 48,
+    "forward_correct": 20,
+    "reverse_correct": 19,
+    "integer_correct": 24,
+    "fraction_correct": 15
+  },
+  "cdf_diagnostics": {
+    "runs_with_violations": 25,
+    "total_adjacent_violations": 54,
+    "max_downward_step": 0.5599999999999999,
+    "median_correct": 28
+  },
+  "cost": 0.011527908,
+  "unpriced_calls": 0
+}

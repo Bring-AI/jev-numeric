@@ -1,0 +1,58 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2019-12-31",
+      "observation": "Official closing level on the final trading day of the calendar year",
+      "closing_level_index_points": "3230.78"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "0": "3230.70 <= closing level < 3230.71 index points",
+          "1": "3230.71 <= closing level < 3230.72 index points",
+          "2": "3230.72 <= closing level < 3230.73 index points",
+          "3": "3230.73 <= closing level < 3230.74 index points",
+          "4": "3230.74 <= closing level < 3230.75 index points",
+          "5": "3230.75 <= closing level < 3230.76 index points",
+          "6": "3230.76 <= closing level < 3230.77 index points",
+          "7": "3230.77 <= closing level < 3230.78 index points",
+          "8": "3230.78 <= closing level < 3230.79 index points",
+          "9": "3230.79 <= closing level < 3230.80 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "8",
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.03,
+          "8": 0.9,
+          "9": 0.02
+        },
+        "confidence": 0.89
+      }
+    },
+    "usage": {
+      "input_tokens": 743,
+      "output_tokens": 88,
+      "cost": 3.1206e-05
+    },
+    "id": "gen-dec-1790151428-wm36TBDym34kLPrn1aEf",
+    "provider": "TypeSafe"
+  }
+}

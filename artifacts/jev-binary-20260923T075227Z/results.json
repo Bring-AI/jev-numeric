@@ -1,0 +1,314 @@
+[
+  {
+    "expression": "1 + 1",
+    "kind": "integer",
+    "target": 2.0,
+    "truth_bits": "0010",
+    "predicted_bits": "0000",
+    "binary_prediction": 0.0,
+    "direct_prediction": 2.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.09,
+      0.07,
+      0.04
+    ],
+    "marginal_mean": 0.62,
+    "elapsed_s": 0.5098150633275509,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    }
+  },
+  {
+    "expression": "2 + 3",
+    "kind": "integer",
+    "target": 5.0,
+    "truth_bits": "0101",
+    "predicted_bits": "0110",
+    "binary_prediction": 6.0,
+    "direct_prediction": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.03,
+      0.56,
+      0.64,
+      0.09
+    ],
+    "marginal_mean": 3.85,
+    "elapsed_s": 0.20528771728277206,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    }
+  },
+  {
+    "expression": "7 - 4",
+    "kind": "integer",
+    "target": 3.0,
+    "truth_bits": "0011",
+    "predicted_bits": "0000",
+    "binary_prediction": 0.0,
+    "direct_prediction": 3.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.01,
+      0.36,
+      0.49,
+      0.13
+    ],
+    "marginal_mean": 2.63,
+    "elapsed_s": 0.22664976119995117,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    }
+  },
+  {
+    "expression": "3 * 4",
+    "kind": "integer",
+    "target": 12.0,
+    "truth_bits": "1100",
+    "predicted_bits": "0110",
+    "binary_prediction": 6.0,
+    "direct_prediction": 12.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.43,
+      0.68,
+      0.68,
+      0.45
+    ],
+    "marginal_mean": 7.970000000000001,
+    "elapsed_s": 0.21520133689045906,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    }
+  },
+  {
+    "expression": "12 / 3",
+    "kind": "integer",
+    "target": 4.0,
+    "truth_bits": "0100",
+    "predicted_bits": "0110",
+    "binary_prediction": 6.0,
+    "direct_prediction": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.07,
+      0.62,
+      0.57,
+      0.15
+    ],
+    "marginal_mean": 4.33,
+    "elapsed_s": 0.23696746677160263,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1036,
+      "output_tokens": 285,
+      "cost": 4.3512e-05
+    }
+  },
+  {
+    "expression": "7 + 8",
+    "kind": "integer",
+    "target": 15.0,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_prediction": 15.0,
+    "direct_prediction": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.91,
+      0.69,
+      0.71,
+      0.8
+    ],
+    "marginal_mean": 12.26,
+    "elapsed_s": 0.22023439407348633,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    }
+  },
+  {
+    "expression": "1 / 2",
+    "kind": "fraction",
+    "target": 0.5,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_prediction": 0.5,
+    "direct_prediction": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.02,
+      0.01
+    ],
+    "marginal_mean": 0.508125,
+    "elapsed_s": 0.2661559209227562,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1143,
+      "output_tokens": 313,
+      "cost": 4.8006e-05
+    }
+  },
+  {
+    "expression": "1 / 4 + 1 / 8",
+    "kind": "fraction",
+    "target": 0.375,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_prediction": 0.375,
+    "direct_prediction": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.02,
+      0.72,
+      0.82,
+      0.39
+    ],
+    "marginal_mean": 0.31687499999999996,
+    "elapsed_s": 0.2535926550626755,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    }
+  },
+  {
+    "expression": "3 / 4 - 1 / 4",
+    "kind": "fraction",
+    "target": 0.5,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_prediction": 0.0,
+    "direct_prediction": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.1,
+      0.25,
+      0.21,
+      0.14
+    ],
+    "marginal_mean": 0.1475,
+    "elapsed_s": 0.177793238312006,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 313,
+      "cost": 4.8258e-05
+    }
+  },
+  {
+    "expression": "3 / 8 + 5 / 16",
+    "kind": "fraction",
+    "target": 0.6875,
+    "truth_bits": "1011",
+    "predicted_bits": "0011",
+    "binary_prediction": 0.1875,
+    "direct_prediction": 0.4375,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.08,
+      0.32,
+      0.7,
+      0.76
+    ],
+    "marginal_mean": 0.255,
+    "elapsed_s": 0.24487999826669693,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    }
+  },
+  {
+    "expression": "(1 / 2) * (1 / 2)",
+    "kind": "fraction",
+    "target": 0.25,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_prediction": 0.0,
+    "direct_prediction": 0.25,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.03,
+      0.45,
+      0.23,
+      0.25
+    ],
+    "marginal_mean": 0.171875,
+    "elapsed_s": 0.19789345934987068,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1152,
+      "output_tokens": 314,
+      "cost": 4.8384e-05
+    }
+  },
+  {
+    "expression": "7 / 8 - 1 / 16",
+    "kind": "fraction",
+    "target": 0.8125,
+    "truth_bits": "1101",
+    "predicted_bits": "1111",
+    "binary_prediction": 0.9375,
+    "direct_prediction": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.75,
+      0.61,
+      0.63,
+      0.57
+    ],
+    "marginal_mean": 0.641875,
+    "elapsed_s": 0.24548783525824547,
+    "served_model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    }
+  }
+]

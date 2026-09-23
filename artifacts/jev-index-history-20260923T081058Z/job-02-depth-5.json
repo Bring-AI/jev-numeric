@@ -1,0 +1,57 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2019-12-31",
+      "observation": "Official closing level on the final trading day of the calendar year"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "9": "3389.99 <= closing level < 3390.00 index points",
+          "8": "3389.98 <= closing level < 3389.99 index points",
+          "7": "3389.97 <= closing level < 3389.98 index points",
+          "6": "3389.96 <= closing level < 3389.97 index points",
+          "5": "3389.95 <= closing level < 3389.96 index points",
+          "4": "3389.94 <= closing level < 3389.95 index points",
+          "3": "3389.93 <= closing level < 3389.94 index points",
+          "2": "3389.92 <= closing level < 3389.93 index points",
+          "1": "3389.91 <= closing level < 3389.92 index points",
+          "0": "3389.90 <= closing level < 3389.91 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "9",
+        "probabilities": {
+          "0": 0.16,
+          "1": 0.12,
+          "2": 0.07,
+          "3": 0.06,
+          "4": 0.08,
+          "5": 0.1,
+          "6": 0.06,
+          "7": 0.05,
+          "8": 0.04,
+          "9": 0.26
+        },
+        "confidence": 0.18
+      }
+    },
+    "usage": {
+      "input_tokens": 726,
+      "output_tokens": 88,
+      "cost": 3.0492e-05
+    },
+    "id": "gen-dec-1790151062-TbnxyrIfIa8MfLUjZYr6",
+    "provider": "TypeSafe"
+  }
+}

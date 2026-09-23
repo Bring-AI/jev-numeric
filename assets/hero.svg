@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Jev Numeric — from decisions to numbers</title>
+<desc id="desc">Jev structured choices repeatedly select smaller intervals. A ten-way decision tree resolves a supplied value of 3230.78 in six decisions. Historical recall: 4.58 percent mean absolute percentage error on three dates. Oracle-input control: zero error on twelve runs with the value supplied.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8faf8"/><stop offset="1" stop-color="#edf5f4"/></linearGradient>
+ <linearGradient id="mint" x2="1" y2="1"><stop stop-color="#d5f9ed"/><stop offset="1" stop-color="#e6fcf7"/></linearGradient>
+ <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#187c69" stroke-width="1.4"/></marker>
+ <style>text{font-family:Inter,Arial,sans-serif;fill:#142d35}.mono{font-family:'DejaVu Sans Mono',monospace}.muted{fill:#62767c}.small{font-size:19px}.label{font-size:17px;font-weight:700;letter-spacing:2px}.line{stroke:#187c69;stroke-width:2.5;fill:none;marker-end:url(#arrow)}</style>
+</defs>
+<rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+<circle cx="1495" cy="64" r="210" fill="#dcefe9" opacity=".6"/>
+<text x="64" y="65" class="label" fill="#187c69">BRING-AI / JEV-NUMERIC</text>
+<text x="64" y="140" font-size="64" font-weight="750">Decisions in. Numbers out.</text>
+<text x="66" y="184" font-size="24" class="muted">A simple algorithm turns Jev choices into numerical outputs.</text>
+<!-- Input -->
+<rect x="64" y="234" width="292" height="405" rx="22" fill="#142d35"/>
+<text x="90" y="277" class="label" style="fill:#81dfbe">01 / DECIDE</text>
+<text x="90" y="328" font-size="42" font-weight="700" style="fill:white">Jev</text>
+<text x="90" y="362" font-size="21" style="fill:#c1d3d7">Structured Choice API</text>
+<rect x="87" y="393" width="245" height="77" rx="12" fill="#26434b"/>
+<text x="104" y="423" font-size="17" style="fill:#c1d3d7">ORACLE INPUT</text>
+<text x="105" y="451" font-size="22" class="mono" style="fill:#fff">close = 3230.78</text>
+<text x="90" y="513" font-size="20" style="fill:#c1d3d7">“Which interval</text>
+<text x="90" y="543" font-size="20" style="fill:#c1d3d7">contains the value?”</text>
+<rect x="90" y="573" width="235" height="36" rx="18" fill="#81dfbe"/>
+<text x="111" y="597" font-size="17" font-weight="700">One discrete choice</text>
+<!-- tree -->
+<rect x="383" y="234" width="808" height="405" rx="22" fill="white" stroke="#d4e3df"/>
+<text x="409" y="277" class="label" style="fill:#187c69">02 / REFINE THE INTERVAL</text>
+<text x="1164" y="277" text-anchor="end" class="small muted">10 choices per level</text>
+<rect x="663" y="303" width="249" height="48" rx="10" fill="#eef4f2"/>
+<text x="787" y="334" text-anchor="middle" class="mono" font-size="21">[0, 10000)</text>
+<path d="M787 351 V363 H513 V382 M787 363 V382 M787 363 H1060 V382" stroke="#b9cbc5" fill="none" stroke-width="2"/>
+<rect x="411" y="382" width="205" height="45" rx="9" fill="#f3f6f5"/>
+<text x="513" y="411" text-anchor="middle" class="mono muted" font-size="18">[0, 1000)</text>
+<rect x="675" y="382" width="224" height="45" rx="9" fill="url(#mint)" stroke="#187c69"/>
+<text x="787" y="411" text-anchor="middle" class="mono" font-size="19">[3000, 4000)</text>
+<rect x="957" y="382" width="205" height="45" rx="9" fill="#f3f6f5"/>
+<text x="1060" y="411" text-anchor="middle" class="mono muted" font-size="18">[9000, 10000)</text>
+<text x="640" y="411" class="muted" font-size="24">…</text><text x="923" y="411" class="muted" font-size="24">…</text>
+<path d="M787 429 V451" class="line"/>
+<rect x="675" y="456" width="224" height="45" rx="9" fill="url(#mint)" stroke="#187c69"/>
+<text x="787" y="485" text-anchor="middle" class="mono" font-size="19">[3200, 3300)</text>
+<text x="935" y="485" class="small muted">repeat on the winner</text>
+<path d="M787 504 V538" class="line"/>
+<text x="829" y="526" class="small muted">…</text>
+<rect x="620" y="544" width="333" height="49" rx="10" fill="#187c69"/>
+<text x="787" y="576" text-anchor="middle" class="mono" font-size="20" style="fill:white">[3230.78, 3230.79)</text>
+<text x="787" y="620" text-anchor="middle" font-size="17" class="muted">Six decisions · one million possible grid values</text>
+<!-- output -->
+<rect x="1217" y="234" width="319" height="405" rx="22" fill="url(#mint)" stroke="#c0e5d9"/>
+<text x="1243" y="277" class="label" style="fill:#187c69">03 / READ A NUMBER</text>
+<text x="1242" y="357" class="mono" font-size="46" font-weight="700">3230.78</text>
+<text x="1244" y="394" font-size="20" class="muted">finite-precision output</text>
+<path d="M1243 427 H1507" stroke="#b6d9cc"/>
+<text x="1244" y="465" class="small">No new model head.</text>
+<text x="1244" y="499" class="small">No fine-tuning.</text>
+<text x="1244" y="533" class="small">Just interval choices.</text>
+<text x="1244" y="594" font-size="16" class="muted">Resolution ≠ guaranteed accuracy.</text>
+<!-- evidence -->
+<rect x="64" y="669" width="716" height="151" rx="20" fill="white" stroke="#d4e3df"/>
+<text x="89" y="704" class="label muted">HISTORICAL INDEX RECALL</text>
+<text x="88" y="766" font-size="51" font-weight="700">4.58% <tspan font-size="25" font-weight="400">mean relative error</tspan></text>
+<text x="90" y="798" font-size="17" class="muted">3 dates · 12 runs · 11/12 within 5% · maximum 6.49%</text>
+<rect x="804" y="669" width="732" height="151" rx="20" fill="white" stroke="#d4e3df"/>
+<text x="830" y="704" class="label muted">GROUND-TRUTH ORACLE INPUT</text>
+<text x="829" y="766" font-size="51" font-weight="700" style="fill:#187c69">0% <tspan font-size="25" font-weight="400">readout error</tspan></text>
+<text x="831" y="798" font-size="17" class="muted">Correct value supplied in context · 12/12 exact at 0.01 points</text>
+<text x="64" y="862" font-size="17" class="muted">Small controlled experiments. Jev already returns scores and categorical probabilities; this adds a numeric decoding interface.</text>
+</svg>

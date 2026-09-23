@@ -1,0 +1,57 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2023-12-29",
+      "observation": "Official closing level on the final trading day of the calendar year"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "0": "4999.90 <= closing level < 4999.91 index points",
+          "1": "4999.91 <= closing level < 4999.92 index points",
+          "2": "4999.92 <= closing level < 4999.93 index points",
+          "3": "4999.93 <= closing level < 4999.94 index points",
+          "4": "4999.94 <= closing level < 4999.95 index points",
+          "5": "4999.95 <= closing level < 4999.96 index points",
+          "6": "4999.96 <= closing level < 4999.97 index points",
+          "7": "4999.97 <= closing level < 4999.98 index points",
+          "8": "4999.98 <= closing level < 4999.99 index points",
+          "9": "4999.99 <= closing level < 5000.00 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "9",
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.1,
+          "2": 0.08,
+          "3": 0.06,
+          "4": 0.08,
+          "5": 0.09,
+          "6": 0.04,
+          "7": 0.04,
+          "8": 0.03,
+          "9": 0.3
+        },
+        "confidence": 0.22
+      }
+    },
+    "usage": {
+      "input_tokens": 726,
+      "output_tokens": 88,
+      "cost": 3.0492e-05
+    },
+    "id": "gen-dec-1790151068-cAn0wUPEKC3lWicTb7Mf",
+    "provider": "TypeSafe"
+  }
+}

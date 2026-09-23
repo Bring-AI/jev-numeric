@@ -1,0 +1,135 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "7 + 8"
+    },
+    "questions": {
+      "direct": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Choose its numerical result.",
+        "criteria": {
+          "0.0": "0.0",
+          "1.0": "1.0",
+          "2.0": "2.0",
+          "3.0": "3.0",
+          "4.0": "4.0",
+          "5.0": "5.0",
+          "6.0": "6.0",
+          "7.0": "7.0",
+          "8.0": "8.0",
+          "9.0": "9.0",
+          "10.0": "10.0",
+          "11.0": "11.0",
+          "12.0": "12.0",
+          "13.0": "13.0",
+          "14.0": "14.0",
+          "15.0": "15.0"
+        }
+      },
+      "bit1": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = 8*b1 + 4*b2 + 2*b3 + b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b1, the bit with numerical weight 8. Equivalently, b1 = floor(x / (8)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b1=0: the 8-weight bit is OFF; floor(x / (8)) is even.",
+          "1": "b1=1: the 8-weight bit is ON; floor(x / (8)) is odd."
+        }
+      },
+      "bit2": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = 8*b1 + 4*b2 + 2*b3 + b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b2, the bit with numerical weight 4. Equivalently, b2 = floor(x / (4)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b2=0: the 4-weight bit is OFF; floor(x / (4)) is even.",
+          "1": "b2=1: the 4-weight bit is ON; floor(x / (4)) is odd."
+        }
+      },
+      "bit3": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = 8*b1 + 4*b2 + 2*b3 + b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b3, the bit with numerical weight 2. Equivalently, b3 = floor(x / (2)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b3=0: the 2-weight bit is OFF; floor(x / (2)) is even.",
+          "1": "b3=1: the 2-weight bit is ON; floor(x / (2)) is odd."
+        }
+      },
+      "bit4": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = 8*b1 + 4*b2 + 2*b3 + b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b4, the bit with numerical weight 1. Equivalently, b4 = floor(x / (1)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b4=0: the 1-weight bit is OFF; floor(x / (1)) is even.",
+          "1": "b4=1: the 1-weight bit is ON; floor(x / (1)) is odd."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "direct": {
+        "type": "choice",
+        "choice": "15.0",
+        "probabilities": {
+          "5.0": 0,
+          "15.0": 1,
+          "12.0": 0,
+          "8.0": 0,
+          "6.0": 0,
+          "11.0": 0,
+          "14.0": 0,
+          "2.0": 0,
+          "7.0": 0,
+          "3.0": 0,
+          "1.0": 0,
+          "0.0": 0,
+          "13.0": 0,
+          "4.0": 0,
+          "10.0": 0,
+          "9.0": 0
+        },
+        "confidence": 0.99
+      },
+      "bit1": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.91
+        },
+        "confidence": 0.81
+      },
+      "bit2": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.63
+        },
+        "confidence": 0.27
+      },
+      "bit3": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.36,
+          "1": 0.64
+        },
+        "confidence": 0.28
+      },
+      "bit4": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.09,
+          "1": 0.91
+        },
+        "confidence": 0.82
+      }
+    },
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "id": "gen-dec-1790150186-qu32iA80UZvCNLbfPpID",
+    "provider": "TypeSafe"
+  }
+}

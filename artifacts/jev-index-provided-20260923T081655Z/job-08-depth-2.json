@@ -1,0 +1,58 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2019-12-31",
+      "observation": "Official closing level on the final trading day of the calendar year",
+      "closing_level_index_points": "3230.78"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "0": "3200.00 <= closing level < 3210.00 index points",
+          "1": "3210.00 <= closing level < 3220.00 index points",
+          "2": "3220.00 <= closing level < 3230.00 index points",
+          "3": "3230.00 <= closing level < 3240.00 index points",
+          "4": "3240.00 <= closing level < 3250.00 index points",
+          "5": "3250.00 <= closing level < 3260.00 index points",
+          "6": "3260.00 <= closing level < 3270.00 index points",
+          "7": "3270.00 <= closing level < 3280.00 index points",
+          "8": "3280.00 <= closing level < 3290.00 index points",
+          "9": "3290.00 <= closing level < 3300.00 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "3",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "confidence": 0.96
+      }
+    },
+    "usage": {
+      "input_tokens": 743,
+      "output_tokens": 88,
+      "cost": 3.1206e-05
+    },
+    "id": "gen-dec-1790151428-QlW6YQghUUFk9g30orYH",
+    "provider": "TypeSafe"
+  }
+}

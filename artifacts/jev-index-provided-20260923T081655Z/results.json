@@ -1,0 +1,1910 @@
+[
+  {
+    "date": "2020-12-31",
+    "truth": 3756.07,
+    "reverse": true,
+    "repeat": 1,
+    "job": 0,
+    "direct_interval": [
+      3700.0,
+      3800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 370000,
+        "hi_cents": 380000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375000,
+        "hi_cents": 376000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375700,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 1,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375610,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.97,
+          "1": 0.02,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375607,
+        "hi_cents": 375608,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.02,
+          "7": 0.98,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3756.07,
+      3756.08
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2023-12-29",
+    "truth": 4769.83,
+    "reverse": true,
+    "repeat": 1,
+    "job": 1,
+    "direct_interval": [
+      4700.0,
+      4800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 400000,
+        "hi_cents": 500000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 470000,
+        "hi_cents": 480000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476000,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.98,
+          "7": 0.01,
+          "8": 0,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476900,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 1
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476980,
+        "hi_cents": 476990,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0,
+          "5": 0.01,
+          "6": 0,
+          "7": 0.01,
+          "8": 0.96,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476983,
+        "hi_cents": 476984,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.02,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      4769.83,
+      4769.84
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2019-12-31",
+    "truth": 3230.78,
+    "reverse": true,
+    "repeat": 1,
+    "job": 2,
+    "direct_interval": [
+      3200.0,
+      3300.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 320000,
+        "hi_cents": 330000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.99,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 324000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 323100,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.01,
+          "8": 0.01,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323070,
+        "hi_cents": 323080,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.98,
+          "8": 0.01,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323078,
+        "hi_cents": 323079,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.03,
+          "8": 0.9,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3230.78,
+      3230.79
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2023-12-29",
+    "truth": 4769.83,
+    "reverse": true,
+    "repeat": 0,
+    "job": 3,
+    "direct_interval": [
+      4700.0,
+      4800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 400000,
+        "hi_cents": 500000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 470000,
+        "hi_cents": 480000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476000,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.99,
+          "7": 0.01,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476900,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 1
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476980,
+        "hi_cents": 476990,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0.98,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476983,
+        "hi_cents": 476984,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.02,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      4769.83,
+      4769.84
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2023-12-29",
+    "truth": 4769.83,
+    "reverse": false,
+    "repeat": 0,
+    "job": 4,
+    "direct_interval": [
+      4700.0,
+      4800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 400000,
+        "hi_cents": 500000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 470000,
+        "hi_cents": 480000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476000,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.99,
+          "7": 0.01,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476900,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 1
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476980,
+        "hi_cents": 476990,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.01,
+          "8": 0.97,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476983,
+        "hi_cents": 476984,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.98,
+          "4": 0.01,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      4769.83,
+      4769.84
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2020-12-31",
+    "truth": 3756.07,
+    "reverse": false,
+    "repeat": 0,
+    "job": 5,
+    "direct_interval": [
+      3700.0,
+      3800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 370000,
+        "hi_cents": 380000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375000,
+        "hi_cents": 376000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375700,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.99,
+          "7": 0,
+          "8": 0,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375610,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.98,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0.02,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375607,
+        "hi_cents": 375608,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.02,
+          "7": 0.98,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3756.07,
+      3756.08
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2023-12-29",
+    "truth": 4769.83,
+    "reverse": false,
+    "repeat": 1,
+    "job": 6,
+    "direct_interval": [
+      4700.0,
+      4800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 400000,
+        "hi_cents": 500000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 470000,
+        "hi_cents": 480000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476000,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.98,
+          "7": 0.02,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476900,
+        "hi_cents": 477000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 1
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476980,
+        "hi_cents": 476990,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.01,
+          "8": 0.97,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 476983,
+        "hi_cents": 476984,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.02,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      4769.83,
+      4769.84
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2019-12-31",
+    "truth": 3230.78,
+    "reverse": false,
+    "repeat": 1,
+    "job": 7,
+    "direct_interval": [
+      3200.0,
+      3300.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 320000,
+        "hi_cents": 330000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.99,
+          "3": 0.01,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 324000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0.98,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 323100,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.91,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.01,
+          "8": 0.01,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323070,
+        "hi_cents": 323080,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.97,
+          "8": 0.01,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323078,
+        "hi_cents": 323079,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.03,
+          "8": 0.89,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3230.78,
+      3230.79
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2019-12-31",
+    "truth": 3230.78,
+    "reverse": false,
+    "repeat": 0,
+    "job": 8,
+    "direct_interval": [
+      3200.0,
+      3300.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 320000,
+        "hi_cents": 330000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.98,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 324000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 323100,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.01,
+          "8": 0.01,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323070,
+        "hi_cents": 323080,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.97,
+          "8": 0.02,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323078,
+        "hi_cents": 323079,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.03,
+          "8": 0.9,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3230.78,
+      3230.79
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2020-12-31",
+    "truth": 3756.07,
+    "reverse": true,
+    "repeat": 0,
+    "job": 9,
+    "direct_interval": [
+      3700.0,
+      3800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 370000,
+        "hi_cents": 380000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375000,
+        "hi_cents": 376000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375700,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 1,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375610,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.96,
+          "1": 0.01,
+          "2": 0,
+          "3": 0,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375607,
+        "hi_cents": 375608,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.01,
+          "7": 0.99,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3756.07,
+      3756.08
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2019-12-31",
+    "truth": 3230.78,
+    "reverse": true,
+    "repeat": 0,
+    "job": 10,
+    "direct_interval": [
+      3200.0,
+      3300.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 320000,
+        "hi_cents": 330000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.98,
+          "3": 0.02,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 324000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.97,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323000,
+        "hi_cents": 323100,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.88,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.02,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.01,
+          "8": 0.01,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323070,
+        "hi_cents": 323080,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0.97,
+          "8": 0.01,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 323078,
+        "hi_cents": 323079,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.03,
+          "8": 0.89,
+          "9": 0.02
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3230.78,
+      3230.79
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  },
+  {
+    "date": "2020-12-31",
+    "truth": 3756.07,
+    "reverse": false,
+    "repeat": 1,
+    "job": 11,
+    "direct_interval": [
+      3700.0,
+      3800.0
+    ],
+    "direct_correct": true,
+    "hierarchy_100_correct": true,
+    "path": [
+      {
+        "lo_cents": 300000,
+        "hi_cents": 400000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 4106,
+          "output_tokens": 898,
+          "cost": 0.000172452
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 370000,
+        "hi_cents": 380000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375000,
+        "hi_cents": 376000,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375700,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 1,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375600,
+        "hi_cents": 375610,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0.97,
+          "1": 0.02,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0.01
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      },
+      {
+        "lo_cents": 375607,
+        "hi_cents": 375608,
+        "contains_truth": true,
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0.02,
+          "7": 0.98,
+          "8": 0,
+          "9": 0
+        },
+        "usage": {
+          "input_tokens": 743,
+          "output_tokens": 88,
+          "cost": 3.1206e-05
+        },
+        "model": "typesafe/jev-1.13-20260917"
+      }
+    ],
+    "final_interval": [
+      3756.07,
+      3756.08
+    ],
+    "final_correct": true,
+    "absolute_error_lower_endpoint": 0.0
+  }
+]

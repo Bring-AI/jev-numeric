@@ -1,0 +1,530 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "3 / 4 - 1 / 4"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.4375? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.4375",
+          "no": "x > 0.4375"
+        }
+      },
+      "direct": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Choose its numerical result.",
+        "criteria": {
+          "0.0": "0.0",
+          "0.0625": "0.0625",
+          "0.125": "0.125",
+          "0.1875": "0.1875",
+          "0.25": "0.25",
+          "0.3125": "0.3125",
+          "0.375": "0.375",
+          "0.4375": "0.4375",
+          "0.5": "0.5",
+          "0.5625": "0.5625",
+          "0.625": "0.625",
+          "0.6875": "0.6875",
+          "0.75": "0.75",
+          "0.8125": "0.8125",
+          "0.875": "0.875",
+          "0.9375": "0.9375"
+        }
+      },
+      "bit1": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = (1/2)*b1 + (1/4)*b2 + (1/8)*b3 + (1/16)*b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b1, the bit with numerical weight 1/2. Equivalently, b1 = floor(x / (1/2)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b1=0: the 1/2-weight bit is OFF; floor(x / (1/2)) is even.",
+          "1": "b1=1: the 1/2-weight bit is ON; floor(x / (1/2)) is odd."
+        }
+      },
+      "bit2": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = (1/2)*b1 + (1/4)*b2 + (1/8)*b3 + (1/16)*b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b2, the bit with numerical weight 1/4. Equivalently, b2 = floor(x / (1/4)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b2=0: the 1/4-weight bit is OFF; floor(x / (1/4)) is even.",
+          "1": "b2=1: the 1/4-weight bit is ON; floor(x / (1/4)) is odd."
+        }
+      },
+      "bit3": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = (1/2)*b1 + (1/4)*b2 + (1/8)*b3 + (1/16)*b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b3, the bit with numerical weight 1/8. Equivalently, b3 = floor(x / (1/8)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b3=0: the 1/8-weight bit is OFF; floor(x / (1/8)) is even.",
+          "1": "b3=1: the 1/8-weight bit is ON; floor(x / (1/8)) is odd."
+        }
+      },
+      "bit4": {
+        "type": "choice",
+        "instructions": "First compute the exact numerical result x of the arithmetic expression in state. Encode x using four bits, each either 0 or 1, defined by x = (1/2)*b1 + (1/4)*b2 + (1/8)*b3 + (1/16)*b4. b1 is the LEFTMOST bit and b4 the RIGHTMOST; include leading zeros. This question asks ONLY for b4, the bit with numerical weight 1/16. Equivalently, b4 = floor(x / (1/16)) modulo 2. Select the bit value, not the whole answer, not a decimal digit, and not a bit of either operand. Option labels 0 and 1 are literal bit values, not option positions.",
+        "criteria": {
+          "0": "b4=0: the 1/16-weight bit is OFF; floor(x / (1/16)) is even.",
+          "1": "b4=1: the 1/16-weight bit is ON; floor(x / (1/16)) is odd."
+        }
+      },
+      "threshold0": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.0? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.0",
+          "no": "x > 0.0"
+        }
+      },
+      "threshold1": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.0625? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.0625",
+          "no": "x > 0.0625"
+        }
+      },
+      "threshold2": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.125? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.125",
+          "no": "x > 0.125"
+        }
+      },
+      "threshold3": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.1875? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.1875",
+          "no": "x > 0.1875"
+        }
+      },
+      "threshold4": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.25? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.25",
+          "no": "x > 0.25"
+        }
+      },
+      "threshold5": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.3125? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.3125",
+          "no": "x > 0.3125"
+        }
+      },
+      "threshold6": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.375? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.375",
+          "no": "x > 0.375"
+        }
+      },
+      "threshold7": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.4375? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.4375",
+          "no": "x > 0.4375"
+        }
+      },
+      "threshold8": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.5? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.5",
+          "no": "x > 0.5"
+        }
+      },
+      "threshold9": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.5625? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.5625",
+          "no": "x > 0.5625"
+        }
+      },
+      "threshold10": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.625? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.625",
+          "no": "x > 0.625"
+        }
+      },
+      "threshold11": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.6875? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.6875",
+          "no": "x > 0.6875"
+        }
+      },
+      "threshold12": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.75? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.75",
+          "no": "x > 0.75"
+        }
+      },
+      "threshold13": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.8125? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.8125",
+          "no": "x > 0.8125"
+        }
+      },
+      "threshold14": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.875? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 0.875",
+          "no": "x > 0.875"
+        }
+      },
+      "group0": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Which set contains x? Select the set label; labels do not represent the numerical answer.",
+        "criteria": {
+          "0": "x is one of {0.0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375}",
+          "1": "x is one of {0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375}"
+        }
+      },
+      "group1": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Which set contains x? Select the set label; labels do not represent the numerical answer.",
+        "criteria": {
+          "0": "x is one of {0.0, 0.0625, 0.125, 0.1875, 0.5, 0.5625, 0.625, 0.6875}",
+          "1": "x is one of {0.25, 0.3125, 0.375, 0.4375, 0.75, 0.8125, 0.875, 0.9375}"
+        }
+      },
+      "group2": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Which set contains x? Select the set label; labels do not represent the numerical answer.",
+        "criteria": {
+          "0": "x is one of {0.0, 0.0625, 0.25, 0.3125, 0.5, 0.5625, 0.75, 0.8125}",
+          "1": "x is one of {0.125, 0.1875, 0.375, 0.4375, 0.625, 0.6875, 0.875, 0.9375}"
+        }
+      },
+      "group3": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Which set contains x? Select the set label; labels do not represent the numerical answer.",
+        "criteria": {
+          "0": "x is one of {0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875}",
+          "1": "x is one of {0.0625, 0.1875, 0.3125, 0.4375, 0.5625, 0.6875, 0.8125, 0.9375}"
+        }
+      },
+      "interval": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Choose the interval containing x. Each interval includes its lower bound and excludes its upper bound.",
+        "criteria": {
+          "0": "0.0 <= x < 0.25",
+          "1": "0.25 <= x < 0.5",
+          "2": "0.5 <= x < 0.75",
+          "3": "0.75 <= x < 1.0"
+        }
+      },
+      "decimal": {
+        "type": "choice",
+        "instructions": "Compute the exact arithmetic result x, which is in [0,1) and has at most four decimal places. Write it as 0.d1d2d3d4, appending trailing zeros if needed. Select decimal digit d1, counting after the decimal point. ",
+        "criteria": {
+          "0": "The requested decimal digit is 0.",
+          "1": "The requested decimal digit is 1.",
+          "2": "The requested decimal digit is 2.",
+          "3": "The requested decimal digit is 3.",
+          "4": "The requested decimal digit is 4.",
+          "5": "The requested decimal digit is 5.",
+          "6": "The requested decimal digit is 6.",
+          "7": "The requested decimal digit is 7.",
+          "8": "The requested decimal digit is 8.",
+          "9": "The requested decimal digit is 9."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 0.91,
+          "no": 0.09
+        },
+        "confidence": 0.81
+      },
+      "direct": {
+        "type": "choice",
+        "choice": "0.5",
+        "probabilities": {
+          "0.6875": 0,
+          "0.125": 0,
+          "0.25": 0.01,
+          "0.875": 0,
+          "0.75": 0,
+          "0.5": 0.99,
+          "0.1875": 0,
+          "0.375": 0,
+          "0.0625": 0,
+          "0.3125": 0,
+          "0.5625": 0,
+          "0.625": 0,
+          "0.8125": 0,
+          "0.0": 0,
+          "0.4375": 0,
+          "0.9375": 0
+        },
+        "confidence": 0.98
+      },
+      "bit1": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.19
+        },
+        "confidence": 0.61
+      },
+      "bit2": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.71,
+          "1": 0.29
+        },
+        "confidence": 0.42
+      },
+      "bit3": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.9,
+          "1": 0.1
+        },
+        "confidence": 0.81
+      },
+      "bit4": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.92,
+          "1": 0.08
+        },
+        "confidence": 0.84
+      },
+      "threshold0": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0,
+          "no": 1
+        },
+        "confidence": 0.99
+      },
+      "threshold1": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0,
+          "no": 1
+        },
+        "confidence": 0.99
+      },
+      "threshold2": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.01,
+          "no": 0.99
+        },
+        "confidence": 0.98
+      },
+      "threshold3": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.02,
+          "no": 0.98
+        },
+        "confidence": 0.96
+      },
+      "threshold4": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.05,
+          "no": 0.95
+        },
+        "confidence": 0.89
+      },
+      "threshold5": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.29,
+          "no": 0.71
+        },
+        "confidence": 0.43
+      },
+      "threshold6": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 0.71,
+          "no": 0.29
+        },
+        "confidence": 0.43
+      },
+      "threshold7": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 0.85,
+          "no": 0.15
+        },
+        "confidence": 0.71
+      },
+      "threshold8": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 0.99,
+          "no": 0.01
+        },
+        "confidence": 0.98
+      },
+      "threshold9": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "threshold10": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "threshold11": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "threshold12": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "threshold13": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "threshold14": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "yes": 1,
+          "no": 0
+        },
+        "confidence": 1
+      },
+      "group0": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.46,
+          "1": 0.54
+        },
+        "confidence": 0.08
+      },
+      "group1": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.69,
+          "1": 0.31
+        },
+        "confidence": 0.38
+      },
+      "group2": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.96,
+          "1": 0.04
+        },
+        "confidence": 0.92
+      },
+      "group3": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.96,
+          "1": 0.04
+        },
+        "confidence": 0.91
+      },
+      "interval": {
+        "type": "choice",
+        "choice": "2",
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.41,
+          "2": 0.57,
+          "3": 0
+        },
+        "confidence": 0.43
+      },
+      "decimal": {
+        "type": "choice",
+        "choice": "5",
+        "probabilities": {
+          "0": 0.23,
+          "1": 0.03,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0.05,
+          "5": 0.65,
+          "6": 0.01,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        },
+        "confidence": 0.61
+      }
+    },
+    "usage": {
+      "input_tokens": 4180,
+      "output_tokens": 1024,
+      "cost": 0.00017556
+    },
+    "id": "gen-dec-1790150486-NCQu0VrSEh8rZMPzeXxL",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.25250765308737755
+}

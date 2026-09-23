@@ -1,0 +1,40 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "1 + 1"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 1.0? Equality counts as yes.",
+        "criteria": {
+          "no": "x > 1.0",
+          "yes": "x <= 1.0"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "no": 1,
+          "yes": 0
+        },
+        "confidence": 1
+      }
+    },
+    "usage": {
+      "input_tokens": 348,
+      "output_tokens": 32,
+      "cost": 1.4616e-05
+    },
+    "id": "gen-dec-1790150529-O3eGpMcO3lGDVJ3PKSCX",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.2194087617099285
+}

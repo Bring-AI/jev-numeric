@@ -1,0 +1,1039 @@
+{
+  "date": "2019-12-31",
+  "truth": 3230.78,
+  "supplied": true,
+  "reverse": true,
+  "result": {
+    "value": "3230.78",
+    "lower": "3230.78",
+    "upper": "3230.79",
+    "resolution": "0.01",
+    "calls": 20,
+    "branching": 2,
+    "trace": [
+      {
+        "lower": "0.00",
+        "upper": "5000.00",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "2500.00",
+        "upper": "5000.00",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "2500.00",
+        "upper": "3750.00",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "3125.00",
+        "upper": "3750.00",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3125.00",
+        "upper": "3437.50",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "3125.00",
+        "upper": "3281.25",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "3203.12",
+        "upper": "3281.25",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3203.12",
+        "upper": "3242.18",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "3222.65",
+        "upper": "3242.18",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3222.65",
+        "upper": "3232.41",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.99,
+          "1": 0.01
+        }
+      },
+      {
+        "lower": "3227.53",
+        "upper": "3232.41",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3229.97",
+        "upper": "3232.41",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3229.97",
+        "upper": "3231.19",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.99,
+          "1": 0.01
+        }
+      },
+      {
+        "lower": "3230.58",
+        "upper": "3231.19",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3230.58",
+        "upper": "3230.88",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      },
+      {
+        "lower": "3230.73",
+        "upper": "3230.88",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3230.73",
+        "upper": "3230.80",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.99,
+          "1": 0.01
+        }
+      },
+      {
+        "lower": "3230.76",
+        "upper": "3230.80",
+        "choice": "1",
+        "probabilities": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      {
+        "lower": "3230.78",
+        "upper": "3230.80",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.99
+        }
+      },
+      {
+        "lower": "3230.78",
+        "upper": "3230.79",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "5000.00 <= value < 10000.00",
+              "0": "0.00 <= value < 5000.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 472,
+          "output_tokens": 31,
+          "cost": 1.9824e-05
+        },
+        "id": "gen-dec-1790153423-HVp80Tyok8pWUTzKhqhi",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "2500.00 <= value < 5000.00",
+              "0": "0.00 <= value < 2500.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 471,
+          "output_tokens": 31,
+          "cost": 1.9782e-05
+        },
+        "id": "gen-dec-1790153424-0JROYHT3jgoqvB3w2h68",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3750.00 <= value < 5000.00",
+              "0": "2500.00 <= value < 3750.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153424-vxNGspRASiuJmguDsoGg",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3125.00 <= value < 3750.00",
+              "0": "2500.00 <= value < 3125.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153425-mwEftwUHRNVl89s6RZmD",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3437.50 <= value < 3750.00",
+              "0": "3125.00 <= value < 3437.50"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153425-tM5FdyaNKs851IgyMMLz",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3281.25 <= value < 3437.50",
+              "0": "3125.00 <= value < 3281.25"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153425-DfC4G5hTWERQR2Qe6ULH",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3203.12 <= value < 3281.25",
+              "0": "3125.00 <= value < 3203.12"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153425-PF804XNA2vTcWx6jXk1s",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3242.18 <= value < 3281.25",
+              "0": "3203.12 <= value < 3242.18"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153426-7lrqFg2cr4rR4HhMMAbc",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3222.65 <= value < 3242.18",
+              "0": "3203.12 <= value < 3222.65"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153426-3e6mbOEJIv56ewZsu6TZ",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3232.41 <= value < 3242.18",
+              "0": "3222.65 <= value < 3232.41"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.99,
+              "1": 0.01
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153426-WBQ5Y94hW7BVz1DUljeA",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3227.53 <= value < 3232.41",
+              "0": "3222.65 <= value < 3227.53"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153426-lK9radNblvvJ0hs7osf3",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3229.97 <= value < 3232.41",
+              "0": "3227.53 <= value < 3229.97"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153427-XkK5MZ0EldLDl8aNq8W6",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3231.19 <= value < 3232.41",
+              "0": "3229.97 <= value < 3231.19"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.99,
+              "1": 0.01
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153427-R8jy2kA9Qbi4TYnB1lRc",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.58 <= value < 3231.19",
+              "0": "3229.97 <= value < 3230.58"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153427-wf3Hks8YtQSJpSOQd463",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.88 <= value < 3231.19",
+              "0": "3230.58 <= value < 3230.88"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153427-HV6BP8JmRPI0JNZstoJx",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.73 <= value < 3230.88",
+              "0": "3230.58 <= value < 3230.73"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153428-Am3fRD3Lr8XxxHDpVRfv",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.80 <= value < 3230.88",
+              "0": "3230.73 <= value < 3230.80"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.99,
+              "1": 0.01
+            },
+            "confidence": 0.98
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153428-lq8HKqYnpxsQh6otyv7r",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.76 <= value < 3230.80",
+              "0": "3230.73 <= value < 3230.76"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0,
+              "1": 1
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153428-aCguT2Jxdtx45t8x9ME2",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.78 <= value < 3230.80",
+              "0": "3230.76 <= value < 3230.78"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.99
+            },
+            "confidence": 0.98
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153428-h8yITMXUumDXR6IcnAYV",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "index": "S&P 500 price index",
+          "date": "2019-12-31",
+          "observation": "Official closing level on the final trading day of the calendar year",
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the official S&P 500 price index closing level on the specified date, in index points (not total return, an ETF, annual average, or intraday high) using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "1": "3230.79 <= value < 3230.80",
+              "0": "3230.78 <= value < 3230.79"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 474,
+          "output_tokens": 31,
+          "cost": 1.9908e-05
+        },
+        "id": "gen-dec-1790153428-4fgVpOdFO2O8nJlqybRH",
+        "provider": "TypeSafe"
+      }
+    }
+  ],
+  "absolute_percentage_error": 0.0
+}

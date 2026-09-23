@@ -1,0 +1,40 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "3 * 4"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 12.0? Equality counts as yes.",
+        "criteria": {
+          "yes": "x <= 12.0",
+          "no": "x > 12.0"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "yes",
+        "probabilities": {
+          "no": 0,
+          "yes": 1
+        },
+        "confidence": 1
+      }
+    },
+    "usage": {
+      "input_tokens": 351,
+      "output_tokens": 32,
+      "cost": 1.4742e-05
+    },
+    "id": "gen-dec-1790150502-TSpjsZEElFkU8CuzywjT",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.39436375349760056
+}

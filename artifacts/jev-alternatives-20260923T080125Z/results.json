@@ -1,0 +1,6050 @@
+[
+  {
+    "job": 0,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.5625,
+      "explicit_bits": 0.4375,
+      "explicit_groups": 0.9375,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.4375,
+      "decimal_digits": 0.01,
+      "interval_selection": 0.5625
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "0100",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.01,
+      0.23,
+      0.03,
+      0.74,
+      0.32,
+      0.9,
+      0.86,
+      0.95,
+      0.88,
+      0.93,
+      0.96
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.015,
+      0.13,
+      0.13,
+      0.53,
+      0.53,
+      0.88,
+      0.88,
+      0.915,
+      0.915,
+      0.93,
+      0.96
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.0,
+      0.115,
+      0.0,
+      0.4,
+      0.0,
+      0.35,
+      0.0,
+      0.03500000000000003,
+      0.0,
+      0.015000000000000013,
+      0.029999999999999916,
+      0.040000000000000036
+    ],
+    "cdf_adjacent_violations": 5,
+    "cdf_max_downward_step": 0.42,
+    "cdf_mean": 0.510625,
+    "cdf_median": 0.4375,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.46057331189513206,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.19545644149184227,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.22099674120545387,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.2293551117181778,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 1,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.0,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.375,
+      "parallel_thresholds": 0.375,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.29,
+      0.71,
+      0.85,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.29,
+      0.71,
+      0.85,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.030000000000000002,
+      0.24,
+      0.42,
+      0.14,
+      0.14,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.38,
+    "cdf_median": 0.375,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1024,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.25250765308737755,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.20952139422297478,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.2100827433168888,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 637,
+          "output_tokens": 116,
+          "cost": 2.6754e-05
+        },
+        "elapsed_s": 0.24041444063186646,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 2,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 12.0,
+      "explicit_bits": 12.0,
+      "explicit_groups": 12.0,
+      "adaptive_bisection": 12.0,
+      "parallel_thresholds": 12.0,
+      "decimal_digits": 12.0,
+      "interval_selection": 12.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "12",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.08,
+      1.0,
+      0.98,
+      0.98
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.08,
+      0.9866666666666667,
+      0.9866666666666667,
+      0.9866666666666667
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.0,
+      0.06,
+      0.9066666666666667,
+      0.0,
+      0.0,
+      0.013333333333333308
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.020000000000000018,
+    "cdf_mean": 11.92,
+    "cdf_median": 12.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.22278789803385735,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.2300638109445572,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2180483154952526,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.21249717846512794,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 3,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 12.0,
+      "explicit_bits": 12.0,
+      "explicit_groups": 12.0,
+      "adaptive_bisection": 12.0,
+      "parallel_thresholds": 12.0,
+      "decimal_digits": 12.0,
+      "interval_selection": 12.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "12",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.05,
+      1.0,
+      0.98,
+      0.97
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.05,
+      0.9833333333333334,
+      0.9833333333333334,
+      0.9833333333333334
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.0,
+      0.030000000000000002,
+      0.9333333333333333,
+      0.0,
+      0.0,
+      0.016666666666666607
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.020000000000000018,
+    "cdf_mean": 11.959999999999999,
+    "cdf_median": 12.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.29708877205848694,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.28721487522125244,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2698570676147938,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.29172949492931366,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 4,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 3.0,
+      "explicit_bits": 3.0,
+      "explicit_groups": 3.0,
+      "adaptive_bisection": 3.0,
+      "parallel_thresholds": 3.0,
+      "decimal_digits": 3.0,
+      "interval_selection": 3.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "03",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.0,
+    "cdf_median": 3.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.2722908966243267,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.23828092962503433,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2824471481144428,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2038881964981556,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 5,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.6875,
+      "explicit_bits": 0.5625,
+      "explicit_groups": 0.6875,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.5625,
+      "decimal_digits": 0.745,
+      "interval_selection": 0.75
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "7450",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.01,
+      0.03,
+      0.08,
+      0.51,
+      0.01,
+      0.89,
+      0.92,
+      0.97,
+      0.93,
+      0.98,
+      0.99
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.015,
+      0.03,
+      0.08,
+      0.26,
+      0.26,
+      0.89,
+      0.92,
+      0.95,
+      0.95,
+      0.98,
+      0.99
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.0,
+      0.015,
+      0.05,
+      0.18,
+      0.0,
+      0.63,
+      0.030000000000000027,
+      0.029999999999999916,
+      0.0,
+      0.030000000000000027,
+      0.010000000000000009,
+      0.010000000000000009
+    ],
+    "cdf_adjacent_violations": 3,
+    "cdf_max_downward_step": 0.5,
+    "cdf_mean": 0.54125,
+    "cdf_median": 0.5625,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.2371111363172531,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.23604921251535416,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.26536476239562035,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.22562315687537193,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 6,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 3.0,
+      "explicit_bits": 3.0,
+      "explicit_groups": 3.0,
+      "adaptive_bisection": 3.0,
+      "parallel_thresholds": 3.0,
+      "decimal_digits": 3.0,
+      "interval_selection": 3.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "03",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.0,
+    "cdf_median": 3.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.2372792810201645,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.216574277728796,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.20663074404001236,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.28697704523801804,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 7,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 4.0,
+      "explicit_bits": 0.0,
+      "explicit_groups": 4.0,
+      "adaptive_bisection": 4.0,
+      "parallel_thresholds": 4.0,
+      "decimal_digits": 4.0,
+      "interval_selection": 4.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "04",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.99,
+      1.0,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.99,
+      0.995,
+      0.995,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.98,
+      0.0050000000000000044,
+      0.0,
+      0.0050000000000000044,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.010000000000000009,
+    "cdf_mean": 4.01,
+    "cdf_median": 4.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3775,
+          "output_tokens": 996,
+          "cost": 0.00015855
+        },
+        "elapsed_s": 0.23761793226003647,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 158,
+          "cost": 3.0366e-05
+        },
+        "elapsed_s": 0.31607810780406,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.2832111418247223,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.3117699660360813,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 8,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.375,
+      "explicit_bits": 0.375,
+      "explicit_groups": 0.375,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.35,
+      "interval_selection": 0.375
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "3500",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.13,
+      0.0,
+      0.74,
+      0.98,
+      0.94,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.065,
+      0.065,
+      0.74,
+      0.96,
+      0.96,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.065,
+      0.0,
+      0.675,
+      0.21999999999999997,
+      0.0,
+      0.030000000000000027,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.13,
+    "cdf_mean": 0.32625,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1026,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.22063599526882172,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.20803763717412949,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.18738549202680588,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.2508638985455036,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 9,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.4375,
+      "explicit_bits": 0.4375,
+      "explicit_groups": 0.9375,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.5625,
+      "decimal_digits": 0.017,
+      "interval_selection": 0.5625
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "0170",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.07,
+      0.02,
+      0.6,
+      0.26,
+      0.87,
+      0.83,
+      0.96,
+      0.91,
+      0.97,
+      0.98
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.045000000000000005,
+      0.045000000000000005,
+      0.43,
+      0.43,
+      0.85,
+      0.85,
+      0.935,
+      0.935,
+      0.97,
+      0.98
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.0,
+      0.04000000000000001,
+      0.0,
+      0.385,
+      0.0,
+      0.42,
+      0.0,
+      0.08500000000000008,
+      0.0,
+      0.03499999999999992,
+      0.010000000000000009,
+      0.020000000000000018
+    ],
+    "cdf_adjacent_violations": 5,
+    "cdf_max_downward_step": 0.33999999999999997,
+    "cdf_mean": 0.5325,
+    "cdf_median": 0.5625,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.2876298986375332,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.23732635378837585,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.2760777994990349,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.27365855127573013,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 10,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.25,
+      "explicit_bits": 0.25,
+      "explicit_groups": 0.25,
+      "adaptive_bisection": 0.1875,
+      "parallel_thresholds": 0.1875,
+      "decimal_digits": 0.055,
+      "interval_selection": 0.25
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "0550",
+    "raw_cdf": [
+      0.0,
+      0.02,
+      0.14,
+      0.93,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.02,
+      0.14,
+      0.93,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.02,
+      0.12000000000000001,
+      0.79,
+      0.06999999999999995,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.181875,
+    "cdf_median": 0.1875,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4183,
+          "output_tokens": 1025,
+          "cost": 0.000175686
+        },
+        "elapsed_s": 0.27473023906350136,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 788,
+          "output_tokens": 158,
+          "cost": 3.3096e-05
+        },
+        "elapsed_s": 0.19239246472716331,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 642,
+          "output_tokens": 116,
+          "cost": 2.6964e-05
+        },
+        "elapsed_s": 0.3103494755923748,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.3699686639010906,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 11,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.25,
+      "explicit_bits": 0.25,
+      "explicit_groups": 0.25,
+      "adaptive_bisection": 0.1875,
+      "parallel_thresholds": 0.1875,
+      "decimal_digits": 0.055,
+      "interval_selection": 0.25
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "0550",
+    "raw_cdf": [
+      0.0,
+      0.03,
+      0.16,
+      0.88,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.03,
+      0.16,
+      0.88,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.03,
+      0.13,
+      0.72,
+      0.12,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.183125,
+    "cdf_median": 0.1875,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4183,
+          "output_tokens": 1025,
+          "cost": 0.000175686
+        },
+        "elapsed_s": 0.21471158787608147,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 788,
+          "output_tokens": 158,
+          "cost": 3.3096e-05
+        },
+        "elapsed_s": 0.18170731887221336,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 642,
+          "output_tokens": 116,
+          "cost": 2.6964e-05
+        },
+        "elapsed_s": 0.2749967984855175,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.2054811380803585,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 12,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.375,
+      "explicit_bits": 0.375,
+      "explicit_groups": 0.375,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.35,
+      "interval_selection": 0.375
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "3500",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.07,
+      0.0,
+      0.75,
+      0.99,
+      0.94,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.035,
+      0.035,
+      0.75,
+      0.965,
+      0.965,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.035,
+      0.0,
+      0.715,
+      0.21499999999999997,
+      0.0,
+      0.025000000000000022,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.07,
+    "cdf_mean": 0.32875,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1026,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.20806066319346428,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.24041376635432243,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.20938122272491455,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.21393222361803055,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 13,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 3.0,
+      "explicit_bits": 3.0,
+      "explicit_groups": 3.0,
+      "adaptive_bisection": 3.0,
+      "parallel_thresholds": 3.0,
+      "decimal_digits": 3.0,
+      "interval_selection": 3.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "03",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.0,
+    "cdf_median": 3.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.21136271953582764,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.2080809660255909,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.22138330712914467,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.20692753419280052,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 14,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 2.0,
+      "explicit_bits": 2.0,
+      "explicit_groups": 2.0,
+      "adaptive_bisection": 2.0,
+      "parallel_thresholds": 2.0,
+      "decimal_digits": 2.0,
+      "interval_selection": 2.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "02",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 2.0,
+    "cdf_median": 2.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.223789744079113,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.20236313343048096,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2331038899719715,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.29223136231303215,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 15,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 15.0,
+      "explicit_bits": 15.0,
+      "explicit_groups": 15.0,
+      "adaptive_bisection": 15.0,
+      "parallel_thresholds": 15.0,
+      "decimal_digits": 15.0,
+      "interval_selection": 15.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "15",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.15,
+      0.01
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.08,
+      0.08
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.08,
+      0.0,
+      0.92
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.13999999999999999,
+    "cdf_mean": 14.84,
+    "cdf_median": 15.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.27126653119921684,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.1963408924639225,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2168043702840805,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.19769739732146263,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 16,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 4.0,
+      "explicit_bits": 0.0,
+      "explicit_groups": 4.0,
+      "adaptive_bisection": 4.0,
+      "parallel_thresholds": 4.0,
+      "decimal_digits": 4.0,
+      "interval_selection": 4.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "04",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.98,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.98,
+    "cdf_median": 4.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3775,
+          "output_tokens": 996,
+          "cost": 0.00015855
+        },
+        "elapsed_s": 0.23711850494146347,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 158,
+          "cost": 3.0366e-05
+        },
+        "elapsed_s": 0.2483404539525509,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.19188131764531136,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.21080323681235313,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 17,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 12.0,
+      "explicit_bits": 12.0,
+      "explicit_groups": 12.0,
+      "adaptive_bisection": 12.0,
+      "parallel_thresholds": 12.0,
+      "decimal_digits": 12.0,
+      "interval_selection": 12.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "12",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.03,
+      1.0,
+      0.97,
+      0.98
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.03,
+      0.9833333333333334,
+      0.9833333333333334,
+      0.9833333333333334
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.019999999999999997,
+      0.9533333333333334,
+      0.0,
+      0.0,
+      0.016666666666666607
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.030000000000000027,
+    "cdf_mean": 12.0,
+    "cdf_median": 12.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.21916763111948967,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.199384406208992,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2748621739447117,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.39436375349760056,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 18,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.6875,
+      "explicit_bits": 0.5625,
+      "explicit_groups": 0.6875,
+      "adaptive_bisection": 0.5625,
+      "parallel_thresholds": 0.5625,
+      "decimal_digits": 0.765,
+      "interval_selection": 0.75
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "7650",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.02,
+      0.02,
+      0.28,
+      0.01,
+      0.8,
+      0.85,
+      0.96,
+      0.89,
+      0.99,
+      0.99
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.02,
+      0.02,
+      0.14500000000000002,
+      0.14500000000000002,
+      0.8,
+      0.85,
+      0.925,
+      0.925,
+      0.99,
+      0.99
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.0,
+      0.015,
+      0.0,
+      0.12500000000000003,
+      0.0,
+      0.655,
+      0.04999999999999993,
+      0.07500000000000007,
+      0.0,
+      0.06499999999999995,
+      0.0,
+      0.010000000000000009
+    ],
+    "cdf_adjacent_violations": 3,
+    "cdf_max_downward_step": 0.27,
+    "cdf_mean": 0.57375,
+    "cdf_median": 0.5625,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.21058513224124908,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.20635350793600082,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.20236793905496597,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 632,
+          "output_tokens": 116,
+          "cost": 2.6544e-05
+        },
+        "elapsed_s": 0.21129906177520752,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 19,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.5,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.5,
+      "parallel_thresholds": 0.5,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.015,
+      0.015,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.004999999999999999,
+      0.0,
+      0.985,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.01,
+    "cdf_mean": 0.4975,
+    "cdf_median": 0.5,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4174,
+          "output_tokens": 1024,
+          "cost": 0.000175308
+        },
+        "elapsed_s": 0.21316992864012718,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 779,
+          "output_tokens": 158,
+          "cost": 3.2718e-05
+        },
+        "elapsed_s": 0.22970477119088173,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 633,
+          "output_tokens": 116,
+          "cost": 2.6586e-05
+        },
+        "elapsed_s": 0.19803358986973763,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 625,
+          "output_tokens": 116,
+          "cost": 2.625e-05
+        },
+        "elapsed_s": 0.21897800639271736,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 20,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 15.0,
+      "explicit_bits": 15.0,
+      "explicit_groups": 15.0,
+      "adaptive_bisection": 15.0,
+      "parallel_thresholds": 15.0,
+      "decimal_digits": 15.0,
+      "interval_selection": 15.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "15",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.17,
+      0.01
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.09000000000000001,
+      0.09000000000000001
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.09000000000000001,
+      0.0,
+      0.91
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.16,
+    "cdf_mean": 14.82,
+    "cdf_median": 15.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.2969001978635788,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.20263218507170677,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2375752031803131,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.29583540558815,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 21,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.6875,
+      "explicit_bits": 0.6875,
+      "explicit_groups": 0.6875,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.5625,
+      "decimal_digits": 0.745,
+      "interval_selection": 0.75
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "7450",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.03,
+      0.08,
+      0.57,
+      0.01,
+      0.9,
+      0.92,
+      0.97,
+      0.93,
+      0.98,
+      0.99
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.03,
+      0.08,
+      0.29,
+      0.29,
+      0.9,
+      0.92,
+      0.95,
+      0.95,
+      0.98,
+      0.99
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.019999999999999997,
+      0.05,
+      0.20999999999999996,
+      0.0,
+      0.6100000000000001,
+      0.020000000000000018,
+      0.029999999999999916,
+      0.0,
+      0.030000000000000027,
+      0.010000000000000009,
+      0.010000000000000009
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.5599999999999999,
+    "cdf_mean": 0.5375000000000001,
+    "cdf_median": 0.5625,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.24034224078059196,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.19264563918113708,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.2712361626327038,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.2339962087571621,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 22,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.375,
+      "explicit_bits": 0.375,
+      "explicit_groups": 0.375,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.35,
+      "interval_selection": 0.375
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "3500",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.08,
+      0.0,
+      0.77,
+      0.99,
+      0.91,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.04,
+      0.04,
+      0.77,
+      0.95,
+      0.95,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.04,
+      0.0,
+      0.73,
+      0.17999999999999994,
+      0.0,
+      0.040000000000000036,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.08,
+    "cdf_mean": 0.32875,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1026,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.3081905096769333,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.25536109507083893,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.23168455064296722,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.21625160053372383,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 23,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.625,
+      "explicit_bits": 0.4375,
+      "explicit_groups": 0.9375,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.4375,
+      "decimal_digits": 0.01,
+      "interval_selection": 0.5625
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "0100",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.23,
+      0.03,
+      0.83,
+      0.35,
+      0.9,
+      0.87,
+      0.95,
+      0.9,
+      0.94,
+      0.97
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.02,
+      0.13,
+      0.13,
+      0.59,
+      0.59,
+      0.885,
+      0.885,
+      0.925,
+      0.925,
+      0.94,
+      0.97
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.0,
+      0.11,
+      0.0,
+      0.45999999999999996,
+      0.0,
+      0.29500000000000004,
+      0.0,
+      0.040000000000000036,
+      0.0,
+      0.014999999999999902,
+      0.030000000000000027,
+      0.030000000000000027
+    ],
+    "cdf_adjacent_violations": 4,
+    "cdf_max_downward_step": 0.48,
+    "cdf_mean": 0.499375,
+    "cdf_median": 0.4375,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1026,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.22849391773343086,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.19799409061670303,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.27017122879624367,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.258951760828495,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 24,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 4.0,
+      "explicit_bits": 0.0,
+      "explicit_groups": 4.0,
+      "adaptive_bisection": 4.0,
+      "parallel_thresholds": 4.0,
+      "decimal_digits": 4.0,
+      "interval_selection": 4.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "04",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.98,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.98,
+    "cdf_median": 4.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3775,
+          "output_tokens": 996,
+          "cost": 0.00015855
+        },
+        "elapsed_s": 0.2379501648247242,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 158,
+          "cost": 3.0366e-05
+        },
+        "elapsed_s": 0.33223798498511314,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.2114885449409485,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.24323857575654984,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 25,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 2.0,
+      "explicit_bits": 2.0,
+      "explicit_groups": 2.0,
+      "adaptive_bisection": 2.0,
+      "parallel_thresholds": 2.0,
+      "decimal_digits": 2.0,
+      "interval_selection": 2.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "02",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 2.0,
+    "cdf_median": 2.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.27057113498449326,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.3435170128941536,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.26836515963077545,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2162771262228489,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 26,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.0,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.05,
+      0.13,
+      0.56,
+      0.66,
+      0.85,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.05,
+      0.13,
+      0.56,
+      0.66,
+      0.85,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.01,
+      0.04,
+      0.08,
+      0.43000000000000005,
+      0.09999999999999998,
+      0.18999999999999995,
+      0.15000000000000002,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.35875,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1024,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.25532107055187225,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.24665778875350952,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.3594258390367031,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.21893704310059547,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 27,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 4.0,
+      "explicit_bits": 0.0,
+      "explicit_groups": 4.0,
+      "adaptive_bisection": 4.0,
+      "parallel_thresholds": 4.0,
+      "decimal_digits": 4.0,
+      "interval_selection": 4.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "04",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.99,
+      0.99,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.99,
+      0.99,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.99,
+      0.0,
+      0.0,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 4.03,
+    "cdf_median": 4.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3775,
+          "output_tokens": 996,
+          "cost": 0.00015855
+        },
+        "elapsed_s": 0.2253854237496853,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 158,
+          "cost": 3.0366e-05
+        },
+        "elapsed_s": 0.21480557695031166,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.2569608651101589,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 349,
+          "output_tokens": 32,
+          "cost": 1.4658e-05
+        },
+        "elapsed_s": 0.3478204719722271,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 28,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.375,
+      "explicit_bits": 0.375,
+      "explicit_groups": 0.375,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.35,
+      "interval_selection": 0.375
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "3500",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.11,
+      0.0,
+      0.69,
+      0.99,
+      0.93,
+      0.99,
+      1.0,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.055,
+      0.69,
+      0.96,
+      0.96,
+      0.99,
+      0.995,
+      0.995,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.055,
+      0.0,
+      0.6349999999999999,
+      0.27,
+      0.0,
+      0.030000000000000027,
+      0.0050000000000000044,
+      0.0,
+      0.0050000000000000044,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 3,
+    "cdf_max_downward_step": 0.11,
+    "cdf_mean": 0.33125,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1026,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.2641880176961422,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.2566198781132698,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.2176126427948475,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.24834193661808968,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 29,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 5.0,
+      "explicit_bits": 7.0,
+      "explicit_groups": 5.0,
+      "adaptive_bisection": 5.0,
+      "parallel_thresholds": 5.0,
+      "decimal_digits": 5.0,
+      "interval_selection": 5.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "05",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.99,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 4.99,
+    "cdf_median": 5.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.253736961632967,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.276609368622303,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2676444314420223,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.26680026575922966,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 30,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.6875,
+      "explicit_bits": 0.5625,
+      "explicit_groups": 0.6875,
+      "adaptive_bisection": 0.5625,
+      "parallel_thresholds": 0.5625,
+      "decimal_digits": 0.76,
+      "interval_selection": 0.75
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "7600",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.02,
+      0.02,
+      0.26,
+      0.01,
+      0.79,
+      0.87,
+      0.97,
+      0.87,
+      0.99,
+      0.99
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.02,
+      0.02,
+      0.135,
+      0.135,
+      0.79,
+      0.87,
+      0.9199999999999999,
+      0.9199999999999999,
+      0.99,
+      0.99
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.0,
+      0.015,
+      0.0,
+      0.115,
+      0.0,
+      0.655,
+      0.07999999999999996,
+      0.04999999999999993,
+      0.0,
+      0.07000000000000006,
+      0.0,
+      0.010000000000000009
+    ],
+    "cdf_adjacent_violations": 3,
+    "cdf_max_downward_step": 0.25,
+    "cdf_mean": 0.5750000000000001,
+    "cdf_median": 0.5625,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.3182574287056923,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.3030844144523144,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.31422629579901695,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 632,
+          "output_tokens": 116,
+          "cost": 2.6544e-05
+        },
+        "elapsed_s": 0.2977764457464218,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 31,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.5,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.5,
+      "parallel_thresholds": 0.5,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.015,
+      0.015,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.004999999999999999,
+      0.0,
+      0.985,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.01,
+    "cdf_mean": 0.4975,
+    "cdf_median": 0.5,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4174,
+          "output_tokens": 1024,
+          "cost": 0.000175308
+        },
+        "elapsed_s": 0.3662402108311653,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 779,
+          "output_tokens": 158,
+          "cost": 3.2718e-05
+        },
+        "elapsed_s": 0.24053294956684113,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 633,
+          "output_tokens": 116,
+          "cost": 2.6586e-05
+        },
+        "elapsed_s": 0.2892886698246002,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 625,
+          "output_tokens": 116,
+          "cost": 2.625e-05
+        },
+        "elapsed_s": 0.23449303582310677,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 32,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.5,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.5,
+      "parallel_thresholds": 0.5,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.015,
+      0.015,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.004999999999999999,
+      0.0,
+      0.985,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.01,
+    "cdf_mean": 0.4975,
+    "cdf_median": 0.5,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4174,
+          "output_tokens": 1024,
+          "cost": 0.000175308
+        },
+        "elapsed_s": 0.2642716281116009,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 779,
+          "output_tokens": 158,
+          "cost": 3.2718e-05
+        },
+        "elapsed_s": 0.26022401452064514,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 633,
+          "output_tokens": 116,
+          "cost": 2.6586e-05
+        },
+        "elapsed_s": 0.22908660769462585,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 625,
+          "output_tokens": 116,
+          "cost": 2.625e-05
+        },
+        "elapsed_s": 0.22801337763667107,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 33,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 5.0,
+      "explicit_bits": 7.0,
+      "explicit_groups": 5.0,
+      "adaptive_bisection": 5.0,
+      "parallel_thresholds": 5.0,
+      "decimal_digits": 5.0,
+      "interval_selection": 5.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "05",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 5.0,
+    "cdf_median": 5.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.27094824239611626,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.2429477982223034,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.21645386889576912,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.21118512749671936,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 34,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 2.0,
+      "explicit_bits": 2.0,
+      "explicit_groups": 2.0,
+      "adaptive_bisection": 2.0,
+      "parallel_thresholds": 2.0,
+      "decimal_digits": 2.0,
+      "interval_selection": 2.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "02",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 2.0,
+    "cdf_median": 2.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.26294079795479774,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.250833448022604,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.21125799417495728,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.25312793254852295,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 35,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 12.0,
+      "explicit_bits": 12.0,
+      "explicit_groups": 12.0,
+      "adaptive_bisection": 12.0,
+      "parallel_thresholds": 12.0,
+      "decimal_digits": 12.0,
+      "interval_selection": 12.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "12",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.01,
+      0.04,
+      1.0,
+      0.98,
+      0.98
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.015,
+      0.04,
+      0.9866666666666667,
+      0.9866666666666667,
+      0.9866666666666667
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.015,
+      0.0,
+      0.025,
+      0.9466666666666667,
+      0.0,
+      0.0,
+      0.013333333333333308
+    ],
+    "cdf_adjacent_violations": 2,
+    "cdf_max_downward_step": 0.020000000000000018,
+    "cdf_mean": 11.969999999999999,
+    "cdf_median": 12.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.22927521914243698,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.2795254774391651,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.26495198532938957,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.22360721230506897,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 36,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.0,
+      "explicit_groups": 0.0,
+      "adaptive_bisection": 0.375,
+      "parallel_thresholds": 0.375,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.31,
+      0.72,
+      0.85,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.31,
+      0.72,
+      0.85,
+      0.99,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.01,
+      0.01,
+      0.030000000000000002,
+      0.26,
+      0.41,
+      0.13,
+      0.14,
+      0.010000000000000009,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.378125,
+    "cdf_median": 0.375,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1024,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.2962803691625595,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.2946263924241066,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.26463594287633896,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 637,
+          "output_tokens": 116,
+          "cost": 2.6754e-05
+        },
+        "elapsed_s": 0.2405044175684452,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 37,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.25,
+      "explicit_bits": 0.25,
+      "explicit_groups": 0.25,
+      "adaptive_bisection": 0.1875,
+      "parallel_thresholds": 0.1875,
+      "decimal_digits": 0.055,
+      "interval_selection": 0.25
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "0550",
+    "raw_cdf": [
+      0.0,
+      0.04,
+      0.19,
+      0.87,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.04,
+      0.19,
+      0.87,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.04,
+      0.15,
+      0.6799999999999999,
+      0.13,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.18125,
+    "cdf_median": 0.1875,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4183,
+          "output_tokens": 1025,
+          "cost": 0.000175686
+        },
+        "elapsed_s": 0.3426506593823433,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 788,
+          "output_tokens": 158,
+          "cost": 3.3096e-05
+        },
+        "elapsed_s": 0.26171115040779114,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 642,
+          "output_tokens": 116,
+          "cost": 2.6964e-05
+        },
+        "elapsed_s": 0.2518436163663864,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.21787641942501068,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 38,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.4375,
+      "explicit_bits": 0.4375,
+      "explicit_groups": 0.9375,
+      "adaptive_bisection": 0.4375,
+      "parallel_thresholds": 0.4375,
+      "decimal_digits": 0.01,
+      "interval_selection": 0.5625
+    },
+    "correct": {
+      "direct": false,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": false
+    },
+    "decimal_string": "0100",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.0,
+      0.05,
+      0.01,
+      0.73,
+      0.28,
+      0.88,
+      0.85,
+      0.96,
+      0.92,
+      0.97,
+      0.98
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.005,
+      0.030000000000000002,
+      0.030000000000000002,
+      0.505,
+      0.505,
+      0.865,
+      0.865,
+      0.94,
+      0.94,
+      0.97,
+      0.98
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.005,
+      0.0,
+      0.025,
+      0.0,
+      0.475,
+      0.0,
+      0.36,
+      0.0,
+      0.07499999999999996,
+      0.0,
+      0.030000000000000027,
+      0.010000000000000009,
+      0.020000000000000018
+    ],
+    "cdf_adjacent_violations": 5,
+    "cdf_max_downward_step": 0.44999999999999996,
+    "cdf_mean": 0.5225,
+    "cdf_median": 0.4375,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4181,
+          "output_tokens": 1027,
+          "cost": 0.000175602
+        },
+        "elapsed_s": 0.22003574296832085,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 786,
+          "output_tokens": 158,
+          "cost": 3.3012e-05
+        },
+        "elapsed_s": 0.25411126390099525,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.23905440047383308,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 638,
+          "output_tokens": 116,
+          "cost": 2.6796e-05
+        },
+        "elapsed_s": 0.29526686295866966,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 39,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 15.0,
+      "explicit_bits": 15.0,
+      "explicit_groups": 15.0,
+      "adaptive_bisection": 15.0,
+      "parallel_thresholds": 15.0,
+      "decimal_digits": 15.0,
+      "interval_selection": 15.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "15",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.16,
+      0.01
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.085,
+      0.085
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.085,
+      0.0,
+      0.915
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.15,
+    "cdf_mean": 14.830000000000002,
+    "cdf_median": 15.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.23164818063378334,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.2168014794588089,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2832337059080601,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2380715198814869,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 40,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 5.0,
+      "explicit_bits": 7.0,
+      "explicit_groups": 5.0,
+      "adaptive_bisection": 5.0,
+      "parallel_thresholds": 5.0,
+      "decimal_digits": 5.0,
+      "interval_selection": 5.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "05",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01,
+      0.99,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 4.99,
+    "cdf_median": 5.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.23680002614855766,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.2255270890891552,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.19213564321398735,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.23045523464679718,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 41,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": true,
+    "repeat": 0,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.0,
+      "explicit_groups": 0.0,
+      "adaptive_bisection": 0.3125,
+      "parallel_thresholds": 0.3125,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.4375
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": false,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": true,
+      "interval_selection": false
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.01,
+      0.01,
+      0.05,
+      0.12,
+      0.54,
+      0.64,
+      0.87,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.01,
+      0.01,
+      0.05,
+      0.12,
+      0.54,
+      0.64,
+      0.87,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.01,
+      0.0,
+      0.04,
+      0.06999999999999999,
+      0.42000000000000004,
+      0.09999999999999998,
+      0.22999999999999998,
+      0.13,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.36,
+    "cdf_median": 0.3125,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4180,
+          "output_tokens": 1024,
+          "cost": 0.00017556
+        },
+        "elapsed_s": 0.25032762810587883,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 785,
+          "output_tokens": 158,
+          "cost": 3.297e-05
+        },
+        "elapsed_s": 0.20527030527591705,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 639,
+          "output_tokens": 116,
+          "cost": 2.6838e-05
+        },
+        "elapsed_s": 0.2315082736313343,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 634,
+          "output_tokens": 116,
+          "cost": 2.6628e-05
+        },
+        "elapsed_s": 0.19975877180695534,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 42,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 5.0,
+      "explicit_bits": 7.0,
+      "explicit_groups": 5.0,
+      "adaptive_bisection": 5.0,
+      "parallel_thresholds": 5.0,
+      "decimal_digits": 5.0,
+      "interval_selection": 5.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": false,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "05",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 5.0,
+    "cdf_median": 5.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.27242685854434967,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.23893407359719276,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2630738206207752,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.311473298817873,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 43,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "reverse": true,
+    "repeat": 1,
+    "predictions": {
+      "direct": 2.0,
+      "explicit_bits": 2.0,
+      "explicit_groups": 2.0,
+      "adaptive_bisection": 2.0,
+      "parallel_thresholds": 2.0,
+      "decimal_digits": 2.0,
+      "interval_selection": 2.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "02",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 2.0,
+    "cdf_median": 2.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.25966888293623924,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.2862553335726261,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2194087617099285,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.3210224397480488,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 44,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.25,
+      "explicit_bits": 0.25,
+      "explicit_groups": 0.25,
+      "adaptive_bisection": 0.1875,
+      "parallel_thresholds": 0.1875,
+      "decimal_digits": 0.055,
+      "interval_selection": 0.25
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": false,
+      "parallel_thresholds": false,
+      "decimal_digits": false,
+      "interval_selection": true
+    },
+    "decimal_string": "0550",
+    "raw_cdf": [
+      0.0,
+      0.02,
+      0.13,
+      0.94,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.02,
+      0.13,
+      0.94,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.02,
+      0.11,
+      0.8099999999999999,
+      0.06000000000000005,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 0.181875,
+    "cdf_median": 0.1875,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4183,
+          "output_tokens": 1025,
+          "cost": 0.000175686
+        },
+        "elapsed_s": 0.20587161928415298,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 788,
+          "output_tokens": 158,
+          "cost": 3.3096e-05
+        },
+        "elapsed_s": 0.21268725395202637,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 642,
+          "output_tokens": 116,
+          "cost": 2.6964e-05
+        },
+        "elapsed_s": 0.2710988484323025,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 116,
+          "cost": 2.688e-05
+        },
+        "elapsed_s": 0.23705405369400978,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 45,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 0.5,
+      "explicit_bits": 0.5,
+      "explicit_groups": 0.5,
+      "adaptive_bisection": 0.5,
+      "parallel_thresholds": 0.5,
+      "decimal_digits": 0.5,
+      "interval_selection": 0.5
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "5000",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.02,
+      0.03,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.016666666666666666,
+      0.016666666666666666,
+      0.016666666666666666,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.016666666666666666,
+      0.0,
+      0.0,
+      0.9833333333333333,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.03,
+    "cdf_mean": 0.49687499999999996,
+    "cdf_median": 0.5,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 4174,
+          "output_tokens": 1024,
+          "cost": 0.000175308
+        },
+        "elapsed_s": 0.26656170934438705,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 779,
+          "output_tokens": 158,
+          "cost": 3.2718e-05
+        },
+        "elapsed_s": 0.24387718737125397,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 633,
+          "output_tokens": 116,
+          "cost": 2.6586e-05
+        },
+        "elapsed_s": 0.2600926160812378,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      },
+      {
+        "usage": {
+          "input_tokens": 625,
+          "output_tokens": 116,
+          "cost": 2.625e-05
+        },
+        "elapsed_s": 0.19670629873871803,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 2
+      }
+    ]
+  },
+  {
+    "job": 46,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 1,
+    "predictions": {
+      "direct": 3.0,
+      "explicit_bits": 3.0,
+      "explicit_groups": 3.0,
+      "adaptive_bisection": 3.0,
+      "parallel_thresholds": 3.0,
+      "decimal_digits": 3.0,
+      "interval_selection": 3.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "03",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cdf_adjacent_violations": 0,
+    "cdf_max_downward_step": 0,
+    "cdf_mean": 3.0,
+    "cdf_median": 3.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 996,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.22255070880055428,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 722,
+          "output_tokens": 158,
+          "cost": 3.0324e-05
+        },
+        "elapsed_s": 0.1784515306353569,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.3085695020854473,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 348,
+          "output_tokens": 32,
+          "cost": 1.4616e-05
+        },
+        "elapsed_s": 0.2814992778003216,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  },
+  {
+    "job": 47,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "reverse": false,
+    "repeat": 0,
+    "predictions": {
+      "direct": 15.0,
+      "explicit_bits": 15.0,
+      "explicit_groups": 15.0,
+      "adaptive_bisection": 15.0,
+      "parallel_thresholds": 15.0,
+      "decimal_digits": 15.0,
+      "interval_selection": 15.0
+    },
+    "correct": {
+      "direct": true,
+      "explicit_bits": true,
+      "explicit_groups": true,
+      "adaptive_bisection": true,
+      "parallel_thresholds": true,
+      "decimal_digits": true,
+      "interval_selection": true
+    },
+    "decimal_string": "15",
+    "raw_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.14,
+      0.01
+    ],
+    "isotonic_cdf": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.07500000000000001,
+      0.07500000000000001
+    ],
+    "masses": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.07500000000000001,
+      0.0,
+      0.925
+    ],
+    "cdf_adjacent_violations": 1,
+    "cdf_max_downward_step": 0.13,
+    "cdf_mean": 14.85,
+    "cdf_median": 15.0,
+    "calls": [
+      {
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 997,
+          "cost": 0.000158508
+        },
+        "elapsed_s": 0.2606812119483948,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 27
+      },
+      {
+        "usage": {
+          "input_tokens": 733,
+          "output_tokens": 158,
+          "cost": 3.0786e-05
+        },
+        "elapsed_s": 0.21768786385655403,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 3
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2531271018087864,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      },
+      {
+        "usage": {
+          "input_tokens": 351,
+          "output_tokens": 32,
+          "cost": 1.4742e-05
+        },
+        "elapsed_s": 0.2578139640390873,
+        "model": "typesafe/jev-1.13-20260917",
+        "questions": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2019-12-31",
+      "observation": "Official closing level on the final trading day of the calendar year"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "9": "3389.90 <= closing level < 3390.00 index points",
+          "8": "3389.80 <= closing level < 3389.90 index points",
+          "7": "3389.70 <= closing level < 3389.80 index points",
+          "6": "3389.60 <= closing level < 3389.70 index points",
+          "5": "3389.50 <= closing level < 3389.60 index points",
+          "4": "3389.40 <= closing level < 3389.50 index points",
+          "3": "3389.30 <= closing level < 3389.40 index points",
+          "2": "3389.20 <= closing level < 3389.30 index points",
+          "1": "3389.10 <= closing level < 3389.20 index points",
+          "0": "3389.00 <= closing level < 3389.10 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "9",
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.14,
+          "2": 0.07,
+          "3": 0.07,
+          "4": 0.1,
+          "5": 0.11,
+          "6": 0.07,
+          "7": 0.07,
+          "8": 0.06,
+          "9": 0.2
+        },
+        "confidence": 0.1
+      }
+    },
+    "usage": {
+      "input_tokens": 726,
+      "output_tokens": 88,
+      "cost": 3.0492e-05
+    },
+    "id": "gen-dec-1790151062-8VAJaI01CHeHFzvPgaFw",
+    "provider": "TypeSafe"
+  }
+}

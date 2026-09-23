@@ -1,0 +1,447 @@
+{
+  "description": "Live check of the reusable ten-way README example; separate from headline experiments.",
+  "result": {
+    "value": "3230.78",
+    "lower": "3230.78",
+    "upper": "3230.79",
+    "resolution": "0.01",
+    "calls": 6,
+    "branching": 10,
+    "trace": [
+      {
+        "lower": "3000.00",
+        "upper": "4000.00",
+        "choice": "3",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "3200.00",
+        "upper": "3300.00",
+        "choice": "2",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "3230.00",
+        "upper": "3240.00",
+        "choice": "3",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "3230.00",
+        "upper": "3231.00",
+        "choice": "0",
+        "probabilities": {
+          "0": 1,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "3230.70",
+        "upper": "3230.80",
+        "choice": "7",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 1,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "3230.78",
+        "upper": "3230.79",
+        "choice": "8",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 1,
+          "9": 0
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "0.00 <= value < 1000.00",
+              "1": "1000.00 <= value < 2000.00",
+              "2": "2000.00 <= value < 3000.00",
+              "3": "3000.00 <= value < 4000.00",
+              "4": "4000.00 <= value < 5000.00",
+              "5": "5000.00 <= value < 6000.00",
+              "6": "6000.00 <= value < 7000.00",
+              "7": "7000.00 <= value < 8000.00",
+              "8": "8000.00 <= value < 9000.00",
+              "9": "9000.00 <= value < 10000.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 622,
+          "output_tokens": 87,
+          "cost": 2.6124e-05
+        },
+        "id": "gen-dec-1790153954-1hy3z4d4cThrrW2I2AzM",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "3000.00 <= value < 3100.00",
+              "1": "3100.00 <= value < 3200.00",
+              "2": "3200.00 <= value < 3300.00",
+              "3": "3300.00 <= value < 3400.00",
+              "4": "3400.00 <= value < 3500.00",
+              "5": "3500.00 <= value < 3600.00",
+              "6": "3600.00 <= value < 3700.00",
+              "7": "3700.00 <= value < 3800.00",
+              "8": "3800.00 <= value < 3900.00",
+              "9": "3900.00 <= value < 4000.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 1,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 87,
+          "cost": 2.6208e-05
+        },
+        "id": "gen-dec-1790153955-emhMBOKHmhbo1oPHOyhI",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "3200.00 <= value < 3210.00",
+              "1": "3210.00 <= value < 3220.00",
+              "2": "3220.00 <= value < 3230.00",
+              "3": "3230.00 <= value < 3240.00",
+              "4": "3240.00 <= value < 3250.00",
+              "5": "3250.00 <= value < 3260.00",
+              "6": "3260.00 <= value < 3270.00",
+              "7": "3270.00 <= value < 3280.00",
+              "8": "3280.00 <= value < 3290.00",
+              "9": "3290.00 <= value < 3300.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 1,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 87,
+          "cost": 2.6208e-05
+        },
+        "id": "gen-dec-1790153955-p0pVwRxywaxZfaEERzaN",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "3230.00 <= value < 3231.00",
+              "1": "3231.00 <= value < 3232.00",
+              "2": "3232.00 <= value < 3233.00",
+              "3": "3233.00 <= value < 3234.00",
+              "4": "3234.00 <= value < 3235.00",
+              "5": "3235.00 <= value < 3236.00",
+              "6": "3236.00 <= value < 3237.00",
+              "7": "3237.00 <= value < 3238.00",
+              "8": "3238.00 <= value < 3239.00",
+              "9": "3239.00 <= value < 3240.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 1,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 87,
+          "cost": 2.6208e-05
+        },
+        "id": "gen-dec-1790153955-bil5rZOdP51wYprBqvnv",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "3230.00 <= value < 3230.10",
+              "1": "3230.10 <= value < 3230.20",
+              "2": "3230.20 <= value < 3230.30",
+              "3": "3230.30 <= value < 3230.40",
+              "4": "3230.40 <= value < 3230.50",
+              "5": "3230.50 <= value < 3230.60",
+              "6": "3230.60 <= value < 3230.70",
+              "7": "3230.70 <= value < 3230.80",
+              "8": "3230.80 <= value < 3230.90",
+              "9": "3230.90 <= value < 3231.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 1,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 87,
+          "cost": 2.6208e-05
+        },
+        "id": "gen-dec-1790153955-wJoOsW6LVgagB9pVVCSt",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "closing_level_index_points": "3230.78"
+        },
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the supplied closing level in index points using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "0": "3230.70 <= value < 3230.71",
+              "1": "3230.71 <= value < 3230.72",
+              "2": "3230.72 <= value < 3230.73",
+              "3": "3230.73 <= value < 3230.74",
+              "4": "3230.74 <= value < 3230.75",
+              "5": "3230.75 <= value < 3230.76",
+              "6": "3230.76 <= value < 3230.77",
+              "7": "3230.77 <= value < 3230.78",
+              "8": "3230.78 <= value < 3230.79",
+              "9": "3230.79 <= value < 3230.80"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 1,
+              "9": 0
+            },
+            "confidence": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 624,
+          "output_tokens": 87,
+          "cost": 2.6208e-05
+        },
+        "id": "gen-dec-1790153955-Px9cLJ74PJ9XWE6lMYyk",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

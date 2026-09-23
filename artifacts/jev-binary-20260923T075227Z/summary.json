@@ -1,0 +1,9 @@
+{
+  "n": 12,
+  "direct_correct": 10,
+  "binary_correct": 3,
+  "correct_bits": 36,
+  "total_bits": 48,
+  "reported_cost": 0.000550368,
+  "unpriced_requests": 0
+}

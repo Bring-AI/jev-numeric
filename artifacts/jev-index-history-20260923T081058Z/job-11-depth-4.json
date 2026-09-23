@@ -1,0 +1,57 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "index": "S&P 500 price index",
+      "date": "2020-12-31",
+      "observation": "Official closing level on the final trading day of the calendar year"
+    },
+    "questions": {
+      "hierarchy": {
+        "type": "choice",
+        "instructions": "Recall the historical S&P 500 price index official closing level on the date in state, in index points. Use the price index, NOT a total-return index, ETF share price, annual average, annual return, or intraday high. Choose the interval containing that closing level. Lower bounds are inclusive and upper bounds exclusive. This is historical factual recall, not a forecast.",
+        "criteria": {
+          "0": "3891.00 <= closing level < 3891.10 index points",
+          "1": "3891.10 <= closing level < 3891.20 index points",
+          "2": "3891.20 <= closing level < 3891.30 index points",
+          "3": "3891.30 <= closing level < 3891.40 index points",
+          "4": "3891.40 <= closing level < 3891.50 index points",
+          "5": "3891.50 <= closing level < 3891.60 index points",
+          "6": "3891.60 <= closing level < 3891.70 index points",
+          "7": "3891.70 <= closing level < 3891.80 index points",
+          "8": "3891.80 <= closing level < 3891.90 index points",
+          "9": "3891.90 <= closing level < 3892.00 index points"
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "hierarchy": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.13,
+          "2": 0.09,
+          "3": 0.08,
+          "4": 0.09,
+          "5": 0.1,
+          "6": 0.12,
+          "7": 0.07,
+          "8": 0.05,
+          "9": 0.13
+        },
+        "confidence": 0.04
+      }
+    },
+    "usage": {
+      "input_tokens": 726,
+      "output_tokens": 88,
+      "cost": 3.0492e-05
+    },
+    "id": "gen-dec-1790151075-YQZtkaZUucNA3Z1LXVIh",
+    "provider": "TypeSafe"
+  }
+}

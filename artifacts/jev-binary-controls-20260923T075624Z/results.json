@@ -1,0 +1,2882 @@
+[
+  {
+    "job": 0,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1011",
+    "predicted_bits": "0111",
+    "binary_value": 0.4375,
+    "direct_value": 0.5625,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.33,
+      0.57,
+      0.61,
+      0.72
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.45962658151984215
+  },
+  {
+    "job": 1,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.1,
+      0.29,
+      0.2,
+      0.14
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 313,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.23186663538217545
+  },
+  {
+    "job": 2,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 0.25,
+    "direct_value": 0.25,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.01,
+      0.77,
+      0.2,
+      0.26
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1658,
+      "output_tokens": 314,
+      "cost": 6.9636e-05
+    },
+    "elapsed_s": 0.18410895019769669
+  },
+  {
+    "job": 3,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1011",
+    "predicted_bits": "0111",
+    "binary_value": 0.4375,
+    "direct_value": 0.625,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.39,
+      0.56,
+      0.6,
+      0.75
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 315,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.2755270004272461
+  },
+  {
+    "job": 4,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0011",
+    "predicted_bits": "0011",
+    "binary_value": 3.0,
+    "direct_value": 3.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.12,
+      0.62,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.21931899711489677
+  },
+  {
+    "job": 5,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.91,
+      0.63,
+      0.64,
+      0.91
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2122797816991806
+  },
+  {
+    "job": 6,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.02,
+      0.02
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1143,
+      "output_tokens": 313,
+      "cost": 4.8006e-05
+    },
+    "elapsed_s": 0.24664798006415367
+  },
+  {
+    "job": 7,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0010",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 2.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.07,
+      0.08,
+      0.03
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.18084579706192017
+  },
+  {
+    "job": 8,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0010",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 2.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.09,
+      0.08,
+      0.03
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.19483459368348122
+  },
+  {
+    "job": 9,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 0.25,
+    "direct_value": 0.25,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.01,
+      0.66,
+      0.23,
+      0.27
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1658,
+      "output_tokens": 314,
+      "cost": 6.9636e-05
+    },
+    "elapsed_s": 0.2006201297044754
+  },
+  {
+    "job": 10,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.09,
+      0.8,
+      0.74,
+      0.48
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 315,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.1837693192064762
+  },
+  {
+    "job": 11,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.09,
+      0.63,
+      0.56,
+      0.17
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1036,
+      "output_tokens": 285,
+      "cost": 4.3512e-05
+    },
+    "elapsed_s": 0.21118829026818275
+  },
+  {
+    "job": 12,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.41,
+      0.41,
+      0.04
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1480,
+      "output_tokens": 285,
+      "cost": 6.216e-05
+    },
+    "elapsed_s": 0.19338569790124893
+  },
+  {
+    "job": 13,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.02,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1143,
+      "output_tokens": 313,
+      "cost": 4.8006e-05
+    },
+    "elapsed_s": 0.33658019080758095
+  },
+  {
+    "job": 14,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 0.25,
+    "direct_value": 0.25,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.01,
+      0.74,
+      0.22,
+      0.24
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1658,
+      "output_tokens": 314,
+      "cost": 6.9636e-05
+    },
+    "elapsed_s": 0.24807481840252876
+  },
+  {
+    "job": 15,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.05,
+      0.02,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1143,
+      "output_tokens": 313,
+      "cost": 4.8006e-05
+    },
+    "elapsed_s": 0.20812494680285454
+  },
+  {
+    "job": 16,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.93,
+      0.69,
+      0.69,
+      0.77
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.1925494447350502
+  },
+  {
+    "job": 17,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1011",
+    "predicted_bits": "0111",
+    "binary_value": 0.4375,
+    "direct_value": 0.4375,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.33,
+      0.58,
+      0.61,
+      0.75
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.20530081167817116
+  },
+  {
+    "job": 18,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.08,
+      0.64,
+      0.58,
+      0.17
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1036,
+      "output_tokens": 285,
+      "cost": 4.3512e-05
+    },
+    "elapsed_s": 0.20943597331643105
+  },
+  {
+    "job": 19,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0101",
+    "predicted_bits": "0111",
+    "binary_value": 7.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.67,
+      0.73,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2249016873538494
+  },
+  {
+    "job": 20,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0101",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.03,
+      0.57,
+      0.62,
+      0.08
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.3402194492518902
+  },
+  {
+    "job": 21,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1101",
+    "predicted_bits": "1011",
+    "binary_value": 0.6875,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.91,
+      0.47,
+      0.51,
+      0.6
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.22414616867899895
+  },
+  {
+    "job": 22,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0011",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 3.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.02,
+      0.39,
+      0.55,
+      0.09
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.2919858247041702
+  },
+  {
+    "job": 23,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.1,
+      0.78,
+      0.72,
+      0.48
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 315,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.2057614102959633
+  },
+  {
+    "job": 24,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0011",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 3.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.38,
+      0.53,
+      0.09
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.1829220987856388
+  },
+  {
+    "job": 25,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0010",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 2.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.07,
+      0.06,
+      0.04
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.21882590651512146
+  },
+  {
+    "job": 26,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.02,
+      0.72,
+      0.81,
+      0.39
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.20783936977386475
+  },
+  {
+    "job": 27,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 12.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.47,
+      0.71,
+      0.67,
+      0.39
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.20024459064006805
+  },
+  {
+    "job": 28,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0011",
+    "predicted_bits": "0011",
+    "binary_value": 3.0,
+    "direct_value": 3.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.17,
+      0.62,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.24747862666845322
+  },
+  {
+    "job": 29,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.1,
+      0.26,
+      0.2,
+      0.16
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 313,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.23378266394138336
+  },
+  {
+    "job": 30,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1100",
+    "predicted_bits": "1110",
+    "binary_value": 14.0,
+    "direct_value": 12.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.55,
+      0.71,
+      0.68,
+      0.47
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.23297519609332085
+  },
+  {
+    "job": 31,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.18,
+      0.33,
+      0.1,
+      0.07
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 313,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.21934686973690987
+  },
+  {
+    "job": 32,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.02,
+      0.72,
+      0.81,
+      0.37
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.26896199211478233
+  },
+  {
+    "job": 33,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.89,
+      0.66,
+      0.64,
+      0.91
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.26078127324581146
+  },
+  {
+    "job": 34,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.9,
+      0.65,
+      0.63,
+      0.91
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.1886112354695797
+  },
+  {
+    "job": 35,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1100",
+    "predicted_bits": "1100",
+    "binary_value": 12.0,
+    "direct_value": 12.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.57,
+      0.63,
+      0.26,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2783702313899994
+  },
+  {
+    "job": 36,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0011",
+    "predicted_bits": "0011",
+    "binary_value": 3.0,
+    "direct_value": 3.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.12,
+      0.6,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.23413542658090591
+  },
+  {
+    "job": 37,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1101",
+    "predicted_bits": "1011",
+    "binary_value": 0.6875,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.92,
+      0.47,
+      0.51,
+      0.6
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.28118183836340904
+  },
+  {
+    "job": 38,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.08,
+      0.78,
+      0.75,
+      0.5
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 315,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.2723688594996929
+  },
+  {
+    "job": 39,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1100",
+    "predicted_bits": "1100",
+    "binary_value": 12.0,
+    "direct_value": 12.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.55,
+      0.52,
+      0.25,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.22617467865347862
+  },
+  {
+    "job": 40,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0101",
+    "predicted_bits": "0111",
+    "binary_value": 7.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.66,
+      0.72,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.17719625309109688
+  },
+  {
+    "job": 41,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.49,
+      0.39,
+      0.03
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1480,
+      "output_tokens": 285,
+      "cost": 6.216e-05
+    },
+    "elapsed_s": 0.2161162570118904
+  },
+  {
+    "job": 42,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0010",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 2.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.06,
+      0.08,
+      0.04
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.23585974425077438
+  },
+  {
+    "job": 43,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1101",
+    "predicted_bits": "1111",
+    "binary_value": 0.9375,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.73,
+      0.62,
+      0.6,
+      0.58
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.24495187774300575
+  },
+  {
+    "job": 44,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.25,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.03,
+      0.48,
+      0.23,
+      0.33
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1152,
+      "output_tokens": 314,
+      "cost": 4.8384e-05
+    },
+    "elapsed_s": 0.2221618928015232
+  },
+  {
+    "job": 45,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.02,
+      0.68,
+      0.82,
+      0.34
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.247579175978899
+  },
+  {
+    "job": 46,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.25,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.03,
+      0.5,
+      0.25,
+      0.27
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1152,
+      "output_tokens": 314,
+      "cost": 4.8384e-05
+    },
+    "elapsed_s": 0.3019740767776966
+  },
+  {
+    "job": 47,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0011",
+    "predicted_bits": "0011",
+    "binary_value": 3.0,
+    "direct_value": 3.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.13,
+      0.61,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2135152518749237
+  },
+  {
+    "job": 48,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1101",
+    "predicted_bits": "1111",
+    "binary_value": 0.9375,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.77,
+      0.61,
+      0.61,
+      0.56
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.19957777485251427
+  },
+  {
+    "job": 49,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.91,
+      0.69,
+      0.7,
+      0.78
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.17337588220834732
+  },
+  {
+    "job": 50,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.02,
+      0.71,
+      0.83,
+      0.4
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.21138424798846245
+  },
+  {
+    "job": 51,
+    "case": 7,
+    "expression": "1 / 4 + 1 / 8",
+    "target": 0.375,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0110",
+    "predicted_bits": "0110",
+    "binary_value": 0.375,
+    "direct_value": 0.375,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.09,
+      0.79,
+      0.72,
+      0.45
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 315,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.2749817371368408
+  },
+  {
+    "job": 52,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.12,
+      0.28,
+      0.24,
+      0.17
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 313,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.18969081342220306
+  },
+  {
+    "job": 53,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1011",
+    "predicted_bits": "0111",
+    "binary_value": 0.4375,
+    "direct_value": 0.4375,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.39,
+      0.58,
+      0.6,
+      0.76
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.1889522224664688
+  },
+  {
+    "job": 54,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.91,
+      0.69,
+      0.72,
+      0.79
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.19784535840153694
+  },
+  {
+    "job": 55,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.02,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1649,
+      "output_tokens": 313,
+      "cost": 6.9258e-05
+    },
+    "elapsed_s": 0.22130433470010757
+  },
+  {
+    "job": 56,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.07,
+      0.63,
+      0.59,
+      0.18
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1036,
+      "output_tokens": 285,
+      "cost": 4.3512e-05
+    },
+    "elapsed_s": 0.2977029159665108
+  },
+  {
+    "job": 57,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1101",
+    "predicted_bits": "1011",
+    "binary_value": 0.6875,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.92,
+      0.46,
+      0.52,
+      0.61
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.25854698196053505
+  },
+  {
+    "job": 58,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 4.0,
+    "direct_value": 4.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.51,
+      0.42,
+      0.03
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1480,
+      "output_tokens": 285,
+      "cost": 6.216e-05
+    },
+    "elapsed_s": 0.2017795741558075
+  },
+  {
+    "job": 59,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.18,
+      0.34,
+      0.09,
+      0.06
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 313,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.2391652688384056
+  },
+  {
+    "job": 60,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.11,
+      0.63,
+      0.58,
+      0.19
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1036,
+      "output_tokens": 285,
+      "cost": 4.3512e-05
+    },
+    "elapsed_s": 0.22562183812260628
+  },
+  {
+    "job": 61,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1101",
+    "predicted_bits": "1111",
+    "binary_value": 0.9375,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.74,
+      0.59,
+      0.62,
+      0.58
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.2532886117696762
+  },
+  {
+    "job": 62,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 12.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.45,
+      0.69,
+      0.65,
+      0.46
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.2623263709247112
+  },
+  {
+    "job": 63,
+    "case": 4,
+    "expression": "12 / 3",
+    "target": 4.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 4.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.44,
+      0.41,
+      0.03
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1480,
+      "output_tokens": 285,
+      "cost": 6.216e-05
+    },
+    "elapsed_s": 0.24568936228752136
+  },
+  {
+    "job": 64,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0011",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 3.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.01,
+      0.37,
+      0.48,
+      0.09
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.2333986461162567
+  },
+  {
+    "job": 65,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0010",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 2.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.01,
+      0.68,
+      0.02
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2503186799585819
+  },
+  {
+    "job": 66,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1011",
+    "predicted_bits": "0011",
+    "binary_value": 0.1875,
+    "direct_value": 0.5625,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.08,
+      0.32,
+      0.72,
+      0.77
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.19795942306518555
+  },
+  {
+    "job": 67,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1101",
+    "predicted_bits": "1111",
+    "binary_value": 0.9375,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.74,
+      0.6,
+      0.63,
+      0.57
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.280941866338253
+  },
+  {
+    "job": 68,
+    "case": 11,
+    "expression": "7 / 8 - 1 / 16",
+    "target": 0.8125,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1101",
+    "predicted_bits": "1011",
+    "binary_value": 0.6875,
+    "direct_value": 0.6875,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 2,
+    "p1": [
+      0.91,
+      0.47,
+      0.51,
+      0.59
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 316,
+      "cost": 6.9552e-05
+    },
+    "elapsed_s": 0.24655162170529366
+  },
+  {
+    "job": 69,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1011",
+    "predicted_bits": "0011",
+    "binary_value": 0.1875,
+    "direct_value": 0.4375,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.09,
+      0.27,
+      0.67,
+      0.75
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.18741272389888763
+  },
+  {
+    "job": 70,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1100",
+    "predicted_bits": "1100",
+    "binary_value": 12.0,
+    "direct_value": 12.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.56,
+      0.56,
+      0.24,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2320449985563755
+  },
+  {
+    "job": 71,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0101",
+    "predicted_bits": "0111",
+    "binary_value": 7.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.66,
+      0.68,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.3413567394018173
+  },
+  {
+    "job": 72,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1011",
+    "predicted_bits": "0011",
+    "binary_value": 0.1875,
+    "direct_value": 0.4375,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.08,
+      0.36,
+      0.74,
+      0.71
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.26356440410017967
+  },
+  {
+    "job": 73,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 0.25,
+    "direct_value": 0.25,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.01,
+      0.72,
+      0.22,
+      0.21
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1658,
+      "output_tokens": 314,
+      "cost": 6.9636e-05
+    },
+    "elapsed_s": 0.22813276201486588
+  },
+  {
+    "job": 74,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.02,
+      0.02,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1649,
+      "output_tokens": 313,
+      "cost": 6.9258e-05
+    },
+    "elapsed_s": 0.17954189702868462
+  },
+  {
+    "job": 75,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.2,
+      0.31,
+      0.1,
+      0.1
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 313,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.2102235183119774
+  },
+  {
+    "job": 76,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.25,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.03,
+      0.48,
+      0.25,
+      0.28
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1152,
+      "output_tokens": 314,
+      "cost": 4.8384e-05
+    },
+    "elapsed_s": 0.26236310601234436
+  },
+  {
+    "job": 77,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1100",
+    "predicted_bits": "1100",
+    "binary_value": 12.0,
+    "direct_value": 12.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.64,
+      0.52,
+      0.25,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2523631863296032
+  },
+  {
+    "job": 78,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0101",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.03,
+      0.57,
+      0.6,
+      0.07
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.235222939401865
+  },
+  {
+    "job": 79,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.03,
+      0.02,
+      0.02
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1649,
+      "output_tokens": 313,
+      "cost": 6.9258e-05
+    },
+    "elapsed_s": 0.23103386163711548
+  },
+  {
+    "job": 80,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.02,
+      0.02
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1649,
+      "output_tokens": 313,
+      "cost": 6.9258e-05
+    },
+    "elapsed_s": 0.1860029622912407
+  },
+  {
+    "job": 81,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0101",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.02,
+      0.59,
+      0.64,
+      0.11
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.18568503484129906
+  },
+  {
+    "job": 82,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0010",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 2.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.01,
+      0.74,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.17345865443348885
+  },
+  {
+    "job": 83,
+    "case": 3,
+    "expression": "3 * 4",
+    "target": 12.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "1100",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 12.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.44,
+      0.65,
+      0.7,
+      0.44
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.26949047297239304
+  },
+  {
+    "job": 84,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.1,
+      0.26,
+      0.23,
+      0.17
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 313,
+      "cost": 4.8258e-05
+    },
+    "elapsed_s": 0.21384843438863754
+  },
+  {
+    "job": 85,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0010",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 2.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.01,
+      0.65,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.18365540355443954
+  },
+  {
+    "job": 86,
+    "case": 9,
+    "expression": "3 / 8 + 5 / 16",
+    "target": 0.6875,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1011",
+    "predicted_bits": "0011",
+    "binary_value": 0.1875,
+    "direct_value": 0.5625,
+    "binary_correct": false,
+    "direct_correct": false,
+    "correct_bits": 3,
+    "p1": [
+      0.06,
+      0.38,
+      0.7,
+      0.76
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1150,
+      "output_tokens": 316,
+      "cost": 4.83e-05
+    },
+    "elapsed_s": 0.27526572719216347
+  },
+  {
+    "job": 87,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.92,
+      0.63,
+      0.62,
+      0.92
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 286,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.2219456508755684
+  },
+  {
+    "job": 88,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "0101",
+    "predicted_bits": "0111",
+    "binary_value": 7.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0,
+      0.62,
+      0.71,
+      0.97
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.3162647597491741
+  },
+  {
+    "job": 89,
+    "case": 8,
+    "expression": "3 / 4 - 1 / 4",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "explicit",
+    "reverse": false,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "0000",
+    "binary_value": 0.0,
+    "direct_value": 0.5,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.22,
+      0.31,
+      0.12,
+      0.09
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1655,
+      "output_tokens": 313,
+      "cost": 6.951e-05
+    },
+    "elapsed_s": 0.20199063047766685
+  },
+  {
+    "job": 90,
+    "case": 1,
+    "expression": "2 + 3",
+    "target": 5.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "0101",
+    "predicted_bits": "0110",
+    "binary_value": 6.0,
+    "direct_value": 5.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 2,
+    "p1": [
+      0.02,
+      0.61,
+      0.61,
+      0.1
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.23651329055428505
+  },
+  {
+    "job": 91,
+    "case": 0,
+    "expression": "1 + 1",
+    "target": 2.0,
+    "kind": "integer",
+    "prompt": "explicit",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "0010",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 2.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0,
+      0.01,
+      0.6,
+      0.02
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1479,
+      "output_tokens": 285,
+      "cost": 6.2118e-05
+    },
+    "elapsed_s": 0.177962314337492
+  },
+  {
+    "job": 92,
+    "case": 10,
+    "expression": "(1 / 2) * (1 / 2)",
+    "target": 0.25,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0100",
+    "predicted_bits": "0100",
+    "binary_value": 0.25,
+    "direct_value": 0.25,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.03,
+      0.52,
+      0.25,
+      0.26
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1152,
+      "output_tokens": 314,
+      "cost": 4.8384e-05
+    },
+    "elapsed_s": 0.24086790904402733
+  },
+  {
+    "job": 93,
+    "case": 6,
+    "expression": "1 / 2",
+    "target": 0.5,
+    "kind": "fraction",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 0,
+    "truth_bits": "1000",
+    "predicted_bits": "1000",
+    "binary_value": 0.5,
+    "direct_value": 0.5,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.99,
+      0.04,
+      0.01,
+      0.01
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1143,
+      "output_tokens": 313,
+      "cost": 4.8006e-05
+    },
+    "elapsed_s": 0.2630816325545311
+  },
+  {
+    "job": 94,
+    "case": 2,
+    "expression": "7 - 4",
+    "target": 3.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": true,
+    "repeat": 1,
+    "truth_bits": "0011",
+    "predicted_bits": "0010",
+    "binary_value": 2.0,
+    "direct_value": 3.0,
+    "binary_correct": false,
+    "direct_correct": true,
+    "correct_bits": 3,
+    "p1": [
+      0.01,
+      0.42,
+      0.53,
+      0.08
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 285,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.18915791809558868
+  },
+  {
+    "job": 95,
+    "case": 5,
+    "expression": "7 + 8",
+    "target": 15.0,
+    "kind": "integer",
+    "prompt": "original",
+    "reverse": false,
+    "repeat": 1,
+    "truth_bits": "1111",
+    "predicted_bits": "1111",
+    "binary_value": 15.0,
+    "direct_value": 15.0,
+    "binary_correct": true,
+    "direct_correct": true,
+    "correct_bits": 4,
+    "p1": [
+      0.92,
+      0.68,
+      0.71,
+      0.78
+    ],
+    "model": "typesafe/jev-1.13-20260917",
+    "usage": {
+      "input_tokens": 1035,
+      "output_tokens": 286,
+      "cost": 4.347e-05
+    },
+    "elapsed_s": 0.2203071005642414
+  }
+]

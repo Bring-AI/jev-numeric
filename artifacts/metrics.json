@@ -1,0 +1,33 @@
+{
+  "recall": {
+    "n": 12,
+    "unique_dates": 3,
+    "mape_percent": 4.581184332561361,
+    "max_ape_percent": 6.494021676912294,
+    "within_5_percent": 11,
+    "mean_absolute_error_points": 180.5325,
+    "all_predictions_above_truth": true
+  },
+  "oracle_input": {
+    "n": 12,
+    "unique_values": 3,
+    "exact": 12,
+    "correct_steps": 72
+  },
+  "arithmetic": {
+    "direct": 40,
+    "explicit_bits": 28,
+    "explicit_groups": 38,
+    "adaptive_bisection": 28,
+    "parallel_thresholds": 28,
+    "decimal_digits": 32,
+    "interval_selection": 39
+  },
+  "cdf_nonmonotone_runs": 25,
+  "prompt_controls": {
+    "original_False": 6,
+    "original_True": 7,
+    "explicit_False": 15,
+    "explicit_True": 14
+  }
+}

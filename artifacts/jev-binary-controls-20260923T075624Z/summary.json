@@ -1,0 +1,38 @@
+{
+  "original_forward": {
+    "n": 24,
+    "direct_correct": 20,
+    "binary_correct": 6,
+    "correct_bits": 74
+  },
+  "original_reverse": {
+    "n": 24,
+    "direct_correct": 20,
+    "binary_correct": 7,
+    "correct_bits": 75
+  },
+  "explicit_forward": {
+    "n": 24,
+    "direct_correct": 20,
+    "binary_correct": 15,
+    "correct_bits": 83
+  },
+  "explicit_reverse": {
+    "n": 24,
+    "direct_correct": 20,
+    "binary_correct": 14,
+    "correct_bits": 82
+  },
+  "original_stability": {
+    "order_bit_flips_of_96": 3,
+    "mean_order_p1_delta": 0.018229166666666664,
+    "repeat_bit_flips_of_96": 3
+  },
+  "explicit_stability": {
+    "order_bit_flips_of_96": 1,
+    "mean_order_p1_delta": 0.0165625,
+    "repeat_bit_flips_of_96": 1
+  },
+  "reported_cost": 0.005360544,
+  "unpriced_requests": 0
+}

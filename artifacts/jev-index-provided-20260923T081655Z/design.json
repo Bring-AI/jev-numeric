@@ -1,0 +1,83 @@
+{
+  "source": "https://fred.stlouisfed.org/data/SP500",
+  "truth": [
+    [
+      "2019-12-31",
+      323078
+    ],
+    [
+      "2020-12-31",
+      375607
+    ],
+    [
+      "2023-12-29",
+      476983
+    ]
+  ],
+  "model": "typesafe/jev-1.13-20260917",
+  "jobs": [
+    [
+      1,
+      true,
+      1
+    ],
+    [
+      2,
+      true,
+      1
+    ],
+    [
+      0,
+      true,
+      1
+    ],
+    [
+      2,
+      true,
+      0
+    ],
+    [
+      2,
+      false,
+      0
+    ],
+    [
+      1,
+      false,
+      0
+    ],
+    [
+      2,
+      false,
+      1
+    ],
+    [
+      0,
+      false,
+      1
+    ],
+    [
+      0,
+      false,
+      0
+    ],
+    [
+      1,
+      true,
+      0
+    ],
+    [
+      0,
+      true,
+      0
+    ],
+    [
+      1,
+      false,
+      1
+    ]
+  ],
+  "provided_close": true,
+  "protocol": "Three S&P 500 year-end closes. Fixed [0,10000) range, six ten-way greedy levels down to .01 points. Single-call 100-bin control at width 100. Two orders and two repeats, English prompts. No prompt revision mid-run. Verified closing_level_index_points added to state; questions unchanged from closed-book run.",
+  "limits": "Historical recall, not forecasting or known training-set membership. Closed-book request but server internals unknown. Three dates only; greedy refinement can add false precision."
+}

@@ -1,0 +1,73 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "7 / 8 - 1 / 16"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.375? Equality counts as yes.",
+        "criteria": {
+          "no": "x > 0.375",
+          "yes": "x <= 0.375"
+        }
+      },
+      "decimal": {
+        "type": "choice",
+        "instructions": "Compute the exact arithmetic result x, which is in [0,1) and has at most four decimal places. Write it as 0.d1d2d3d4, appending trailing zeros if needed. Select decimal digit d4, counting after the decimal point. The previously selected decimal prefix is 0.745.",
+        "criteria": {
+          "9": "The requested decimal digit is 9.",
+          "8": "The requested decimal digit is 8.",
+          "7": "The requested decimal digit is 7.",
+          "6": "The requested decimal digit is 6.",
+          "5": "The requested decimal digit is 5.",
+          "4": "The requested decimal digit is 4.",
+          "3": "The requested decimal digit is 3.",
+          "2": "The requested decimal digit is 2.",
+          "1": "The requested decimal digit is 1.",
+          "0": "The requested decimal digit is 0."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.06,
+          "no": 0.94
+        },
+        "confidence": 0.89
+      },
+      "decimal": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.61,
+          "1": 0.03,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.04,
+          "5": 0.21,
+          "6": 0.05,
+          "7": 0.02,
+          "8": 0.01,
+          "9": 0.01
+        },
+        "confidence": 0.55
+      }
+    },
+    "usage": {
+      "input_tokens": 638,
+      "output_tokens": 116,
+      "cost": 2.6796e-05
+    },
+    "id": "gen-dec-1790150506-BPDc3Q46LlbxmF0SeQdJ",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.2339962087571621
+}

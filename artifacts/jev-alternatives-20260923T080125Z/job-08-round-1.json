@@ -1,0 +1,94 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "1 / 4 + 1 / 8"
+    },
+    "questions": {
+      "bisect": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Is x less than or equal to 0.1875? Equality counts as yes.",
+        "criteria": {
+          "no": "x > 0.1875",
+          "yes": "x <= 0.1875"
+        }
+      },
+      "interval": {
+        "type": "choice",
+        "instructions": "Compute the exact result x of the expression in state. Choose the interval containing x. Each interval includes its lower bound and excludes its upper bound.",
+        "criteria": {
+          "3": "0.4375 <= x < 0.5",
+          "2": "0.375 <= x < 0.4375",
+          "1": "0.3125 <= x < 0.375",
+          "0": "0.25 <= x < 0.3125"
+        }
+      },
+      "decimal": {
+        "type": "choice",
+        "instructions": "Compute the exact arithmetic result x, which is in [0,1) and has at most four decimal places. Write it as 0.d1d2d3d4, appending trailing zeros if needed. Select decimal digit d2, counting after the decimal point. The previously selected decimal prefix is 0.3.",
+        "criteria": {
+          "9": "The requested decimal digit is 9.",
+          "8": "The requested decimal digit is 8.",
+          "7": "The requested decimal digit is 7.",
+          "6": "The requested decimal digit is 6.",
+          "5": "The requested decimal digit is 5.",
+          "4": "The requested decimal digit is 4.",
+          "3": "The requested decimal digit is 3.",
+          "2": "The requested decimal digit is 2.",
+          "1": "The requested decimal digit is 1.",
+          "0": "The requested decimal digit is 0."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "bisect": {
+        "type": "choice",
+        "choice": "no",
+        "probabilities": {
+          "yes": 0.13,
+          "no": 0.87
+        },
+        "confidence": 0.74
+      },
+      "interval": {
+        "type": "choice",
+        "choice": "2",
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.31,
+          "2": 0.63,
+          "3": 0.04
+        },
+        "confidence": 0.52
+      },
+      "decimal": {
+        "type": "choice",
+        "choice": "5",
+        "probabilities": {
+          "0": 0.12,
+          "1": 0.07,
+          "2": 0.09,
+          "3": 0.13,
+          "4": 0.06,
+          "5": 0.33,
+          "6": 0.06,
+          "7": 0.1,
+          "8": 0.02,
+          "9": 0.02
+        },
+        "confidence": 0.27
+      }
+    },
+    "usage": {
+      "input_tokens": 785,
+      "output_tokens": 158,
+      "cost": 3.297e-05
+    },
+    "id": "gen-dec-1790150493-DNZWt6uOjyaqX9CfVAje",
+    "provider": "TypeSafe"
+  },
+  "elapsed_s": 0.20803763717412949
+}

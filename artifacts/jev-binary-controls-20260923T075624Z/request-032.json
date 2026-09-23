@@ -1,0 +1,135 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13-20260917",
+    "state": {
+      "expression": "1 / 4 + 1 / 8"
+    },
+    "questions": {
+      "direct": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Choose its numerical result.",
+        "criteria": {
+          "0.0": "0.0",
+          "0.0625": "0.0625",
+          "0.125": "0.125",
+          "0.1875": "0.1875",
+          "0.25": "0.25",
+          "0.3125": "0.3125",
+          "0.375": "0.375",
+          "0.4375": "0.4375",
+          "0.5": "0.5",
+          "0.5625": "0.5625",
+          "0.625": "0.625",
+          "0.6875": "0.6875",
+          "0.75": "0.75",
+          "0.8125": "0.8125",
+          "0.875": "0.875",
+          "0.9375": "0.9375"
+        }
+      },
+      "bit1": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as binary fraction 0.b1b2b3b4, with weights 1/2, 1/4, 1/8, 1/16. The result is an exact multiple of 1/16 in [0,1). What is bit b1, counting from the left (most significant first)?",
+        "criteria": {
+          "0": "This bit is zero.",
+          "1": "This bit is one."
+        }
+      },
+      "bit2": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as binary fraction 0.b1b2b3b4, with weights 1/2, 1/4, 1/8, 1/16. The result is an exact multiple of 1/16 in [0,1). What is bit b2, counting from the left (most significant first)?",
+        "criteria": {
+          "0": "This bit is zero.",
+          "1": "This bit is one."
+        }
+      },
+      "bit3": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as binary fraction 0.b1b2b3b4, with weights 1/2, 1/4, 1/8, 1/16. The result is an exact multiple of 1/16 in [0,1). What is bit b3, counting from the left (most significant first)?",
+        "criteria": {
+          "0": "This bit is zero.",
+          "1": "This bit is one."
+        }
+      },
+      "bit4": {
+        "type": "choice",
+        "instructions": "Compute the arithmetic expression in state exactly. Represent the result as binary fraction 0.b1b2b3b4, with weights 1/2, 1/4, 1/8, 1/16. The result is an exact multiple of 1/16 in [0,1). What is bit b4, counting from the left (most significant first)?",
+        "criteria": {
+          "0": "This bit is zero.",
+          "1": "This bit is one."
+        }
+      }
+    }
+  },
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "direct": {
+        "type": "choice",
+        "choice": "0.375",
+        "probabilities": {
+          "0.75": 0,
+          "0.375": 0.65,
+          "0.3125": 0.22,
+          "0.125": 0,
+          "0.4375": 0.12,
+          "0.25": 0,
+          "0.875": 0,
+          "0.5": 0,
+          "0.6875": 0,
+          "0.1875": 0.01,
+          "0.5625": 0,
+          "0.9375": 0,
+          "0.8125": 0,
+          "0.0": 0,
+          "0.0625": 0,
+          "0.625": 0
+        },
+        "confidence": 0.62
+      },
+      "bit1": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.98,
+          "1": 0.02
+        },
+        "confidence": 0.97
+      },
+      "bit2": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.28,
+          "1": 0.72
+        },
+        "confidence": 0.44
+      },
+      "bit3": {
+        "type": "choice",
+        "choice": "1",
+        "probabilities": {
+          "0": 0.19,
+          "1": 0.81
+        },
+        "confidence": 0.62
+      },
+      "bit4": {
+        "type": "choice",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.63,
+          "1": 0.37
+        },
+        "confidence": 0.27
+      }
+    },
+    "usage": {
+      "input_tokens": 1149,
+      "output_tokens": 315,
+      "cost": 4.8258e-05
+    },
+    "id": "gen-dec-1790150192-zSZLGq6lLqoJMCaCTrU9",
+    "provider": "TypeSafe"
+  }
+}
