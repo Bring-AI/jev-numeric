@@ -1,0 +1,13 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "state": "A stock costs USD 10.50. It rises by USD 1.25.",
+  "questions": {
+    "new_price": {
+      "type": "number",
+      "method": "digits",
+      "instructions": "What is the new stock price in USD?",
+      "range": [0, 100],
+      "resolution": 0.01
+    }
+  }
+}

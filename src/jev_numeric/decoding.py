@@ -1,7 +1,7 @@
 """Finite-grid numerical interfaces over a structured Choice oracle."""
 
 import math
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal, InvalidOperation, localcontext
 
 
 def bounds(lower, upper):
@@ -85,6 +85,117 @@ def decode_number(
         "branching": branching,
         "trace": trace,
     }
+
+
+def digit_layout(lower, upper, resolution):
+    """Validate the direct decimal format: [0, 10**n), step 10**-d, n,d >= 0."""
+    lo, hi = bounds(lower, upper)
+    try:
+        step = Decimal(str(resolution))
+    except InvalidOperation as exc:
+        raise ValueError("digits resolution must be a nonpositive power of ten") from exc
+    if lo != 0 or hi < 1:
+        raise ValueError("digits requires range [0, 10**n), with integer n >= 0")
+    if not step.is_finite() or not 0 < step <= 1:
+        raise ValueError("digits resolution must be a nonpositive power of ten")
+    exponents = []
+    for value in (hi, step):
+        parts = value.as_tuple()
+        if parts.digits[0] != 1 or any(parts.digits[1:]):
+            raise ValueError("digits upper bound and resolution must be powers of ten")
+        exponents.append(parts.exponent + len(parts.digits) - 1)
+    return exponents[0], -exponents[1]
+
+
+def decode_digits(
+    client, state, target, *, lower, upper, resolution="0.01", reverse=False, max_calls=128
+):
+    """Select decimal digits through Choice, preserving the prefix. No logits needed.
+
+    Supports [0, 10**n) at resolution 10**-d for nonnegative integers n,d.
+    The fixed decimal point is inserted locally; leading/trailing zeros are retained
+    in the prefix. Truncation gives the same lower-endpoint grid as interval decoding.
+    """
+    integer_digits, decimal_places = digit_layout(lower, upper, resolution)
+    total = integer_digits + decimal_places
+    if type(max_calls) is not int or max_calls < 0:
+        raise ValueError("max_calls must be a nonnegative integer")
+    if total > max_calls:
+        raise RuntimeError("Call limit is too small for the requested decimal format")
+    digits, trace = "", []
+    prefix = "" if integer_digits else ("0." if decimal_places else "0")
+    with localcontext() as context:
+        context.prec = max(context.prec, total + 2)
+        step = Decimal(1).scaleb(-decimal_places)
+        value = Decimal(0).quantize(step)
+        for position in range(total):
+            exponent = integer_digits - position - 1
+            place = {
+                3: "thousands",
+                2: "hundreds",
+                1: "tens",
+                0: "units",
+                -1: "tenths",
+                -2: "hundredths",
+                -3: "thousandths",
+            }.get(exponent, f"10^{exponent} place")
+            criteria = {str(i): f"The {place} digit is {i}." for i in range(10)}
+            if reverse:
+                criteria = dict(reversed(list(criteria.items())))
+            instructions = (
+                f"Determine {target} using the state. The value is in [0, {upper}). "
+                f"Write it in decimal with exactly {max(integer_digits, 1)} integer digits "
+                f"and {decimal_places} digits after the decimal point. "
+                "Pad with leading and trailing zeros as needed. Truncate extra fractional "
+                "digits; do not round. Do not use scientific notation. "
+            )
+            if exponent >= 0:
+                instructions += (
+                    f"Select the {place} digit (integer place value {Decimal(1).scaleb(exponent)}). "
+                    "Count integer positions from the units digit, moving left. "
+                    "If this leading position is absent, its digit is 0. "
+                )
+            else:
+                instructions += (
+                    f"Select the {place} digit: decimal digit d{-exponent}, "
+                    "counting after the decimal point. "
+                )
+            instructions += (
+                f'Previously selected prefix: "{prefix}". '
+                "The prefix is a previous prediction, not a new numerical input. "
+                "Compute the value from the original state and select the requested digit. "
+                "Each option names the digit itself, not the whole numerical answer."
+            )
+            question = {"type": "choice", "instructions": instructions, "criteria": criteria}
+            answer = client.ask(state, {"number": question})["answers"]["number"]
+            label = answer["choice"]
+            if label not in criteria:
+                raise ValueError("Oracle selected an unknown decimal digit")
+            digits += label
+            prefix += label
+            if len(digits) == integer_digits and decimal_places:
+                prefix += "."
+            width = Decimal(1).scaleb(integer_digits - len(digits))
+            value = Decimal(int(digits)) * width
+            trace.append(
+                {
+                    "position": position + 1,
+                    "prefix": prefix,
+                    "choice": label,
+                    "lower": str(value),
+                    "upper": str(value + width),
+                    "probabilities": answer.get("probabilities", {}),
+                }
+            )
+        return {
+            "value": str(value),
+            "lower": str(value),
+            "upper": str(value + step),
+            "resolution": str(step),
+            "calls": len(trace),
+            "branching": 10,
+            "trace": trace,
+        }
 
 
 def isotonic(values):

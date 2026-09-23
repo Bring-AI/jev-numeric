@@ -9,8 +9,8 @@
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<p align="center"><strong>NumericJev · Multiway interval decoding</strong></p>
-<p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
+<p align="center"><strong>NumericJev · Interval &amp; digit-by-digit decoding</strong></p>
+<p align="center">Numerical output through interval decisions or decimal-digit choices.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
   <a href="#turning-jev-to-numerical-output">Examples</a> ·
@@ -20,7 +20,7 @@
   <a href="artifacts/metrics.json">Recorded metrics</a>
 </p>
 
-**Jev is built for structured decisions. We use those decisions to construct a numerical output interface.** Ask which interval contains a value, keep the selected interval, and repeat. A multiway decision tree turns categorical choices into a finite-precision number—without training a model or adding a regression head.
+**Jev is built for structured decisions. We use those decisions to construct a numerical output interface.** Choose a containing interval, or choose the next decimal digit from `0–9`. Repeat to obtain a finite-precision number. **Both methods use ordinary Jev Choice calls—no training, regression head, or access to token logits.**
 
 ## What this adds
 
@@ -28,10 +28,18 @@
 |---|:---:|:---:|
 | Decisions & option probabilities | ✅ | ✅ |
 | Rubric scores | ✅ | ✅ |
-| Numeric decoding | ❌ | ✅ |
+| Interval decoding | ❌ | ✅ |
+| Digit-by-digit decoding | ❌ | ✅ |
 | CDF / histogram construction | ❌ | ✅* |
 
 Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
+
+| Method | Each decision | Model returns |
+|---|---|---|
+| **`interval`** (default) | Which interval contains the value? | Interval label |
+| **[`digits`](#digit-by-digit-decoding-no-logits)** | Given the selected prefix, what is the next decimal digit? | Digit `0–9` |
+
+The digit is a **Choice option**, not a vocabulary token. Both methods receive option probabilities directly from Jev.
 
 ## Even Better Performance Than Choosing from an Answer List
 
@@ -41,7 +49,7 @@ Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https:
 
 **83.40% vs. 80.47% (+2.93 percentage points)** within 5% relative error on 256 arithmetic expressions—even when the direct-choice list contains the correct answer.
 
-<sub>Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
+<sub>NumericJev bars use interval decoding. Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
 
 ## Application example: token billing
 
@@ -150,6 +158,40 @@ For a supplied value of **3230.78**, the recorded ten-way path is:
 
 The caller must supply a containing range and a stopping precision. An early wrong branch cannot be recovered by this greedy implementation. The final cell is a **resolution interval, not a confidence interval**.
 
+### Digit-by-digit decoding: no logits
+
+Set **`"method": "digits"`** to select decimal digits instead of intervals:
+
+```json
+{
+  "state": "A stock costs USD 10.50. It rises by USD 1.25.",
+  "questions": {
+    "new_price": {
+      "type": "number",
+      "method": "digits",
+      "instructions": "What is the new stock price in USD?",
+      "range": [0, 100],
+      "resolution": 0.01
+    }
+  }
+}
+```
+
+```text
+Each step: original question + selected prefix → Choice(0, 1, …, 9)
+Illustrative path: "" → "1" → "11." → "11.7" → "11.75" → numeric value 11.75
+```
+
+```bash
+jev-numeric --request examples/stock-price-digits.json --details
+```
+
+The adapter inserts the decimal point and preserves leading zeros. The supported format is `[0, 10ⁿ)` at resolution `10⁻ᵈ`, with nonnegative integers `n,d`; it takes `n+d` sequential Choice calls. Extra fractional digits are truncated, not rounded. Signed values or other ranges can use `interval`. [JSON API and Python usage](docs/json-api.md#digit-by-digit-choice).
+
+On this decimal grid, selecting prefix `0.81` and selecting interval `[0.81, 0.82)` describe the same branch. **The difference is how the decision is presented to the model.** Choosing digit labels does not require a digit to be one tokenizer token, and does not establish that this prompt better matches Jev's training. Neither method guarantees accurate or calibrated predictions.
+
+[Live smoke check, including prompt revisions and all outputs](artifacts/digit-decoding-place-prompt-20260924/report.md). Historical accuracy results below remain tied to their original interval and digit prompts.
+
 ## Results
 
 All primary experiments below used `typesafe/jev-1.13-20260917` through OpenRouter. No fine-tuning, no GPU inference, and no retrieval tool was supplied to Jev. These are small exploratory evaluations; repetitions are not additional unique problems.
@@ -194,9 +236,9 @@ Relative error = `100 × |decoded value − ground truth| / |ground truth|`, usi
 
 **Jev could read these supplied values and select the right intervals.** This supports separating factual recall from numerical readout. “Oracle input” means the correct answer is deliberately supplied in context; it is a readout control, not a prediction benchmark or evidence of universal numerical reasoning. Only three unique values were tested. [Raw control and report →](artifacts/jev-index-provided-20260923T081655Z/report.md)
 
-### Why not just ask for digits or bits?
+### Measured comparison: intervals, digits, and bits
 
-We tried that too. Twelve hand-picked arithmetic problems—six integers and six exact binary fractions—were evaluated with two option orders and two repeats: **48 evaluations per method**.
+Both interval and decimal-digit decoding are available in the adapter. In our earlier experiment, twelve hand-picked arithmetic problems—six integers and six exact binary fractions—were evaluated with two option orders and two repeats: **48 evaluations per method**. These numbers describe the archived prompts, not a new benchmark of the current adapter.
 
 Mean absolute percentage error (MAPE); all targets are nonzero.
 

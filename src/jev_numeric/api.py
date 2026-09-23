@@ -5,7 +5,7 @@ import math
 from decimal import Decimal, InvalidOperation
 
 from .client import JevClient
-from .decoding import bounds, decode_number, estimate_distribution
+from .decoding import bounds, decode_digits, decode_number, digit_layout, estimate_distribution
 
 
 def _validate(request):
@@ -30,7 +30,7 @@ def _validate(request):
         if kind not in ("number", "distribution"):
             raise ValueError("Question type must be number or distribution")
         allowed = {"type", "instructions", "range"} | (
-            {"resolution", "branching"} if kind == "number" else {"bins"}
+            {"resolution", "branching", "method"} if kind == "number" else {"bins"}
         )
         if set(q) - allowed:
             raise ValueError(f"Unsupported fields for question {name}")
@@ -55,6 +55,15 @@ def _validate(request):
             branching = q.get("branching", 10)
             if type(branching) is not int or not 2 <= branching <= 255:
                 raise ValueError("branching must be an integer in [2,255]")
+            method = q.get("method", "interval")
+            if method not in ("interval", "digits"):
+                raise ValueError("method must be interval or digits")
+            if method == "digits":
+                digit_layout(lo, hi, step)
+                if branching != 10:
+                    raise ValueError(
+                        "digits uses exactly 10 digit choices; omit branching or use 10"
+                    )
         else:
             bins = q.get("bins", 16)
             if type(bins) is not int or not 2 <= bins <= 128:
@@ -79,19 +88,23 @@ def evaluate(request, *, client=None, details=False, max_calls=128):
     for name, q in questions.items():
         lo, hi = q["range"]
         if q["type"] == "number":
-            r = decode_number(
+            method = q.get("method", "interval")
+            decoder = decode_digits if method == "digits" else decode_number
+            options = {} if method == "digits" else {"branching": q.get("branching", 10)}
+            r = decoder(
                 client,
                 request["state"],
                 q["instructions"],
                 lower=lo,
                 upper=hi,
                 resolution=q.get("resolution", ".01"),
-                branching=q.get("branching", 10),
                 max_calls=max_calls,
+                **options,
             )
             answer = {"type": "number", "value": float(r["value"])}
             if details:
                 answer.update(
+                    method=method,
                     exact=r["value"],
                     interval=[r["lower"], r["upper"]],
                     resolution=r["resolution"],

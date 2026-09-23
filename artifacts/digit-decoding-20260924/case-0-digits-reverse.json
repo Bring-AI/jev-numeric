@@ -1,0 +1,309 @@
+{
+  "question": "What is 1 + 1?",
+  "expected": "2.00",
+  "method": "digits",
+  "reverse": true,
+  "value": "20.00",
+  "relative_error_percent": 900.0,
+  "calls": 4,
+  "result": {
+    "value": "20.00",
+    "lower": "20.00",
+    "upper": "20.01",
+    "resolution": "0.01",
+    "calls": 4,
+    "branching": 10,
+    "trace": [
+      {
+        "position": 1,
+        "prefix": "2",
+        "choice": "2",
+        "lower": "2E+1",
+        "upper": "3E+1",
+        "probabilities": {
+          "0": 0.37,
+          "1": 0.05,
+          "2": 0.5700000000000001,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "position": 2,
+        "prefix": "20.",
+        "choice": "0",
+        "lower": "20",
+        "upper": "21",
+        "probabilities": {
+          "0": 0.96,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "position": 3,
+        "prefix": "20.0",
+        "choice": "0",
+        "lower": "20.0",
+        "upper": "20.1",
+        "probabilities": {
+          "0": 0.97,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "position": 4,
+        "prefix": "20.00",
+        "choice": "0",
+        "lower": "20.00",
+        "upper": "20.01",
+        "probabilities": {
+          "0": 0.97,
+          "1": 0.01,
+          "2": 0.02,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select digit 1 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.37,
+              "1": 0.05,
+              "2": 0.5700000000000001,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.51
+          }
+        },
+        "usage": {
+          "input_tokens": 591,
+          "output_tokens": 87,
+          "cost": 2.4822e-05
+        },
+        "id": "gen-dec-1790192729-qlEpbuJiccRC9l8vzEGe",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select digit 2 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"2\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.96,
+              "1": 0.02,
+              "2": 0.02,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.96
+          }
+        },
+        "usage": {
+          "input_tokens": 593,
+          "output_tokens": 87,
+          "cost": 2.4906e-05
+        },
+        "id": "gen-dec-1790192729-8BdEuo1HHLBrP7nZCfG8",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select digit 3 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"20.\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.97,
+              "1": 0.02,
+              "2": 0.01,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.96
+          }
+        },
+        "usage": {
+          "input_tokens": 594,
+          "output_tokens": 87,
+          "cost": 2.4948e-05
+        },
+        "id": "gen-dec-1790192730-ObVqrl7arrFL2KvbDLl9",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select digit 4 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"20.0\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.97,
+              "1": 0.01,
+              "2": 0.02,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.95
+          }
+        },
+        "usage": {
+          "input_tokens": 596,
+          "output_tokens": 87,
+          "cost": 2.5032e-05
+        },
+        "id": "gen-dec-1790192730-GCPsJLtwzlAEC1vZMkcs",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

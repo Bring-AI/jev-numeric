@@ -1,0 +1,301 @@
+{
+  "question": "What is 7 / 8 - 1 / 16?",
+  "expected": "0.8125",
+  "method": "interval",
+  "reverse": true,
+  "value": "0.7800",
+  "relative_error_percent": 4.0,
+  "calls": 4,
+  "result": {
+    "value": "0.7800",
+    "lower": "0.7800",
+    "upper": "0.7801",
+    "resolution": "0.0001",
+    "calls": 4,
+    "branching": 10,
+    "trace": [
+      {
+        "lower": "0.7000",
+        "upper": "0.8000",
+        "choice": "7",
+        "probabilities": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0.02,
+          "6": 0.09,
+          "7": 0.54,
+          "8": 0.32,
+          "9": 0.03
+        }
+      },
+      {
+        "lower": "0.7800",
+        "upper": "0.7900",
+        "choice": "8",
+        "probabilities": {
+          "0": 0.21,
+          "1": 0.05,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.06,
+          "5": 0.09,
+          "6": 0.05,
+          "7": 0.06,
+          "8": 0.31,
+          "9": 0.14
+        }
+      },
+      {
+        "lower": "0.7800",
+        "upper": "0.7810",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.31,
+          "1": 0.13,
+          "2": 0.04,
+          "3": 0.04,
+          "4": 0.12,
+          "5": 0.09,
+          "6": 0.06,
+          "7": 0.1,
+          "8": 0.06,
+          "9": 0.05
+        }
+      },
+      {
+        "lower": "0.7800",
+        "upper": "0.7801",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.52,
+          "1": 0.09,
+          "2": 0.04,
+          "3": 0.02,
+          "4": 0.07,
+          "5": 0.05,
+          "6": 0.04,
+          "7": 0.06,
+          "8": 0.05,
+          "9": 0.06
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "0.9000 <= value < 1.0000",
+              "8": "0.8000 <= value < 0.9000",
+              "7": "0.7000 <= value < 0.8000",
+              "6": "0.6000 <= value < 0.7000",
+              "5": "0.5000 <= value < 0.6000",
+              "4": "0.4000 <= value < 0.5000",
+              "3": "0.3000 <= value < 0.4000",
+              "2": "0.2000 <= value < 0.3000",
+              "1": "0.1000 <= value < 0.2000",
+              "0": "0.0000 <= value < 0.1000"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0,
+              "1": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0.02,
+              "6": 0.09,
+              "7": 0.54,
+              "8": 0.32,
+              "9": 0.03
+            },
+            "confidence": 0.48
+          }
+        },
+        "usage": {
+          "input_tokens": 602,
+          "output_tokens": 87,
+          "cost": 2.5284e-05
+        },
+        "id": "gen-dec-1790192913-SsS3n4rNMIEKbiUSvkGG",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "0.7900 <= value < 0.8000",
+              "8": "0.7800 <= value < 0.7900",
+              "7": "0.7700 <= value < 0.7800",
+              "6": "0.7600 <= value < 0.7700",
+              "5": "0.7500 <= value < 0.7600",
+              "4": "0.7400 <= value < 0.7500",
+              "3": "0.7300 <= value < 0.7400",
+              "2": "0.7200 <= value < 0.7300",
+              "1": "0.7100 <= value < 0.7200",
+              "0": "0.7000 <= value < 0.7100"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.21,
+              "1": 0.05,
+              "2": 0.01,
+              "3": 0.02,
+              "4": 0.06,
+              "5": 0.09,
+              "6": 0.05,
+              "7": 0.06,
+              "8": 0.31,
+              "9": 0.14
+            },
+            "confidence": 0.24
+          }
+        },
+        "usage": {
+          "input_tokens": 602,
+          "output_tokens": 87,
+          "cost": 2.5284e-05
+        },
+        "id": "gen-dec-1790192915-tUrv8ePaFgbAN8xeTIcl",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "0.7890 <= value < 0.7900",
+              "8": "0.7880 <= value < 0.7890",
+              "7": "0.7870 <= value < 0.7880",
+              "6": "0.7860 <= value < 0.7870",
+              "5": "0.7850 <= value < 0.7860",
+              "4": "0.7840 <= value < 0.7850",
+              "3": "0.7830 <= value < 0.7840",
+              "2": "0.7820 <= value < 0.7830",
+              "1": "0.7810 <= value < 0.7820",
+              "0": "0.7800 <= value < 0.7810"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.31,
+              "1": 0.13,
+              "2": 0.04,
+              "3": 0.04,
+              "4": 0.12,
+              "5": 0.09,
+              "6": 0.06,
+              "7": 0.1,
+              "8": 0.06,
+              "9": 0.05
+            },
+            "confidence": 0.23
+          }
+        },
+        "usage": {
+          "input_tokens": 602,
+          "output_tokens": 87,
+          "cost": 2.5284e-05
+        },
+        "id": "gen-dec-1790192915-d2iOvsRwCv3C0iBCSQx0",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "0.7809 <= value < 0.7810",
+              "8": "0.7808 <= value < 0.7809",
+              "7": "0.7807 <= value < 0.7808",
+              "6": "0.7806 <= value < 0.7807",
+              "5": "0.7805 <= value < 0.7806",
+              "4": "0.7804 <= value < 0.7805",
+              "3": "0.7803 <= value < 0.7804",
+              "2": "0.7802 <= value < 0.7803",
+              "1": "0.7801 <= value < 0.7802",
+              "0": "0.7800 <= value < 0.7801"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.52,
+              "1": 0.09,
+              "2": 0.04,
+              "3": 0.02,
+              "4": 0.07,
+              "5": 0.05,
+              "6": 0.04,
+              "7": 0.06,
+              "8": 0.05,
+              "9": 0.06
+            },
+            "confidence": 0.47
+          }
+        },
+        "usage": {
+          "input_tokens": 602,
+          "output_tokens": 87,
+          "cost": 2.5284e-05
+        },
+        "id": "gen-dec-1790192917-Ltf1yGO4rh5WCfe3rWDS",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

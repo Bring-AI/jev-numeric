@@ -1,0 +1,301 @@
+{
+  "question": "What is 1 + 1?",
+  "expected": "2.00",
+  "method": "interval",
+  "reverse": true,
+  "value": "2.00",
+  "relative_error_percent": 0.0,
+  "calls": 4,
+  "result": {
+    "value": "2.00",
+    "lower": "2.00",
+    "upper": "2.01",
+    "resolution": "0.01",
+    "calls": 4,
+    "branching": 10,
+    "trace": [
+      {
+        "lower": "0.00",
+        "upper": "10.00",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.55,
+          "1": 0.05,
+          "2": 0.39,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "2.00",
+        "upper": "3.00",
+        "choice": "2",
+        "probabilities": {
+          "0": 0,
+          "1": 0.01,
+          "2": 0.99,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "2.00",
+        "upper": "2.10",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.81,
+          "1": 0.05,
+          "2": 0.13,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "lower": "2.00",
+        "upper": "2.01",
+        "choice": "0",
+        "probabilities": {
+          "0": 0.89,
+          "1": 0.04,
+          "2": 0.07,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "90.00 <= value < 100.00",
+              "8": "80.00 <= value < 90.00",
+              "7": "70.00 <= value < 80.00",
+              "6": "60.00 <= value < 70.00",
+              "5": "50.00 <= value < 60.00",
+              "4": "40.00 <= value < 50.00",
+              "3": "30.00 <= value < 40.00",
+              "2": "20.00 <= value < 30.00",
+              "1": "10.00 <= value < 20.00",
+              "0": "0.00 <= value < 10.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.55,
+              "1": 0.05,
+              "2": 0.39,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.49
+          }
+        },
+        "usage": {
+          "input_tokens": 575,
+          "output_tokens": 87,
+          "cost": 2.415e-05
+        },
+        "id": "gen-dec-1790192880-kUlGxO5tjFTU2ApHM09x",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "9.00 <= value < 10.00",
+              "8": "8.00 <= value < 9.00",
+              "7": "7.00 <= value < 8.00",
+              "6": "6.00 <= value < 7.00",
+              "5": "5.00 <= value < 6.00",
+              "4": "4.00 <= value < 5.00",
+              "3": "3.00 <= value < 4.00",
+              "2": "2.00 <= value < 3.00",
+              "1": "1.00 <= value < 2.00",
+              "0": "0.00 <= value < 1.00"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0,
+              "1": 0.01,
+              "2": 0.99,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 556,
+          "output_tokens": 87,
+          "cost": 2.3352e-05
+        },
+        "id": "gen-dec-1790192880-if2l1NgsoK5cCKCLwicz",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "2.90 <= value < 3.00",
+              "8": "2.80 <= value < 2.90",
+              "7": "2.70 <= value < 2.80",
+              "6": "2.60 <= value < 2.70",
+              "5": "2.50 <= value < 2.60",
+              "4": "2.40 <= value < 2.50",
+              "3": "2.30 <= value < 2.40",
+              "2": "2.20 <= value < 2.30",
+              "1": "2.10 <= value < 2.20",
+              "0": "2.00 <= value < 2.10"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.81,
+              "1": 0.05,
+              "2": 0.13,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.79
+          }
+        },
+        "usage": {
+          "input_tokens": 555,
+          "output_tokens": 87,
+          "cost": 2.331e-05
+        },
+        "id": "gen-dec-1790192881-OoFiOWWi8QskRx3ljaAp",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 1 + 1?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. Select the interval containing this numerical value. Include the lower bound; exclude the upper bound. Option labels identify intervals, not the value itself.",
+            "criteria": {
+              "9": "2.09 <= value < 2.10",
+              "8": "2.08 <= value < 2.09",
+              "7": "2.07 <= value < 2.08",
+              "6": "2.06 <= value < 2.07",
+              "5": "2.05 <= value < 2.06",
+              "4": "2.04 <= value < 2.05",
+              "3": "2.03 <= value < 2.04",
+              "2": "2.02 <= value < 2.03",
+              "1": "2.01 <= value < 2.02",
+              "0": "2.00 <= value < 2.01"
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.89,
+              "1": 0.04,
+              "2": 0.07,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.86
+          }
+        },
+        "usage": {
+          "input_tokens": 555,
+          "output_tokens": 87,
+          "cost": 2.331e-05
+        },
+        "id": "gen-dec-1790192883-JMPgKjJD8seijEpGNRrI",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

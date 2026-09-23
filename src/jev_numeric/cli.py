@@ -7,7 +7,9 @@ from . import JevClient, decode_number, evaluate
 
 
 def main():
-    p = argparse.ArgumentParser(description="Numerical output through Jev interval choices")
+    p = argparse.ArgumentParser(
+        description="Numerical output through Jev interval or digit choices"
+    )
     p.add_argument("--request", help="JSON request file, or - for stdin")
     p.add_argument(
         "--details", action="store_true", help="Include exact decimals and decision trace"

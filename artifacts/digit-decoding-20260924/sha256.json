@@ -1,0 +1,15 @@
+{
+  "case-2-digits-forward.json": "92dd21874ffc9fe67e477feb57369704e1df2f00079ead0c203b4ad362726654",
+  "summary.json": "333fefd0caf7ba6f73a486a128a074a84f4fd21c23ffc74d352a742179b476e5",
+  "case-0-interval-reverse.json": "201d9810984a3e7da815b2f46ab55942b4f30f98899947da5b681ebcb4d7955c",
+  "case-1-interval-forward.json": "1475c034c9a81bcc65bed6820031864c7e87abf6c43ac0fc7eb9e3c6d8707a0e",
+  "case-0-digits-forward.json": "b640f03cdbc01693aef992a29c7087f07fb903a05023778753aae901248baed5",
+  "case-0-digits-reverse.json": "01f099168d4512f3a4c917a4e3c0c01a0e2e953728339691b97b46d4fb57b43e",
+  "case-2-interval-reverse.json": "d8c8f594f0a59bed2a8c76f7c845e6fec11d6c3f709bbd5d2e1c5c4d2982febb",
+  "case-0-interval-forward.json": "6d368e2686b5e17a5c7160b2290eb18bb6b02816768f5b8ca14cc52b0c021e68",
+  "case-1-digits-forward.json": "4922d63fea51a23dade5ba56bda852dd138c297d9ce01a00e47bd2f422c3ea31",
+  "case-1-digits-reverse.json": "b3a9ade4425e0fdd8413925b9ab37480084475ed6df16c381bffa7fb2d0a8a28",
+  "case-2-interval-forward.json": "a93efaae9d67610f3dd579327e91cf2712ad929c515c0143dd4cf8b58f1dc62a",
+  "case-1-interval-reverse.json": "143e2f8a3dc1f8fa88d6cb01e03d87cc950c37e641fbbfbb789ee3af30dddb28",
+  "case-2-digits-reverse.json": "40a2908261c2b0955b86cddd21c634892d2150bc7720f8678d480ce22771beb0"
+}

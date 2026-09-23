@@ -1,0 +1,125 @@
+{
+  "protocol": "Three fixed questions; two methods; two option orders; one run per condition. No answer supplied to Jev. Integration smoke check, not a general accuracy estimate.",
+  "results": [
+    {
+      "question": "What is 1 + 1?",
+      "expected": "2.00",
+      "method": "interval",
+      "reverse": false,
+      "value": "2.00",
+      "relative_error_percent": 0.0,
+      "calls": 4,
+      "record": "case-0-interval-forward.json"
+    },
+    {
+      "question": "What is 1 + 1?",
+      "expected": "2.00",
+      "method": "interval",
+      "reverse": true,
+      "value": "2.00",
+      "relative_error_percent": 0.0,
+      "calls": 4,
+      "record": "case-0-interval-reverse.json"
+    },
+    {
+      "question": "What is 1 + 1?",
+      "expected": "2.00",
+      "method": "digits",
+      "reverse": false,
+      "value": "0.00",
+      "relative_error_percent": 100.0,
+      "calls": 4,
+      "record": "case-0-digits-forward.json"
+    },
+    {
+      "question": "What is 1 + 1?",
+      "expected": "2.00",
+      "method": "digits",
+      "reverse": true,
+      "value": "20.00",
+      "relative_error_percent": 900.0,
+      "calls": 4,
+      "record": "case-0-digits-reverse.json"
+    },
+    {
+      "question": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+      "expected": "11.75",
+      "method": "interval",
+      "reverse": false,
+      "value": "11.75",
+      "relative_error_percent": 0.0,
+      "calls": 4,
+      "record": "case-1-interval-forward.json"
+    },
+    {
+      "question": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+      "expected": "11.75",
+      "method": "interval",
+      "reverse": true,
+      "value": "11.75",
+      "relative_error_percent": 0.0,
+      "calls": 4,
+      "record": "case-1-interval-reverse.json"
+    },
+    {
+      "question": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+      "expected": "11.75",
+      "method": "digits",
+      "reverse": false,
+      "value": "17.55",
+      "relative_error_percent": 49.361702127659576,
+      "calls": 4,
+      "record": "case-1-digits-forward.json"
+    },
+    {
+      "question": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+      "expected": "11.75",
+      "method": "digits",
+      "reverse": true,
+      "value": "77.05",
+      "relative_error_percent": 555.7446808510638,
+      "calls": 4,
+      "record": "case-1-digits-reverse.json"
+    },
+    {
+      "question": "What is 7 / 8 - 1 / 16?",
+      "expected": "0.8125",
+      "method": "interval",
+      "reverse": false,
+      "value": "0.7800",
+      "relative_error_percent": 4.0,
+      "calls": 4,
+      "record": "case-2-interval-forward.json"
+    },
+    {
+      "question": "What is 7 / 8 - 1 / 16?",
+      "expected": "0.8125",
+      "method": "interval",
+      "reverse": true,
+      "value": "0.7000",
+      "relative_error_percent": 13.846153846153847,
+      "calls": 4,
+      "record": "case-2-interval-reverse.json"
+    },
+    {
+      "question": "What is 7 / 8 - 1 / 16?",
+      "expected": "0.8125",
+      "method": "digits",
+      "reverse": false,
+      "value": "0.7300",
+      "relative_error_percent": 10.153846153846153,
+      "calls": 4,
+      "record": "case-2-digits-forward.json"
+    },
+    {
+      "question": "What is 7 / 8 - 1 / 16?",
+      "expected": "0.8125",
+      "method": "digits",
+      "reverse": true,
+      "value": "0.7300",
+      "relative_error_percent": 10.153846153846153,
+      "calls": 4,
+      "record": "case-2-digits-reverse.json"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "question": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+  "expected": "11.75",
+  "method": "digits",
+  "reverse": true,
+  "value": "11.77",
+  "relative_error_percent": 0.1702127659574468,
+  "calls": 4,
+  "result": {
+    "value": "11.77",
+    "lower": "11.77",
+    "upper": "11.78",
+    "resolution": "0.01",
+    "calls": 4,
+    "branching": 10,
+    "trace": [
+      {
+        "position": 1,
+        "prefix": "1",
+        "choice": "1",
+        "lower": "1E+1",
+        "upper": "2E+1",
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.98,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0
+        }
+      },
+      {
+        "position": 2,
+        "prefix": "11.",
+        "choice": "1",
+        "lower": "11",
+        "upper": "12",
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.42,
+          "2": 0.3,
+          "3": 0.03,
+          "4": 0.02,
+          "5": 0.05,
+          "6": 0.02,
+          "7": 0.03,
+          "8": 0.01,
+          "9": 0.02
+        }
+      },
+      {
+        "position": 3,
+        "prefix": "11.7",
+        "choice": "7",
+        "lower": "11.7",
+        "upper": "11.8",
+        "probabilities": {
+          "0": 0.05,
+          "1": 0.05,
+          "2": 0.03,
+          "3": 0.03,
+          "4": 0.05,
+          "5": 0.06,
+          "6": 0.04,
+          "7": 0.51,
+          "8": 0.14,
+          "9": 0.04
+        }
+      },
+      {
+        "position": 4,
+        "prefix": "11.77",
+        "choice": "7",
+        "lower": "11.77",
+        "upper": "11.78",
+        "probabilities": {
+          "0": 0.07,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.01,
+          "4": 0.02,
+          "5": 0.19,
+          "6": 0.01,
+          "7": 0.6,
+          "8": 0.04,
+          "9": 0.02
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select the tens digit (integer place value 1E+1). Count integer positions from the units digit, moving left. If this leading position is absent, its digit is 0. Previously selected prefix: \"\". The prefix is a previous prediction, not a new numerical input. Compute the value from the original state and select the requested digit. Each option names the digit itself, not the whole numerical answer.",
+            "criteria": {
+              "9": "The tens digit is 9.",
+              "8": "The tens digit is 8.",
+              "7": "The tens digit is 7.",
+              "6": "The tens digit is 6.",
+              "5": "The tens digit is 5.",
+              "4": "The tens digit is 4.",
+              "3": "The tens digit is 3.",
+              "2": "The tens digit is 2.",
+              "1": "The tens digit is 1.",
+              "0": "The tens digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.02,
+              "1": 0.98,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "confidence": 0.97
+          }
+        },
+        "usage": {
+          "input_tokens": 637,
+          "output_tokens": 87,
+          "cost": 2.6754e-05
+        },
+        "id": "gen-dec-1790192902-igty62ShTP2UlQxKSQK0",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select the units digit (integer place value 1). Count integer positions from the units digit, moving left. If this leading position is absent, its digit is 0. Previously selected prefix: \"1\". The prefix is a previous prediction, not a new numerical input. Compute the value from the original state and select the requested digit. Each option names the digit itself, not the whole numerical answer.",
+            "criteria": {
+              "9": "The units digit is 9.",
+              "8": "The units digit is 8.",
+              "7": "The units digit is 7.",
+              "6": "The units digit is 6.",
+              "5": "The units digit is 5.",
+              "4": "The units digit is 4.",
+              "3": "The units digit is 3.",
+              "2": "The units digit is 2.",
+              "1": "The units digit is 1.",
+              "0": "The units digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1,
+              "1": 0.42,
+              "2": 0.3,
+              "3": 0.03,
+              "4": 0.02,
+              "5": 0.05,
+              "6": 0.02,
+              "7": 0.03,
+              "8": 0.01,
+              "9": 0.02
+            },
+            "confidence": 0.35
+          }
+        },
+        "usage": {
+          "input_tokens": 636,
+          "output_tokens": 87,
+          "cost": 2.6712e-05
+        },
+        "id": "gen-dec-1790192904-QWpiLz5lWIYNFOkvWLM1",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select the tenths digit: decimal digit d1, counting after the decimal point. Previously selected prefix: \"11.\". The prefix is a previous prediction, not a new numerical input. Compute the value from the original state and select the requested digit. Each option names the digit itself, not the whole numerical answer.",
+            "criteria": {
+              "9": "The tenths digit is 9.",
+              "8": "The tenths digit is 8.",
+              "7": "The tenths digit is 7.",
+              "6": "The tenths digit is 6.",
+              "5": "The tenths digit is 5.",
+              "4": "The tenths digit is 4.",
+              "3": "The tenths digit is 3.",
+              "2": "The tenths digit is 2.",
+              "1": "The tenths digit is 1.",
+              "0": "The tenths digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.05,
+              "1": 0.05,
+              "2": 0.03,
+              "3": 0.03,
+              "4": 0.05,
+              "5": 0.06,
+              "6": 0.04,
+              "7": 0.51,
+              "8": 0.14,
+              "9": 0.04
+            },
+            "confidence": 0.46
+          }
+        },
+        "usage": {
+          "input_tokens": 629,
+          "output_tokens": 87,
+          "cost": 2.6418e-05
+        },
+        "id": "gen-dec-1790192906-0gcDnnvrvCp01pE6Yg0D",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 100). Write it in decimal with exactly 2 integer digits and 2 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. Select the hundredths digit: decimal digit d2, counting after the decimal point. Previously selected prefix: \"11.7\". The prefix is a previous prediction, not a new numerical input. Compute the value from the original state and select the requested digit. Each option names the digit itself, not the whole numerical answer.",
+            "criteria": {
+              "9": "The hundredths digit is 9.",
+              "8": "The hundredths digit is 8.",
+              "7": "The hundredths digit is 7.",
+              "6": "The hundredths digit is 6.",
+              "5": "The hundredths digit is 5.",
+              "4": "The hundredths digit is 4.",
+              "3": "The hundredths digit is 3.",
+              "2": "The hundredths digit is 2.",
+              "1": "The hundredths digit is 1.",
+              "0": "The hundredths digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.07,
+              "1": 0.02,
+              "2": 0.02,
+              "3": 0.01,
+              "4": 0.02,
+              "5": 0.19,
+              "6": 0.01,
+              "7": 0.6,
+              "8": 0.04,
+              "9": 0.02
+            },
+            "confidence": 0.55
+          }
+        },
+        "usage": {
+          "input_tokens": 642,
+          "output_tokens": 87,
+          "cost": 2.6964e-05
+        },
+        "id": "gen-dec-1790192907-9bdCjCqgspC3DTrvqAFB",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

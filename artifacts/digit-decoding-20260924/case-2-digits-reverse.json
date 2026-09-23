@@ -1,0 +1,309 @@
+{
+  "question": "What is 7 / 8 - 1 / 16?",
+  "expected": "0.8125",
+  "method": "digits",
+  "reverse": true,
+  "value": "0.7300",
+  "relative_error_percent": 10.153846153846153,
+  "calls": 4,
+  "result": {
+    "value": "0.7300",
+    "lower": "0.7300",
+    "upper": "0.7301",
+    "resolution": "0.0001",
+    "calls": 4,
+    "branching": 10,
+    "trace": [
+      {
+        "position": 1,
+        "prefix": "0.7",
+        "choice": "7",
+        "lower": "0.7",
+        "upper": "0.8",
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.02,
+          "2": 0.01,
+          "3": 0.03,
+          "4": 0.05,
+          "5": 0.04,
+          "6": 0.18,
+          "7": 0.43,
+          "8": 0.14,
+          "9": 0.04
+        }
+      },
+      {
+        "position": 2,
+        "prefix": "0.73",
+        "choice": "3",
+        "lower": "0.73",
+        "upper": "0.74",
+        "probabilities": {
+          "0": 0.1,
+          "1": 0.11,
+          "2": 0.08,
+          "3": 0.14,
+          "4": 0.13,
+          "5": 0.1,
+          "6": 0.1,
+          "7": 0.1,
+          "8": 0.09,
+          "9": 0.05
+        }
+      },
+      {
+        "position": 3,
+        "prefix": "0.730",
+        "choice": "0",
+        "lower": "0.730",
+        "upper": "0.731",
+        "probabilities": {
+          "0": 0.15000000000000002,
+          "1": 0.12,
+          "2": 0.1,
+          "3": 0.1,
+          "4": 0.12,
+          "5": 0.11,
+          "6": 0.08,
+          "7": 0.11,
+          "8": 0.07,
+          "9": 0.04
+        }
+      },
+      {
+        "position": 4,
+        "prefix": "0.7300",
+        "choice": "0",
+        "lower": "0.7300",
+        "upper": "0.7301",
+        "probabilities": {
+          "0": 0.35000000000000003,
+          "1": 0.09,
+          "2": 0.05,
+          "3": 0.06,
+          "4": 0.07,
+          "5": 0.17,
+          "6": 0.06,
+          "7": 0.04,
+          "8": 0.06,
+          "9": 0.05
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 1). Write it in decimal with exactly 1 integer digits and 4 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. The integer part is fixed at 0; select fractional digits only. Select digit 1 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"0.\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.06,
+              "1": 0.02,
+              "2": 0.01,
+              "3": 0.03,
+              "4": 0.05,
+              "5": 0.04,
+              "6": 0.18,
+              "7": 0.43,
+              "8": 0.14,
+              "9": 0.04
+            },
+            "confidence": 0.38
+          }
+        },
+        "usage": {
+          "input_tokens": 612,
+          "output_tokens": 87,
+          "cost": 2.5704e-05
+        },
+        "id": "gen-dec-1790192742-mFxHKdzIIwwYbV3mWrTG",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 1). Write it in decimal with exactly 1 integer digits and 4 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. The integer part is fixed at 0; select fractional digits only. Select digit 2 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"0.7\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.1,
+              "1": 0.11,
+              "2": 0.08,
+              "3": 0.14,
+              "4": 0.13,
+              "5": 0.1,
+              "6": 0.1,
+              "7": 0.1,
+              "8": 0.09,
+              "9": 0.05
+            },
+            "confidence": 0.04
+          }
+        },
+        "usage": {
+          "input_tokens": 614,
+          "output_tokens": 87,
+          "cost": 2.5788e-05
+        },
+        "id": "gen-dec-1790192743-hmRUS45hZQrXJeytbdjG",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 1). Write it in decimal with exactly 1 integer digits and 4 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. The integer part is fixed at 0; select fractional digits only. Select digit 3 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"0.73\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.15000000000000002,
+              "1": 0.12,
+              "2": 0.1,
+              "3": 0.1,
+              "4": 0.12,
+              "5": 0.11,
+              "6": 0.08,
+              "7": 0.11,
+              "8": 0.07,
+              "9": 0.04
+            },
+            "confidence": 0.04
+          }
+        },
+        "usage": {
+          "input_tokens": 615,
+          "output_tokens": 87,
+          "cost": 2.583e-05
+        },
+        "id": "gen-dec-1790192743-ITKoItVlXzlhnJBVFZgI",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": "What is 7 / 8 - 1 / 16?",
+        "questions": {
+          "number": {
+            "type": "choice",
+            "instructions": "Determine the numerical answer to the question using the state. The value is in [0, 1). Write it in decimal with exactly 1 integer digits and 4 digits after the decimal point. Pad with leading and trailing zeros as needed. Truncate extra fractional digits; do not round. Do not use scientific notation. The integer part is fixed at 0; select fractional digits only. Select digit 4 of 4, reading left to right, excluding the decimal point and any fixed integer part. Previously selected prefix: \"0.730\". Select the next decimal digit from 0 through 9. Each option names the digit itself.",
+            "criteria": {
+              "9": "The requested decimal digit is 9.",
+              "8": "The requested decimal digit is 8.",
+              "7": "The requested decimal digit is 7.",
+              "6": "The requested decimal digit is 6.",
+              "5": "The requested decimal digit is 5.",
+              "4": "The requested decimal digit is 4.",
+              "3": "The requested decimal digit is 3.",
+              "2": "The requested decimal digit is 2.",
+              "1": "The requested decimal digit is 1.",
+              "0": "The requested decimal digit is 0."
+            }
+          }
+        }
+      },
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "number": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.35000000000000003,
+              "1": 0.09,
+              "2": 0.05,
+              "3": 0.06,
+              "4": 0.07,
+              "5": 0.17,
+              "6": 0.06,
+              "7": 0.04,
+              "8": 0.06,
+              "9": 0.05
+            },
+            "confidence": 0.27
+          }
+        },
+        "usage": {
+          "input_tokens": 616,
+          "output_tokens": 87,
+          "cost": 2.5872e-05
+        },
+        "id": "gen-dec-1790192743-5WjFEXjIdjQwsJQRG0Qg",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}
