@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
-<h1 align="center">Jev Numeric</h1>
+<h1 align="center">A simple algorithm that turns Jev decisions into numerical outputs.</h1>
 <p align="center"><strong>一个简单算法，把 Jev 的离散决策变成数值输出。</strong></p>
 <p align="center"><a href="README.md">English</a> · <a href="#实测结果">实测结果</a> · <a href="#快速开始">快速开始</a> · <a href="artifacts/metrics.json">可核对的指标</a></p>
 

@@ -2,8 +2,8 @@
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<h1 align="center">Jev Numeric</h1>
-<p align="center"><strong>A simple algorithm that turns Jev decisions into numerical outputs.</strong></p>
+<h1 align="center">A simple algorithm that turns Jev decisions into numerical outputs.</h1>
+<p align="center"><strong>Jev Numeric · Multiway interval decoding</strong></p>
 <p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
