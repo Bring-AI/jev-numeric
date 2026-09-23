@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
   <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Noncommercial-f59e0b?style=flat-square" alt="License: PolyForm Noncommercial 1.0.0"></a>
 </p>
 
 <p align="center">
@@ -363,4 +364,10 @@ Every archived API record includes the submitted state, question text, option or
 
 This repository demonstrates a **regression-style interface over a decision model**. It does not introduce a new trained regressor, establish out-of-distribution generalization, or claim to invent hierarchical search. Known bounds, finite precision, irreversible greedy choices, a small reused test suite, and unverified probability calibration remain important limitations. The model's training-data membership and internal option handling are unknown.
 
-Code and original documentation/figures: [MIT](LICENSE). Unaffiliated with TypeSafe; Jev is their model.
+Unaffiliated with TypeSafe; Jev is their model.
+
+## License
+
+**[PolyForm Noncommercial 1.0.0](LICENSE).** Code and original documentation/figures are available for permitted noncommercial use, modification, and redistribution under these terms. Commercial use outside the license's permitted purposes requires separate permission from the copyright holders. Third-party components and materials retain their own licenses.
+
+This licensing change does not revoke permissions already granted for versions previously distributed under MIT. Those versions retain their original license.

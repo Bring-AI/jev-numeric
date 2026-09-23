@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
   <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Noncommercial-f59e0b?style=flat-square" alt="License: PolyForm Noncommercial 1.0.0"></a>
 </p>
 
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
@@ -290,4 +291,10 @@ python scripts/probe_jev_binary_controls.py
 
 [artifacts](artifacts/) 保留原始请求、选项排列、返回概率及模型标识；不含鉴权头。新实验写入被忽略的 `runs/`。[指标](artifacts/metrics.json)由已保存结果重新计算，[哈希清单](artifacts/manifest.json)用于核对文件完整性。
 
-本项目是基于决策接口的数值输出探索，不是训练出的新回归模型，也尚未验证 OOD 或概率校准。代码和原创文档/图片采用 [MIT](LICENSE)。非 TypeSafe 官方项目。
+本项目是基于决策接口的数值输出探索，不是训练出的新回归模型，也尚未验证 OOD 或概率校准。非 TypeSafe 官方项目。
+
+## 许可证
+
+**[PolyForm Noncommercial 1.0.0](LICENSE)。** 代码和原创文档/图片允许在协议规定的非商业用途下使用、修改和再分发。超出协议允许用途的商业使用须另获版权持有人许可。第三方组件与材料保留各自的许可证。
+
+本次变更不撤销此前已按 MIT 发布版本的既有授权；这些旧版本仍适用原许可证。
