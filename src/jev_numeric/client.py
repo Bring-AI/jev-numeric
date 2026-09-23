@@ -37,8 +37,9 @@ def settings():
 
 
 class JevClient:
-    def __init__(self, *, max_calls=256):
-        self.gateway, self._key, base, self.model = settings()
+    def __init__(self, *, max_calls=256, model=None):
+        self.gateway, self._key, base, configured_model = settings()
+        self.model = configured_model if model is None else model
         self._url = base.rstrip("/") + "/systemone"
         self._http = httpx.Client(timeout=60, follow_redirects=False)
         self.max_calls = max_calls

@@ -36,24 +36,44 @@ Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https:
 | **A stock costs 10 yuan. It rises by 1 yuan. What is its new price?** | **`11.00`** |
 | **A stock costs 10.50 yuan. It rises by 1.25 yuan. What is its new price?** | **`11.75`** |
 
-These are **actual Jev runs**, not expected-output placeholders. Each used ten-way interval decoding over `[0,100)` at `0.01` resolution: four Choice calls per answer. The input contained the question, **not the answer**. The decoder returns a decimal string and its final interval; Jev itself selects the branches.
+These are **actual Jev runs**, not expected-output placeholders. Each used ten-way interval decoding over `[0,100)` at `0.01` resolution: four Choice calls per answer. The input contained the question, **not the answer**. The JSON interface returns a number; Jev selects the branches underneath.
 
-```python
-from jev_numeric import JevClient, decode_number
+**JSON in**
 
-with JevClient() as client:
-    result = decode_number(
-        client,
-        state={"question": "A stock costs 10 yuan. It rises by 1 yuan. What is its new price in yuan?"},
-        target="the numerical answer to the question, in the stated units",
-        lower="0", upper="100", resolution="0.01", branching=10,
-    )
-
-print(result["value"])  # Recorded output: 11.00
-# Selected intervals: [10,20) → [11,12) → [11.0,11.1) → [11.00,11.01)
+```json
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "state": "A stock costs 10 yuan. It rises by 1 yuan.",
+  "questions": {
+    "new_price": {
+      "type": "number",
+      "instructions": "What is the new stock price in yuan?",
+      "range": [0, 100],
+      "resolution": 0.01
+    }
+  }
+}
 ```
 
-After [installation](#quick-start), run `python scripts/run_examples.py` to try all three. [Exact prompts and recorded outputs →](artifacts/readme-examples-20260923T090329Z/results.json) These three one-shot examples illustrate the interface; the broader comparisons and failures are reported below.
+**JSON out — recorded response**
+
+```json
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "answers": {
+    "new_price": {
+      "type": "number",
+      "value": 11.0
+    }
+  }
+}
+```
+
+```bash
+jev-numeric --request examples/stock-price.json
+```
+
+`number` is this project's local adapter type; upstream Jev still receives Choice questions. [JSON API reference](docs/json-api.md) · [Live request/response](artifacts/json-api-20260923T091437Z/stock-price.json) · [All three original examples](artifacts/readme-examples-20260923T090329Z/results.json).
 
 ## The algorithm
 
@@ -187,6 +207,18 @@ cp .env.example .env
 # Set OPENROUTER_API_KEY in .env, or configure the TypeSafe gateway.
 ```
 
+```bash
+jev-numeric --request examples/stock-price.json
+jev-numeric --request examples/addition.json
+# Read a request from stdin:
+cat examples/stock-price.json | jev-numeric --request -
+# Include exact decimal strings, intervals and the decision path:
+jev-numeric --request examples/stock-price.json --details --output runs/response.json
+```
+
+<details>
+<summary>Python API (optional)</summary>
+
 ```python
 from jev_numeric import JevClient, decode_number
 
@@ -204,15 +236,7 @@ print(result["lower"], result["upper"])
 print(result["trace"])  # Every interval choice and its returned probabilities.
 ```
 
-Or use the CLI:
-
-```bash
-jev-numeric \
-  --state '{"closing_level_index_points":"3230.78"}' \
-  --target 'the supplied closing level in index points' \
-  --lower 0 --upper 10000 --resolution 0.01 --branching 10 \
-  --output runs/example.json
-```
+</details>
 
 The reusable decoder uses a general prompt. **To reproduce the headline protocols, use the experiment scripts below**, which retain their original specialized prompts. Gateway settings and file-based keys are documented in [.env.example](.env.example); historical scripts pin their model version, whose future availability depends on the provider.
 

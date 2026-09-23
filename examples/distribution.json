@@ -1,0 +1,12 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "state": {"value": "0.42"},
+  "questions": {
+    "value_distribution": {
+      "type": "distribution",
+      "instructions": "the supplied value",
+      "range": [0, 1],
+      "bins": 8
+    }
+  }
+}

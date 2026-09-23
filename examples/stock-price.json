@@ -1,0 +1,12 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "state": "A stock costs 10 yuan. It rises by 1 yuan.",
+  "questions": {
+    "new_price": {
+      "type": "number",
+      "instructions": "What is the new stock price in yuan?",
+      "range": [0, 100],
+      "resolution": 0.01
+    }
+  }
+}

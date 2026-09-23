@@ -1,0 +1,9 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "answers": {
+    "result": {
+      "type": "number",
+      "value": 2.0
+    }
+  }
+}
