@@ -53,16 +53,18 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 ## Application example: continuous game control
 
-**[Watch GIFs, full videos, and all 64 attempts →](https://bring-ai.github.io/jev-numeric/)**
+**[Watch GIFs, full videos, and all 69 attempts →](https://bring-ai.github.io/jev-numeric/)**
 
 | Game | Numeric controls | Featured result | GIF |
 |---|---|---|---|
 | CarRacing | Steering + signed throttle/brake | **100% track coverage** in 84.12s; all four K / precision settings completed | [![CarRacing](docs/media/control/racing-focused-v2-K20-resolution0.005-seed7/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-1) |
 | LunarLander | Main + lateral engine | **Safe landing**, reward 243.91 | [![LunarLander](docs/media/control/lunarlander-seed7-v14/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-2) |
 | MountainCar | Motor force | **Goal reached**, both seeds | [![MountainCar](docs/media/control/mountaincar-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-3) |
-| BipedalWalker | Four joint commands | Forward walking achieved; terrain not yet completed | [![BipedalWalker](docs/media/control/bipedalwalker-seed7-v9_sequential-hold1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
+| BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 | [![BipedalWalker](docs/media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
 
-Jev receives structured telemetry and explicit control guidance; NumericJev decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt development; all earlier failures remain available. Videos omit API waiting.
+Jev receives structured telemetry and explicit control guidance; NumericJev decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt and controller development; all earlier failures remain available. Videos omit API waiting.
+
+Comparison-table Walker completed 1 of 2 development trajectories; an API-interrupted trajectory was continued from its exact recorded prefix. Its fixed feedback rules are compiled into input intervals; Jev selects each term bin, and the adapter explicitly sums and clips those values into joint commands. [Walker protocol and audits](docs/evidence/control/walker-redesign-REPORT.md).
 
 | CarRacing, seed 7 · revised prompt | Resolution 0.020 | Resolution 0.005 |
 |---|---:|---:|

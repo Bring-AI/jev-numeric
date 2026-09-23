@@ -43,16 +43,18 @@
 
 ## 应用示例：连续游戏控制
 
-**[查看 GIF、完整视频和全部 64 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
+**[查看 GIF、完整视频和全部 69 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
 
 | 游戏 | 数值控制 | 展示实例的结果 | GIF |
 |---|---|---|---|
 | CarRacing 赛车 | 转向 + 带符号的油门/刹车 | **100% 覆盖赛道**，84.12 秒；四种 K / 精度设置均完成 | [![赛车](docs/media/control/racing-focused-v2-K20-resolution0.005-seed7/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-1) |
 | LunarLander 登月 | 主引擎 + 侧向引擎 | **安全着陆**，得分 243.91 | [![登月](docs/media/control/lunarlander-seed7-v14/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-2) |
 | MountainCar 山地车 | 电机推力 | **两个种子都到达目标** | [![山地车](docs/media/control/mountaincar-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-3) |
-| BipedalWalker 双足行走 | 四个关节控制量 | 已能向前行走，尚未走完全程 | [![双足行走](docs/media/control/bipedalwalker-seed7-v9_sequential-hold1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
+| BipedalWalker 双足行走 | 四个关节控制量 | **走完全程**，得分 315.16 | [![双足行走](docs/media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
 
-模型接收结构化状态和明确的控制指导，实际电机控制量由 NumericJev 解码产生，无训练、无备用控制器。展示录像选自提示词调试后的真实运行，之前的失败记录全部保留。视频省略 API 等待。
+模型接收结构化状态和明确的控制指导，实际电机控制量由 NumericJev 解码产生，无训练、无备用控制器。展示录像选自提示词与控制规则调试后的真实运行，之前的失败记录全部保留。视频省略 API 等待。
+
+区间比较版 Walker 的 2 条调试轨迹中，1 条走完全程；API 中断的轨迹通过精确重放已有记录后续跑。固定反馈规则被编译成输入区间，由 Jev 选择每个数值分项，再由程序明确地加总、限幅为关节指令。[Walker 协议和核验记录](docs/evidence/control/walker-redesign-REPORT.md)。
 
 | 赛车，种子 7 · 修改后的提示词 | 精度 0.020 | 精度 0.005 |
 |---|---:|---:|

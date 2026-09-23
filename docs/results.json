@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T16:35:05.017223+00:00",
+  "updated_at": "2026-09-23T17:52:03.451146+00:00",
   "model": "typesafe/jev-1.13-20260917",
   "method": "Training-free multiway interval decoding with explicit control guidance",
   "source_url": "https://github.com/Bring-AI/jev-numeric",
@@ -3584,18 +3584,551 @@
             "intermediate_gait_protocol": "Five sequential API calls per motor decision: gait case1, knee-memory numerical refinement2, four motor numerical refinements2. Templates choose ANGLE goals only; actual torques all model-selected. Controlfrequency hold1.",
             "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed7-v9_sequential-hold1.tar.gz"
           }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 215.90687716705725,
+          "success": false,
+          "stop_reason": "api_or_runner_error",
+          "steps": 1075,
+          "sim_seconds": 21.5,
+          "api_calls": 4303,
+          "decision_count": 1075,
+          "mean_action_latency_s": 1.3229203048348426,
+          "p95_action_latency_s": 1.917209481447935,
+          "wall_seconds": 1466.9393307454884,
+          "score_threshold_met": false,
+          "final_observation": {
+            "torso_angle": -0.130906,
+            "torso_angular_velocity_scaled": 0.007603,
+            "vx_scaled": 0.286097,
+            "vy_scaled": 0.029031,
+            "leg0": {
+              "hip_angle": 1.041866,
+              "hip_speed": 0.165948,
+              "knee_angle_plus1": -0.602961,
+              "knee_speed": 0.0,
+              "ground_contact": 0.0
+            },
+            "leg1": {
+              "hip_angle": 0.60164,
+              "hip_speed": -0.462554,
+              "knee_angle_plus1": -0.283075,
+              "knee_speed": 0.124489,
+              "ground_contact": 1.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.409368,
+              0.423936,
+              0.450453,
+              0.487764,
+              0.546028,
+              0.618565,
+              0.744914,
+              0.907451,
+              1.0,
+              1.0
+            ],
+            "privileged_torso_x": 62.2428,
+            "privileged_torso_y": 5.5441
+          },
+          "id": "bipedalwalker-seed19-comparison-v2",
+          "experiment_stage": "walker-redesign",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed19-comparison-v2/preview.gif",
+            "video": "media/control/bipedalwalker-seed19-comparison-v2/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed19-comparison-v2/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed19-comparison-v2.tar.gz",
+          "config": {
+            "protocol": "comparison-v2",
+            "attempt": "comparison-v2",
+            "guidance": "Jev independently classifies four gait comparisons, then locates observed values in fixed comparison-table intervals to select signed feedback contributions. Explicit deterministic addition/clipping combines ONLY model term readouts into motor commands; no exact motor target or fallback.",
+            "state_access": "Jev sees raw joint/body values and input-interval comparisons compiled from fixed control rules, plus four gait comparisons. It does not calculate arithmetic products. No lidar/torso position/image is given. Those fields exist only in diagnostic logs.",
+            "grid": {
+              "term_centers": [
+                -16,
+                16
+              ],
+              "term_grid_spacing": ".005",
+              "term_count": 6401,
+              "bin_boundaries": "half a grid step below/above each center",
+              "term_readout": "selected interval center",
+              "physical_motor_range": [
+                -1,
+                0.995
+              ],
+              "physical_motor_grid_spacing": ".005",
+              "composition": "sum signed integer term units, clip to[-200,199], scale by0.005"
+            },
+            "action_hold_frames": 1,
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "intermediate_gait_protocol": "Four independent binary comparisons in1request; deterministic chained logic combines model booleans. Three K20 requests locate observed values in inverse-threshold intervals and decode signed terms; deterministic integer addition/clipping composes four motors.4APIcalls perphysicsframe.",
+            "executed_action_overrides": 0,
+            "coefficients": [
+              0.495,
+              2.2,
+              0.1375,
+              0.495,
+              0.825,
+              8.25
+            ],
+            "difference_from_direct_decoder": "Fixed feedback rules are explicitly compiled into inverse input-interval criteria. Jev chooses each bin from the raw observation; the adapter sums bin-center terms. This is a guided comparison-table controller, not unconstrained motor inference or arithmetic evaluation.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed19-comparison-v2.tar.gz",
+            "error": "ReadTimeout: The read operation timed out"
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 298.9605251965113,
+          "success": false,
+          "stop_reason": "api_or_runner_error",
+          "steps": 1504,
+          "sim_seconds": 30.08,
+          "api_calls": 6021,
+          "decision_count": 1504,
+          "mean_action_latency_s": null,
+          "p95_action_latency_s": null,
+          "wall_seconds": 2071.1155343279243,
+          "score_threshold_met": false,
+          "final_observation": {
+            "torso_angle": -0.118944,
+            "torso_angular_velocity_scaled": 0.007365,
+            "vx_scaled": 0.308102,
+            "vy_scaled": 0.016956,
+            "leg0": {
+              "hip_angle": 1.037355,
+              "hip_speed": 0.224822,
+              "knee_angle_plus1": -0.603218,
+              "knee_speed": 0.0,
+              "ground_contact": 0.0
+            },
+            "leg1": {
+              "hip_angle": 0.492383,
+              "hip_speed": -0.487763,
+              "knee_angle_plus1": -0.230074,
+              "knee_speed": 0.139669,
+              "ground_contact": 0.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.409379,
+              0.416436,
+              0.43467,
+              0.466293,
+              0.516232,
+              0.586437,
+              0.688066,
+              0.827452,
+              1.0,
+              1.0
+            ],
+            "privileged_torso_x": 84.3435,
+            "privileged_torso_y": 5.361
+          },
+          "id": "bipedalwalker-seed19-comparison-v2-resumed",
+          "experiment_stage": "walker-redesign",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed19-comparison-v2-resumed/preview.gif",
+            "video": "media/control/bipedalwalker-seed19-comparison-v2-resumed/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed19-comparison-v2-resumed/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed19-comparison-v2-resumed.tar.gz",
+          "config": {
+            "protocol": "comparison-v2",
+            "attempt": "comparison-v2-resumed",
+            "guidance": "Jev independently classifies four gait comparisons, then locates observed values in fixed comparison-table intervals to select signed feedback contributions. Explicit deterministic addition/clipping combines ONLY model term readouts into motor commands; no exact motor target or fallback.",
+            "state_access": "Jev sees raw joint/body values and input-interval comparisons compiled from fixed control rules, plus four gait comparisons. It does not calculate arithmetic products. No lidar/torso position/image is given. Those fields exist only in diagnostic logs.",
+            "grid": {
+              "term_centers": [
+                -16,
+                16
+              ],
+              "term_grid_spacing": ".005",
+              "term_count": 6401,
+              "bin_boundaries": "half a grid step below/above each center",
+              "term_readout": "selected interval center",
+              "physical_motor_range": [
+                -1,
+                0.995
+              ],
+              "physical_motor_grid_spacing": ".005",
+              "composition": "sum signed integer term units, clip to[-200,199], scale by0.005"
+            },
+            "action_hold_frames": 1,
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "intermediate_gait_protocol": "Four independent binary comparisons in1request; deterministic chained logic combines model booleans. Three K20 requests locate observed values in inverse-threshold intervals and decode signed terms; deterministic integer addition/clipping composes four motors.4APIcalls perphysicsframe.",
+            "executed_action_overrides": 0,
+            "coefficients": [
+              0.495,
+              2.2,
+              0.1375,
+              0.495,
+              0.825,
+              8.25
+            ],
+            "difference_from_direct_decoder": "Fixed feedback rules are explicitly compiled into inverse input-interval criteria. Jev chooses each bin from the raw observation; the adapter sums bin-center terms. This is a guided comparison-table controller, not unconstrained motor inference or arithmetic evaluation.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed19-comparison-v2-resumed.tar.gz",
+            "error": "RuntimeError: Jev returned HTTP 402; no automatic retry",
+            "continuation_of": "bipedalwalker-seed19-comparison-v2",
+            "prefix_physics_frames": 1075,
+            "cached_prefix_requests": 4302,
+            "new_network_attempts": 1718,
+            "successful_logical_responses": 6019,
+            "continuation_note": "Same seed, frozen controller, and exact previously returned model responses. Every cached request payload is checked for identity. This continues the interrupted trajectory and is not an independent fresh rollout.",
+            "latency_note": "Full-trajectory mean omitted: the prefix is exactly replayed from archived responses, not re-inferred. Source and resume-session means are separate; resume-session mean includes fast cached-prefix replay. Total wall time sums both recorded sessions, excluding the between-session debugging gap.",
+            "source_session_wall_seconds": 1466.9393307454884,
+            "resume_session_wall_seconds": 604.1762035824358,
+            "source_session_mean_action_latency_s": 1.3229203048348426,
+            "resume_session_mean_action_latency_s": 0.39504187592761
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 315.16371979238465,
+          "success": true,
+          "stop_reason": "terrain_finished",
+          "steps": 1588,
+          "sim_seconds": 31.76,
+          "api_calls": 6354,
+          "decision_count": 1588,
+          "mean_action_latency_s": null,
+          "p95_action_latency_s": null,
+          "wall_seconds": 2207.8379604667425,
+          "score_threshold_met": true,
+          "final_observation": {
+            "torso_angle": 0.147788,
+            "torso_angular_velocity_scaled": -0.024393,
+            "vx_scaled": 0.306329,
+            "vy_scaled": 0.049201,
+            "leg0": {
+              "hip_angle": 0.585581,
+              "hip_speed": -0.173176,
+              "knee_angle_plus1": -0.296062,
+              "knee_speed": 0.100965,
+              "ground_contact": 1.0
+            },
+            "leg1": {
+              "hip_angle": -0.301802,
+              "hip_speed": 1.0,
+              "knee_angle_plus1": 0.14378,
+              "knee_speed": -1.0,
+              "ground_contact": 0.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.402806,
+              0.407381,
+              0.419032,
+              0.439448,
+              0.470378,
+              0.512671,
+              0.590786,
+              0.732792,
+              1.0,
+              1.0
+            ],
+            "privileged_torso_x": 88.7057,
+            "privileged_torso_y": 5.3676
+          },
+          "id": "bipedalwalker-seed19-comparison-v2-resumed-resumed",
+          "experiment_stage": "walker-redesign",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/preview.gif",
+            "video": "media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed19-comparison-v2-resumed-resumed.tar.gz",
+          "config": {
+            "protocol": "comparison-v2",
+            "attempt": "comparison-v2-resumed-resumed",
+            "guidance": "Jev independently classifies four gait comparisons, then locates observed values in fixed comparison-table intervals to select signed feedback contributions. Explicit deterministic addition/clipping combines ONLY model term readouts into motor commands; no exact motor target or fallback.",
+            "state_access": "Jev sees raw joint/body values and input-interval comparisons compiled from fixed control rules, plus four gait comparisons. It does not calculate arithmetic products. No lidar/torso position/image is given. Those fields exist only in diagnostic logs.",
+            "grid": {
+              "term_centers": [
+                -16,
+                16
+              ],
+              "term_grid_spacing": ".005",
+              "term_count": 6401,
+              "bin_boundaries": "half a grid step below/above each center",
+              "term_readout": "selected interval center",
+              "physical_motor_range": [
+                -1,
+                0.995
+              ],
+              "physical_motor_grid_spacing": ".005",
+              "composition": "sum signed integer term units, clip to[-200,199], scale by0.005"
+            },
+            "action_hold_frames": 1,
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "intermediate_gait_protocol": "Four independent binary comparisons in1request; deterministic chained logic combines model booleans. Three K20 requests locate observed values in inverse-threshold intervals and decode signed terms; deterministic integer addition/clipping composes four motors.4APIcalls perphysicsframe.",
+            "executed_action_overrides": 0,
+            "coefficients": [
+              0.495,
+              2.2,
+              0.1375,
+              0.495,
+              0.825,
+              8.25
+            ],
+            "difference_from_direct_decoder": "Fixed feedback rules are explicitly compiled into inverse input-interval criteria. Jev chooses each bin from the raw observation; the adapter sums bin-center terms. This is a guided comparison-table controller, not unconstrained motor inference or arithmetic evaluation.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed19-comparison-v2-resumed-resumed.tar.gz",
+            "error": null,
+            "continuation_of": "bipedalwalker-seed19-comparison-v2-resumed",
+            "prefix_physics_frames": 1504,
+            "cached_prefix_requests": 6019,
+            "new_network_attempts": 333,
+            "successful_logical_responses": 6352,
+            "continuation_note": "Same seed, frozen controller, and exact previously returned model responses. Every cached request payload is checked for identity. This continues the interrupted trajectory and is not an independent fresh rollout.",
+            "latency_note": "Full-trajectory mean omitted: the prefix is exactly replayed from archived responses, not re-inferred. Source and resume-session means are separate; resume-session mean includes fast cached-prefix replay. Total wall time sums both recorded sessions, excluding the between-session debugging gap.",
+            "source_session_wall_seconds": 2071.1155343279243,
+            "resume_session_wall_seconds": 136.72242613881826,
+            "source_session_mean_action_latency_s": null,
+            "resume_session_mean_action_latency_s": 0.08034685356378254
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 43.43807045882568,
+          "success": false,
+          "stop_reason": "fall",
+          "steps": 979,
+          "sim_seconds": 19.58,
+          "api_calls": 3916,
+          "decision_count": 979,
+          "mean_action_latency_s": 1.2891876202065258,
+          "p95_action_latency_s": 1.8647639904171227,
+          "wall_seconds": 1270.5231734737754,
+          "score_threshold_met": false,
+          "final_observation": {
+            "torso_angle": 0.670698,
+            "torso_angular_velocity_scaled": -0.033316,
+            "vx_scaled": -0.152364,
+            "vy_scaled": -0.03989,
+            "leg0": {
+              "hip_angle": 1.181646,
+              "hip_speed": 1.191709,
+              "knee_angle_plus1": 0.543797,
+              "knee_speed": -0.595934,
+              "ground_contact": 0.0
+            },
+            "leg1": {
+              "hip_angle": 1.161558,
+              "hip_speed": 0.491117,
+              "knee_angle_plus1": 0.934906,
+              "knee_speed": 0.0,
+              "ground_contact": 0.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.158167,
+              0.159803,
+              0.165222,
+              0.173115,
+              0.185983,
+              0.205947,
+              0.237572,
+              0.292708,
+              0.403576,
+              0.639804
+            ],
+            "privileged_torso_x": 44.9946,
+            "privileged_torso_y": 4.1507
+          },
+          "id": "bipedalwalker-seed7-comparison-v2",
+          "experiment_stage": "walker-redesign",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed7-comparison-v2/preview.gif",
+            "video": "media/control/bipedalwalker-seed7-comparison-v2/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed7-comparison-v2/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed7-comparison-v2.tar.gz",
+          "config": {
+            "protocol": "comparison-v2",
+            "attempt": "comparison-v2",
+            "guidance": "Jev independently classifies four gait comparisons, then locates observed values in fixed comparison-table intervals to select signed feedback contributions. Explicit deterministic addition/clipping combines ONLY model term readouts into motor commands; no exact motor target or fallback.",
+            "state_access": "Jev sees raw joint/body values and input-interval comparisons compiled from fixed control rules, plus four gait comparisons. It does not calculate arithmetic products. No lidar/torso position/image is given. Those fields exist only in diagnostic logs.",
+            "grid": {
+              "term_centers": [
+                -16,
+                16
+              ],
+              "term_grid_spacing": ".005",
+              "term_count": 6401,
+              "bin_boundaries": "half a grid step below/above each center",
+              "term_readout": "selected interval center",
+              "physical_motor_range": [
+                -1,
+                0.995
+              ],
+              "physical_motor_grid_spacing": ".005",
+              "composition": "sum signed integer term units, clip to[-200,199], scale by0.005"
+            },
+            "action_hold_frames": 1,
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "intermediate_gait_protocol": "Four independent binary comparisons in1request; deterministic chained logic combines model booleans. Three K20 requests locate observed values in inverse-threshold intervals and decode signed terms; deterministic integer addition/clipping composes four motors.4APIcalls perphysicsframe.",
+            "executed_action_overrides": 0,
+            "coefficients": [
+              0.495,
+              2.2,
+              0.1375,
+              0.495,
+              0.825,
+              8.25
+            ],
+            "difference_from_direct_decoder": "Fixed feedback rules are explicitly compiled into inverse input-interval criteria. Jev chooses each bin from the raw observation; the adapter sums bin-center terms. This is a guided comparison-table controller, not unconstrained motor inference or arithmetic evaluation.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed7-comparison-v2.tar.gz",
+            "error": null
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -79.6081083768513,
+          "success": false,
+          "stop_reason": "fall",
+          "steps": 164,
+          "sim_seconds": 3.28,
+          "api_calls": 656,
+          "decision_count": 164,
+          "mean_action_latency_s": 1.0632043196024692,
+          "p95_action_latency_s": 1.2917372090741992,
+          "wall_seconds": 176.13546255230904,
+          "score_threshold_met": false,
+          "final_observation": {
+            "torso_angle": -0.662983,
+            "torso_angular_velocity_scaled": 0.041065,
+            "vx_scaled": 0.404551,
+            "vy_scaled": -0.097127,
+            "leg0": {
+              "hip_angle": -0.846817,
+              "hip_speed": -0.890979,
+              "knee_angle_plus1": 0.902273,
+              "knee_speed": 0.0,
+              "ground_contact": 0.0
+            },
+            "leg1": {
+              "hip_angle": -0.672712,
+              "hip_speed": -0.750854,
+              "knee_angle_plus1": 0.928307,
+              "knee_speed": -0.0,
+              "ground_contact": 1.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.163855,
+              0.166079,
+              0.172286,
+              0.185576,
+              0.207008,
+              0.237839,
+              0.281422,
+              0.345045,
+              0.466496,
+              0.807205
+            ],
+            "privileged_torso_x": 11.3605,
+            "privileged_torso_y": 4.2292
+          },
+          "id": "bipedalwalker-seed7-composed-v1",
+          "experiment_stage": "walker-redesign",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed7-composed-v1/preview.gif",
+            "video": "media/control/bipedalwalker-seed7-composed-v1/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed7-composed-v1/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed7-composed-v1.tar.gz",
+          "config": {
+            "protocol": "composed-v1",
+            "attempt": "composed-v1",
+            "guidance": "Jev independently classifies four gait comparisons, then numerically decodes signed feedback contributions. Explicit deterministic addition/clipping combines ONLY model term readouts into motor commands; no exact motor target or fallback.",
+            "state_access": "Jev sees raw joint/body values in arithmetic expressions and four simple numerical comparisons. No lidar/torso position/image is given. Those fields exist only in diagnostic logs.",
+            "grid": {
+              "term_centers": [
+                -16,
+                16
+              ],
+              "term_grid_spacing": ".005",
+              "term_count": 6401,
+              "bin_boundaries": "half a grid step below/above each center",
+              "term_readout": "selected interval center",
+              "physical_motor_range": [
+                -1,
+                0.995
+              ],
+              "physical_motor_grid_spacing": ".005",
+              "composition": "sum signed integer term units, clip to[-200,199], scale by0.005"
+            },
+            "action_hold_frames": 1,
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "intermediate_gait_protocol": "Four independent binary comparisons in1request; deterministic chained logic combines model booleans. ThreeK20requests decode model signed terms; deterministic integer addition/clipping composes four motors.4APIcalls perphysicsframe.",
+            "executed_action_overrides": 0,
+            "coefficients": [
+              0.495,
+              2.2,
+              0.1375,
+              0.495,
+              0.825,
+              8.25
+            ],
+            "difference_from_direct_decoder": "The final motor is an explicitly composed sum of Jev numerical term outputs, not a single whole-motor interval choice.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed7-composed-v1.tar.gz",
+            "error": null
+          }
         }
       ],
-      "featured_run_id": "bipedalwalker-seed7-v9_sequential-hold1",
+      "featured_run_id": "bipedalwalker-seed19-comparison-v2-resumed-resumed",
       "success_criterion": "environment terminated beyond the right terrain finish without falling",
       "config": {
         "continuous": true,
         "hardcore": false
       },
       "notes": [
-        "Shown: seed 7, fall, reward -55.26.",
-        "The featured recording is a selected example after prompt development. All earlier failures and all new attempts remain in the history below.",
-        "Joint-control and gait instructions, state access, and control frequency are recorded per attempt. No Python action fallback."
+        "Shown: seed 19, terrain finished, reward 315.16.",
+        "Comparison-table protocol: fixed feedback rules define input intervals. Jev selects signed term bins; explicit addition and clipping compose the four motor commands.",
+        "The gait uses four model-evaluated comparisons. K=20, term spacing 0.005, four API requests per physics frame. No action fallback.",
+        "Selected development recording. Every prior failure remains in the history; API waits are omitted from video."
       ]
     }
   ],
@@ -3779,14 +4312,15 @@
     "video_time": "Simulation steps only; API waits omitted"
   },
   "protocol_notes": [
-    "64 recorded Jev episodes, including all prompt-development failures. Featured rollouts are selected examples, not held-out performance estimates.",
+    "69 recorded Jev attempts, including failures and explicitly linked continuations of API-interrupted runs. Featured rollouts are selected development examples, not independent held-out trials.",
     "The model receives structured telemetry and explicit control guidance, not gameplay images. CarRacing includes future centerline waypoints. Earlier Walker prompts receive extended observations; focused sequential prompts use only the joint/body measurements printed in their questions, without lidar or torso position.",
-    "NumericJev decodes each motor action on [-1,1); Python executes the selected grid lower endpoint. No fallback controller replaces model actions. Walker follow-ups also ask Jev for gait choices and target-angle memory before selecting motor commands.",
-    "Motor components share one request per tree level. K=10 / 0.005 needs three motor-refinement requests; the other tested grids need two. Walker planning adds separate sequential requests, documented in each run configuration.",
+    "Direct protocols execute the selected motor-grid lower endpoint. New Walker protocols decode centered signed terms, then explicitly sum and clip them into motors. In comparison-v2, fixed affine feedback rules are compiled into input intervals; Jev locates the raw observation. No exact per-state motor target or fallback is computed.",
+    "Components share one request per tree level. Direct K=10 / 0.005 uses three motor-refinement calls; other original grids use two. Walker comparison-v2 uses one gait-predicate request plus three K20 term refinements, with centered 0.005 term bins over [-16,16].",
     "Simulation pauses for API calls. Videos omit those waits; they do not demonstrate real-time control. Mean action latency includes planning and numerical-refinement requests but excludes rendering/physics.",
     "Box2D games integrate at 50 Hz. CarRacing holds actions for 10 frames; Lander for 5. Walker started with 5-frame holds; later attempts update every frame. MountainCar holds 4 discrete steps and displays seconds at its 30-fps rendering rate.",
     "GIFs show short simulation-speed excerpts; the full-video tab shows the entire recorded episode. Per-run archives contain complete requests/responses, executed actions, rules or source snapshots, and original summaries.",
-    "The displayed K/precision follow-up uses the new focused racing prompt. Previous comparisons remain in the racing history and historical_racing_ablation field. Prompt, input presentation, and control-frequency changes are documented per run."
+    "The displayed K/precision follow-up uses the new focused racing prompt. Previous comparisons remain in the racing history and historical_racing_ablation field. Prompt, input presentation, and control-frequency changes are documented per run.",
+    "A resumed Walker recording restores the exact interrupted action/response prefix and requests new Jev outputs only after it. The interruption remains listed separately. Combined mean latency is omitted; source and resume timings are disclosed in the run configuration."
   ],
   "historical_racing_ablation": [
     {

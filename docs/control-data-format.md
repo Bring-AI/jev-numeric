@@ -66,6 +66,7 @@ Media objects contain optional relative or HTTPS paths: `gif`, `video`, and `pos
 - The shown run's branching, resolution, and mean action latency are labeled as belonging to that recording. They are not presented as averages over different settings.
 - Featured run selection never changes all-run statistics. Mark illustrative or diagnostic prompts in the run config; retain earlier unsuccessful variants.
 - Walker configurations disclose intermediate gait decisions, target-angle templates, and the number of planning calls in addition to motor-refinement calls. Angle goals are distinct from the executed motor commands.
+- Walker `composed-v1` and `comparison-v2` configurations explicitly distinguish term-grid spacing from physical motor spacing. Signed interval centers are added as integer units and clipped. `comparison-v2` compiles fixed affine rules into input-interval criteria; each bin remains a recorded Jev choice. This differs from directly choosing a whole-motor interval.
 - All rows expose available video, GIF, and trace links. Direct video links use the browser's native player; visitors can inspect unsuccessful attempts as well as the featured one.
 - Empty games or missing featured videos leave a visible development/missing-recording notice. Do not deploy an empty scaffold.
 - Text is inserted as DOM text, not HTML. Links accept HTTP and HTTPS URLs only, including relative URLs resolved under the current page.
