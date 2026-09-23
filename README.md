@@ -1,10 +1,10 @@
-# A simple algorithm that turns Jev decisions into numerical outputs.
+# A simple algorithm that turns Jev decisions into accurate numerical outputs
 
 <p align="center">
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<p align="center"><strong>Jev Numeric · Multiway interval decoding</strong></p>
+<p align="center"><strong>NumericJev · Multiway interval decoding</strong></p>
 <p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
@@ -27,6 +27,16 @@
 | CDF / histogram construction | ❌ | ✅* |
 
 Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
+
+## Even Better Performance Than Choosing from an Answer List
+
+<p align="center">
+  <img src="assets/performance.svg" alt="NumericJev reaches 83.40% within 5% relative error versus 80.47% for direct choice on 256 arithmetic expressions" width="100%">
+</p>
+
+**83.40% vs. 80.47% (+2.93 percentage points)** within 5% relative error on 256 arithmetic expressions—even when the direct-choice list contains the correct answer.
+
+<sub>Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
 
 ## Turning Jev to Numerical Output
 

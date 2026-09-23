@@ -1,4 +1,4 @@
-# A simple algorithm that turns Jev decisions into numerical outputs.
+# A simple algorithm that turns Jev decisions into accurate numerical outputs
 
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
@@ -17,6 +17,16 @@
 | CDF / 直方图构造 | ❌ | ✅* |
 
 原生接口：[Choice](https://docs.typesafe.ai/primitives/choice)、[Score](https://docs.typesafe.ai/primitives/score)。*实验性，尚未验证概率校准。
+
+## 甚至优于从包含正确答案的列表中直接选择
+
+<p align="center">
+  <img src="assets/performance.svg" alt="256 道算术题中，相对误差不超过 5% 的比例：NumericJev 为 83.40%，直接选择为 80.47%" width="100%">
+</p>
+
+256 道算术题中，相对误差不超过 5% 的比例：**83.40% vs. 80.47%（提高 2.93 个百分点）**，直接选择的候选列表已包含正确答案。
+
+<sub>误差线为 95% 题目族自助法区间。LoRA 连续头是在因果分布上训练、使用不同骨干模型的迁移基线；斜线柱为输入中提供答案的对照。</sub>
 
 ## Turning Jev to Numerical Output
 
