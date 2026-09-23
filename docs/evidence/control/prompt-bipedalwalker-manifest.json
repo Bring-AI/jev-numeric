@@ -122,8 +122,18 @@
     },
     {
       "id": "bipedalwalker-seed7-v16_fixed0_direct-hold1",
-      "status": "running_or_incomplete",
-      "directory": "/data/yww/notebook/numericjev-game-experiments/prompt-recovery-20260924/bipedalwalker/bipedalwalker-seed7-v16_fixed0_direct-hold1"
+      "status": "complete",
+      "summary": "/data/yww/notebook/numericjev-game-experiments/prompt-recovery-20260924/bipedalwalker/bipedalwalker-seed7-v16_fixed0_direct-hold1/summary.json",
+      "directory": "/data/yww/notebook/numericjev-game-experiments/prompt-recovery-20260924/bipedalwalker/bipedalwalker-seed7-v16_fixed0_direct-hold1",
+      "success": false,
+      "stop_reason": "fall",
+      "reward": -111.41307090828195,
+      "steps": 391,
+      "seed": 7,
+      "hold": 1,
+      "video": "/data/yww/notebook/numericjev-game-experiments/prompt-recovery-20260924/bipedalwalker/bipedalwalker-seed7-v16_fixed0_direct-hold1/replay.mp4",
+      "gif": "/data/yww/notebook/numericjev-game-experiments/prompt-recovery-20260924/bipedalwalker/bipedalwalker-seed7-v16_fixed0_direct-hold1/preview.gif",
+      "audit_pass": true
     },
     {
       "id": "bipedalwalker-seed7-v17_simple_coefficients-hold1",

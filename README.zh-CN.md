@@ -43,7 +43,7 @@
 
 ## 应用示例：连续游戏控制
 
-**[查看 GIF、完整视频和全部 63 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
+**[查看 GIF、完整视频和全部 64 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
 
 | 游戏 | 数值控制 | 展示实例的结果 | GIF |
 |---|---|---|---|

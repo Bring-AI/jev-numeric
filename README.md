@@ -53,7 +53,7 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 ## Application example: continuous game control
 
-**[Watch GIFs, full videos, and all 63 attempts →](https://bring-ai.github.io/jev-numeric/)**
+**[Watch GIFs, full videos, and all 64 attempts →](https://bring-ai.github.io/jev-numeric/)**
 
 | Game | Numeric controls | Featured result | GIF |
 |---|---|---|---|

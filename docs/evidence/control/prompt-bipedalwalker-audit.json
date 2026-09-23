@@ -160,6 +160,26 @@
     }
   },
   {
+    "id": "bipedalwalker-seed7-v16_fixed0_direct-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 391,
+    "all_api_calls": 1173,
+    "motor_api_calls": 782,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -111.41307090828195,
+    "replay_steps": 391,
+    "replay_x": 4.252484321594238,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.997673034579098e-07,
+    "sha256": {
+      "actions.jsonl": "6916dec1d93b21e60829e7e8bf84d9b9c67c9d0404560f53dd8aa76661ddcacf",
+      "api-records.jsonl": "6502acb8064ab2b12d2be2a8b42ab63ba0b9860a5c9f33bab28bdf034dad1370",
+      "replay.mp4": "778860da3e4d15744c1d0c1e888f6d814904627d69514c535b61c2393c0f2458",
+      "prompt-runner-snapshot.py": "e40323e5d2551b8548387f6cbdb3a3f0ac0bb89ab9abb16b230a87b138bc520e"
+    }
+  },
+  {
     "id": "bipedalwalker-seed7-v17_simple_coefficients-hold1",
     "pass": true,
     "errors": [],

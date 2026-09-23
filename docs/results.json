@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T16:29:57.364945+00:00",
+  "updated_at": "2026-09-23T16:35:05.017223+00:00",
   "model": "typesafe/jev-1.13-20260917",
   "method": "Training-free multiway interval decoding with explicit control guidance",
   "source_url": "https://github.com/Bring-AI/jev-numeric",
@@ -2848,6 +2848,88 @@
           "reverse_options": false,
           "branching": 20,
           "resolution": "0.005",
+          "reward": -111.41307090828195,
+          "success": false,
+          "stop_reason": "fall",
+          "steps": 391,
+          "sim_seconds": 7.82,
+          "api_calls": 1173,
+          "decision_count": 391,
+          "mean_action_latency_s": 0.7569351983649651,
+          "p95_action_latency_s": 0.9179991725832224,
+          "wall_seconds": 298.9376038275659,
+          "score_threshold_met": false,
+          "final_observation": {
+            "torso_angle": 0.675776,
+            "torso_angular_velocity_scaled": -0.045134,
+            "vx_scaled": -0.035756,
+            "vy_scaled": -0.053626,
+            "leg0": {
+              "hip_angle": 1.178642,
+              "hip_speed": 1.437368,
+              "knee_angle_plus1": 0.004765,
+              "knee_speed": -0.998428,
+              "ground_contact": 1.0
+            },
+            "leg1": {
+              "hip_angle": 1.152464,
+              "hip_speed": 0.861041,
+              "knee_angle_plus1": 0.934581,
+              "knee_speed": 1.000007,
+              "ground_contact": 0.0
+            },
+            "lidar_fractions_down_to_forward": [
+              0.158995,
+              0.160801,
+              0.166428,
+              0.176573,
+              0.192643,
+              0.217299,
+              0.255779,
+              0.319542,
+              0.438779,
+              0.725983
+            ],
+            "privileged_torso_x": 4.2525,
+            "privileged_torso_y": 4.1813
+          },
+          "id": "bipedalwalker-seed7-v16_fixed0_direct-hold1",
+          "experiment_stage": "prompt-recovery",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed7-v16_fixed0_direct-hold1/preview.gif",
+            "video": "media/control/bipedalwalker-seed7-v16_fixed0_direct-hold1/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed7-v16_fixed0_direct-hold1/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed7-v16_fixed0_direct-hold1.tar.gz",
+          "config": {
+            "attempt": "v16_fixed0_direct-hold1",
+            "guidance": "Sequential Jev gait case with explicit predicate candidates; fixed0.0 support-knee ANGLE template replaces dynamic memory; NumericJev direct motor interval choices; v17 optionally simplifies constant feedback coefficients. No Python motor computation.",
+            "action_hold_frames": 1,
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "state_access": "Raw Gymnasium torso/joint/contact/speed observations embedded in focused prompts. No rendered images, lidar, or privileged torso position in these API requests. Full observations including torso position are logged separately for audit.",
+            "intermediate_gait_protocol": "Three sequential API calls per motor decision: model gait case1, four motor numerical refinements2. Support knee angle is a fixed disclosed0.0 policy constant. Templates choose ANGLE goals only; actual torques all model-selected. Controlfrequency hold1.",
+            "recorded_prompt_and_source": "evidence/control/bipedalwalker-seed7-v16_fixed0_direct-hold1.tar.gz"
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
           "reward": -90.96695509785786,
           "success": false,
           "stop_reason": "fall",
@@ -3697,7 +3779,7 @@
     "video_time": "Simulation steps only; API waits omitted"
   },
   "protocol_notes": [
-    "63 recorded Jev episodes, including all prompt-development failures. Featured rollouts are selected examples, not held-out performance estimates.",
+    "64 recorded Jev episodes, including all prompt-development failures. Featured rollouts are selected examples, not held-out performance estimates.",
     "The model receives structured telemetry and explicit control guidance, not gameplay images. CarRacing includes future centerline waypoints. Earlier Walker prompts receive extended observations; focused sequential prompts use only the joint/body measurements printed in their questions, without lidar or torso position.",
     "NumericJev decodes each motor action on [-1,1); Python executes the selected grid lower endpoint. No fallback controller replaces model actions. Walker follow-ups also ask Jev for gait choices and target-angle memory before selecting motor commands.",
     "Motor components share one request per tree level. K=10 / 0.005 needs three motor-refinement requests; the other tested grids need two. Walker planning adds separate sequential requests, documented in each run configuration.",

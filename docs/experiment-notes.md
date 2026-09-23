@@ -2,7 +2,7 @@
 
 [Interactive recordings](./) · [All measurements](results.json) · [Data format](control-data-format.md)
 
-This snapshot features selected recordings after prompt refinement, with 63 development episodes retained in the run ledgers. Each recorded motor command comes from Jev's interval selections. No policy was trained and no fallback controller replaced model outputs. The model receives structured observations and explicit control guidance, not gameplay images. The manifest records the snapshot time; ongoing experiments are added after completion and audit.
+This snapshot features selected recordings after prompt refinement, with 64 development episodes retained in the run ledgers. Each recorded motor command comes from Jev's interval selections. No policy was trained and no fallback controller replaced model outputs. The model receives structured observations and explicit control guidance, not gameplay images. The manifest records the snapshot time; ongoing experiments are added after completion and audit.
 
 ## Featured recordings
 
