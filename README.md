@@ -267,6 +267,4 @@ Every archived API record includes the submitted state, question text, option or
 
 This repository demonstrates a **regression-style interface over a decision model**. It does not introduce a new trained regressor, establish out-of-distribution generalization, or claim to invent hierarchical search. Known bounds, finite precision, irreversible greedy choices, a small reused test suite, and unverified probability calibration remain important limitations. The model's training-data membership and internal option handling are unknown.
 
-Related reading: [Do NLP Models Know Numbers? Probing Numeracy in Embeddings](https://aclanthology.org/D19-1534/) motivates separating numerical representation, computation, and generalization. It does not validate this Jev-specific method.
-
 Code and original documentation/figures: [MIT](LICENSE). Unaffiliated with TypeSafe; Jev is their model.
