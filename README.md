@@ -7,6 +7,7 @@
 <p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
+  <a href="#what-goes-in-what-comes-out">Examples</a> ·
   <a href="#the-algorithm">How it works</a> ·
   <a href="#results">Results</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -14,6 +15,35 @@
 </p>
 
 **Jev is built for structured decisions. We use those decisions to construct a numerical output interface.** Ask which interval contains a value, keep the selected interval, and repeat. A multiway decision tree turns categorical choices into a finite-precision number—without training a model or adding a regression head.
+
+## What goes in. What comes out.
+
+| Your question | Numerical output |
+|---|---:|
+| **What is 1 + 1?** | **`2.00`** |
+| **A stock costs 10 yuan. It rises by 1 yuan. What is its new price?** | **`11.00`** |
+| **A stock costs 10.50 yuan. It rises by 1.25 yuan. What is its new price?** | **`11.75`** |
+
+These are **actual Jev runs**, not expected-output placeholders. Each used ten-way interval decoding over `[0,100)` at `0.01` resolution: four Choice calls per answer. The input contained the question, **not the answer**. The decoder returns a decimal string and its final interval; Jev itself selects the branches.
+
+```python
+from jev_numeric import JevClient, decode_number
+
+with JevClient() as client:
+    result = decode_number(
+        client,
+        state={"question": "A stock costs 10 yuan. It rises by 1 yuan. What is its new price in yuan?"},
+        target="the numerical answer to the question, in the stated units",
+        lower="0", upper="100", resolution="0.01", branching=10,
+    )
+
+print(result["value"])  # Recorded output: 11.00
+# Selected intervals: [10,20) → [11,12) → [11.0,11.1) → [11.00,11.01)
+```
+
+After [installation](#quick-start), run `python scripts/run_examples.py` to try all three. [Exact prompts and recorded outputs →](artifacts/readme-examples-20260923T090329Z/results.json) These three one-shot examples illustrate the interface; the broader comparisons and failures are reported below.
+
+## What this adds
 
 | Capability | Native Jev primitives | This project |
 |---|---|---|

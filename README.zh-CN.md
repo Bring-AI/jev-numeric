@@ -6,6 +6,35 @@
 
 **Jev 擅长结构化决策。我们利用这种能力，加上多叉数值决策树，构建一个可指定范围与精度的数值输出接口。** 每次只问“答案落在哪个区间”，再在选中的区间中继续细分。不训练模型，也不添加回归头。
 
+## 输入什么，输出什么？
+
+| 输入问题 | 数值输出 |
+|---|---:|
+| **1 + 1 等于多少？** | **`2.00`** |
+| **一只股票现在 10 元，上涨 1 元后，价格是多少？** | **`11.00`** |
+| **一只股票现在 10.50 元，上涨 1.25 元后，价格是多少？** | **`11.75`** |
+
+以上是**实际调用结果**，不是预设的期望答案。测试使用英文问题，表中为中文翻译。三个例子统一在 `[0,100)` 上十叉细分，分辨率 `0.01`，每题四次 Choice 调用。**输入只包含题目，没有提供答案。** Jev 负责选择区间，解码器返回数值的十进制字符串及最终区间。
+
+```python
+from jev_numeric import JevClient, decode_number
+
+with JevClient() as client:
+    result = decode_number(
+        client,
+        state={"question": "A stock costs 10 yuan. It rises by 1 yuan. What is its new price in yuan?"},
+        target="the numerical answer to the question, in the stated units",
+        lower="0", upper="100", resolution="0.01", branching=10,
+    )
+
+print(result["value"])  # 实测输出：11.00
+# 所选区间：[10,20) → [11,12) → [11.0,11.1) → [11.00,11.01)
+```
+
+[安装后](#快速开始)运行 `python scripts/run_examples.py` 可以重跑全部三个例子。[原始题目与结果](artifacts/readme-examples-20260923T090329Z/results.json)。这三个例子各测一次，用于直观展示接口；更多方法对照和失败情况见后文。
+
+## 增加了什么能力？
+
 | 能力 | Jev 原生接口 | 本项目 |
 |---|---|---|
 | 离散决策、选项概率 | 已支持 | 作为基本组件 |
