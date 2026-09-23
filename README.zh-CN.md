@@ -50,28 +50,12 @@
 
 **[查看完整视频和全部 69 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
 
-| 游戏 | 数值控制 | 展示实例的结果 |
-|---|---|---|
-| CarRacing 赛车 | 转向 + 带符号的油门/刹车 | **100% 覆盖赛道**，84.12 秒；四种 K / 精度设置均完成 |
-| LunarLander 登月 | 主引擎 + 侧向引擎 | **安全着陆**，得分 243.91 |
-| MountainCar 山地车 | 电机推力 | **两个种子都到达目标** |
-| BipedalWalker 双足行走 | 四个关节控制量 | **走完全程**，得分 315.16 |
-
-### CarRacing 赛车
-
-https://github.com/user-attachments/assets/e88496d5-c280-4dbe-8503-916486268f8e
-
-### LunarLander 登月
-
-https://github.com/user-attachments/assets/c05a2498-43be-4739-8600-c1a3cf7666bf
-
-### MountainCar 山地车
-
-https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec
-
-### BipedalWalker 双足行走
-
-https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44
+| 游戏 | 数值控制 | 展示实例的结果 | 视频 |
+|---|---|---|---|
+| CarRacing 赛车 | 转向 + 带符号的油门/刹车 | **100% 覆盖赛道**，84.12 秒；四种 K / 精度设置均完成 | https://github.com/user-attachments/assets/e88496d5-c280-4dbe-8503-916486268f8e |
+| LunarLander 登月 | 主引擎 + 侧向引擎 | **安全着陆**，得分 243.91 | https://github.com/user-attachments/assets/c05a2498-43be-4739-8600-c1a3cf7666bf |
+| MountainCar 山地车 | 电机推力 | **两个种子都到达目标** | https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec |
+| BipedalWalker 双足行走 | 四个关节控制量 | **走完全程**，得分 315.16 | https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44 |
 
 模型接收结构化状态和明确的控制指导，实际电机控制量由 NumericJev 解码产生，无训练、无备用控制器。展示录像选自提示词与控制规则调试后的真实运行，之前的失败记录全部保留。视频省略 API 等待。
 

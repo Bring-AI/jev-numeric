@@ -60,28 +60,12 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 **[Watch full videos and all 69 attempts →](https://bring-ai.github.io/jev-numeric/)**
 
-| Game | Numeric controls | Featured result |
-|---|---|---|
-| CarRacing | Steering + signed throttle/brake | **100% track coverage** in 84.12s; all four K / precision settings completed |
-| LunarLander | Main + lateral engine | **Safe landing**, reward 243.91 |
-| MountainCar | Motor force | **Goal reached**, both seeds |
-| BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 |
-
-### CarRacing
-
-https://github.com/user-attachments/assets/e88496d5-c280-4dbe-8503-916486268f8e
-
-### LunarLander
-
-https://github.com/user-attachments/assets/c05a2498-43be-4739-8600-c1a3cf7666bf
-
-### MountainCar
-
-https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec
-
-### BipedalWalker
-
-https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44
+| Game | Numeric controls | Featured result | Video |
+|---|---|---|---|
+| CarRacing | Steering + signed throttle/brake | **100% track coverage** in 84.12s; all four K / precision settings completed | https://github.com/user-attachments/assets/e88496d5-c280-4dbe-8503-916486268f8e |
+| LunarLander | Main + lateral engine | **Safe landing**, reward 243.91 | https://github.com/user-attachments/assets/c05a2498-43be-4739-8600-c1a3cf7666bf |
+| MountainCar | Motor force | **Goal reached**, both seeds | https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec |
+| BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 | https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44 |
 
 Jev receives structured telemetry and explicit control guidance; NumericJev decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt and controller development; all earlier failures remain available. Videos omit API waiting.
 
