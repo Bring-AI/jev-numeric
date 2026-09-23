@@ -58,14 +58,30 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 ## Application example: continuous game control
 
-**[Watch GIFs, full videos, and all 69 attempts →](https://bring-ai.github.io/jev-numeric/)**
+**[Watch full videos and all 69 attempts →](https://bring-ai.github.io/jev-numeric/)**
 
-| Game | Numeric controls | Featured result | GIF |
-|---|---|---|---|
-| CarRacing | Steering + signed throttle/brake | **100% track coverage** in 84.12s; all four K / precision settings completed | [![CarRacing](docs/media/control/racing-focused-v2-K20-resolution0.005-seed7/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-1) |
-| LunarLander | Main + lateral engine | **Safe landing**, reward 243.91 | [![LunarLander](docs/media/control/lunarlander-seed7-v14/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-2) |
-| MountainCar | Motor force | **Goal reached**, both seeds | [![MountainCar](docs/media/control/mountaincar-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-3) |
-| BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 | [![BipedalWalker](docs/media/control/bipedalwalker-seed19-comparison-v2-resumed-resumed/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
+| Game | Numeric controls | Featured result |
+|---|---|---|
+| CarRacing | Steering + signed throttle/brake | **100% track coverage** in 84.12s; all four K / precision settings completed |
+| LunarLander | Main + lateral engine | **Safe landing**, reward 243.91 |
+| MountainCar | Motor force | **Goal reached**, both seeds |
+| BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 |
+
+### CarRacing
+
+https://github.com/user-attachments/assets/e88496d5-c280-4dbe-8503-916486268f8e
+
+### LunarLander
+
+https://github.com/user-attachments/assets/c05a2498-43be-4739-8600-c1a3cf7666bf
+
+### MountainCar
+
+https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec
+
+### BipedalWalker
+
+https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44
 
 Jev receives structured telemetry and explicit control guidance; NumericJev decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt and controller development; all earlier failures remain available. Videos omit API waiting.
 
