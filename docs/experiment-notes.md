@@ -1,58 +1,61 @@
 # NumericJev continuous-control experiments
 
-[Interactive recordings](./) · [All measurements](results.json) · [Data format](control-data-format.md) · [Runner source snapshots](evidence/control/runner-sources.tar.gz)
+[Interactive recordings](./) · [All measurements](results.json) · [Data format](control-data-format.md)
 
-These are 26 exploratory Jev rollouts across four environments, including prompt-development failures. No policy was trained. The model receives structured state and explicit control guidance. It does not receive gameplay images. Counts across different prompts, seeds, and stopping rules are descriptive, not estimated success rates.
+This snapshot features selected recordings after prompt refinement, with 63 development episodes retained in the run ledgers. Each recorded motor command comes from Jev's interval selections. No policy was trained and no fallback controller replaced model outputs. The model receives structured observations and explicit control guidance, not gameplay images. The manifest records the snapshot time; ongoing experiments are added after completion and audit.
 
-## Where NumericJev is used
+## Featured recordings
 
-Every action component is decoded by asking Jev which numeric interval to retain, then repeating until one grid point remains. Python executes the selected lower endpoint. All components are batched into one request at each tree level. There is no fallback controller or programmatic replacement of selected actions.
+| Game | Recorded run | Outcome | Reward | Simulation seconds | API calls |
+|---|---|---|---:|---:|---:|
+| CarRacing | racing-focused-v2-K20-resolution0.005-seed7 | 100% track coverage | 579.40 | 84.12 | 842 |
+| LunarLander | lunarlander-seed7-v14 | safe landing | 243.91 | 6.24 | 126 |
+| MountainCar | mountaincar-seed7-v1 | goal reached | 91.72 | 2.80 | 42 |
+| BipedalWalker | bipedalwalker-seed7-v9_sequential-hold1 | fall | -55.26 | 6.72 | 1680 |
 
-CarRacing decodes steering and a signed pedal value. The latter maps to throttle if positive and brake if negative. LunarLander decodes two engine commands; MountainCar decodes motor force; BipedalWalker decodes four joint commands. The shared numeric range is `[-1,1)`, so the upper bound itself is not available.
+These are guided demonstrations selected on development seeds. They do not estimate performance on unseen seeds or establish a general success rate. The simulator, terrain, and completion definitions were not changed to make a run successful.
 
-## K and resolution: fixed-track comparison
+## What changed in the prompts
 
-All four conditions used seed 7, forward option order, the same recovery-policy instructions, and a 180-second simulation horizon. The former 10-second no-new-tile guard was disabled in **all four** conditions. Thus this comparison does not confound K with that guard, but earlier runs used a different stopping rule.
+- **CarRacing:** put full steering and pedal instructions in their respective questions. Use the current four-tile waypoint bearing divided by 75 (clipped to ±0.6), plus an ordered conservative speed table. Remove previous commands from model input. Jev evaluates these guides and selects the actual actions. Several archived-state probes corrected wrong-sign steering, but guidance and input presentation changed together, so this does not isolate one causal fix.
+- **LunarLander:** put focused instructions and the current raw observation in each engine question. Main thrust follows an altitude/descent-speed table; lateral thrust uses an arithmetic stabilization guide. The selected v14 seed-7 run landed upright on the central pad. v14 produced four safe terminations scoring above 200 across seeds 7 and 19 plus repeats; one repeat settled at the pad edge. Earlier off-pad safe terminations and crashes are retained with their own outcomes.
+- **MountainCar:** retain the original successful runs. Their prompt includes the dynamics equation and energy-pumping guidance.
+- **BipedalWalker:** test gait instructions, numerical motor equations, and sequential model-chosen gait decisions. Later variants pass disclosed phase-to-angle-goal templates into the motor questions; these angle goals are not motor commands. Every executed torque still comes from NumericJev. Per-run configurations disclose the additional planning calls and action frequency; follow-up results and failures are in the full ledger.
 
-| K | Grid spacing | Requests/action | Track covered | End | Sim. seconds | API calls | Mean action latency |
-|---:|---:|---:|---:|---|---:|---:|---:|
-| 10 | 0.020 | 2 | 99.69% | Time limit | 180.00 | 1,800 | 0.507 s |
-| 20 | 0.020 | 2 | 97.18% | Time limit | 180.00 | 1,800 | 0.510 s |
-| 10 | 0.005 | 3 | **100%** | **Lap finished** | **127.32** | 1,911 | 0.756 s |
-| 20 | 0.005 | 2 | 94.36% | Time limit | 180.00 | 1,800 | 0.543 s |
+## K and precision: revised racing prompt
 
-The finer K=10 rollout completed this track; increasing K did not improve these individual runs. One rollout per setting cannot establish a general causal effect or reliability estimate. The 0.005 spacing gives 400 values per component, compared with 100 at 0.02. Representational precision does not guarantee a good control decision.
+All four seed-7 settings use the same revised prompt, forward option order, unchanged physics, actions held for 10 frames, and a 180-second simulation horizon. The additional seed-19 run uses that same prompt.
 
-At 99.69% the coarser K=10 car had missed one track tile, rather than merely lacking decimal precision in a completion counter. Completion still required the environment's actual `lap_finished` signal. Neither the environment nor the success criterion was changed to label that run successful.
+| Seed | K | Grid spacing | Coverage | Simulation seconds | API calls |
+|---:|---:|---:|---:|---:|---:|
+| 7 | 10 | 0.020 | 100% | 84.54 | 846 |
+| 7 | 20 | 0.020 | 100% | 85.44 | 856 |
+| 7 | 10 | 0.005 | 100% | 84.06 | 1263 |
+| 7 | 20 | 0.005 | 100% | 84.12 | 842 |
+| 19 | 20 | 0.005 | 100% | 93.78 | 938 |
 
-## All environments
+The earlier prompt completed only the K=10 / 0.005 condition: coverage was 99.69%, 97.18%, 100%, and 94.36% in the corresponding four seed-7 settings. Those records remain in the racing ledger and `historical_racing_ablation` in the JSON manifest. The new results do not establish that a larger K or finer precision caused the improvement: the prompt changed between rounds.
 
-| Environment | Recorded outcomes | Featured recording |
-|---|---|---|
-| CarRacing-v3 | 2 completed, 12 incomplete across four experiment stages | Seed 7, K=10, spacing 0.005; 100% coverage |
-| LunarLander-v3, continuous | 8 unsuccessful: four prompt versions × two seeds | Latest prompt, seed 7; crash |
-| MountainCarContinuous-v0 | Both seeds reached the goal | Seed 7; reward 91.72 |
-| BipedalWalker-v3, normal terrain | Both seeds fell | Seed 7; reward −115.31 |
+## Numerical actions, observations, and timing
 
-The CarRacing player deliberately features a completed run. For the three additional games the player uses seed 7 of the latest attempted prompt. The expandable ledger retains every episode and its full video, including unsuccessful attempts. The complete three-game prompt history is in the [experiment report](evidence/control/games-REPORT.md).
+- Model: `typesafe/jev-1.13-20260917`, through OpenRouter/systemone. Gymnasium 1.3.0. No GPU training.
+- Each action is a finite-grid number on `[-1,1)`. Python partitions the range and executes the selected cell's lower endpoint. The excluded upper bound is not an available action.
+- CarRacing uses steering plus a signed pedal, mapped mechanically to throttle if positive and brake if negative. It receives privileged speed, slip, yaw, road contact, and future track-centerline waypoints.
+- Lander uses main and lateral engine commands; MountainCar uses one motor force; Walker uses four hip/knee commands. Earlier Walker prompts receive extended observations including lidar and torso position. The focused sequential variants receive only the joint/body measurements printed in their questions; lidar and torso position remain in the diagnostic logs but are not given to Jev. Exact input access, prompt variants, and histories are archived.
+- All motor components share one request per tree level. K=10 / 0.005 uses three motor-refinement calls; the other tested grids use two. Later Walker protocols add model-chosen gait and numerical target-memory calls; the exact count is in each run's configuration.
+- Box2D integrates at 50 Hz. CarRacing holds actions for 10 frames; Lander for 5. Walker initially used 5-frame holds, while later attempts update every frame. MountainCar holds 4 discrete steps; displayed seconds follow its 30-fps rendering convention.
+- Simulation pauses during API inference. Full videos omit network waiting and show simulation-speed frames. GIFs are short excerpts. Mean action latency includes all planning and refinement requests, excluding physics/rendering. These are not real-time-control demonstrations.
+- Racing completion requires every track tile and the environment's lap-finished flag. Lander success uses the original asleep/no-body-crash termination; pad position and the score-200 threshold are reported separately. MountainCar requires the goal position and nonnegative velocity. Walker requires the normal terrain's right finish without a torso fall.
 
-## Inputs and timing
+## Evidence and independent replay
 
-- Model: `typesafe/jev-1.13-20260917`, accessed through OpenRouter/systemone. Gymnasium 1.3.0. No GPU training.
-- CarRacing: privileged speed, slip, yaw, road contact and future centerline waypoints. Recovery instructions include conservative speeds, gentle braking, positive throttle at low speed, and six recent controls.
-- LunarLander: normalized observation vector and history. The first two prompts supplied heuristic arithmetic; later prompts used verbal guidance and interval-effect labels. Version 4 corrected labels at engine deadzone boundaries. All eight attempts failed.
-- MountainCar: position, velocity, history, the transition equation, and explicit energy-pumping guidance. Both successful episodes are guided control demonstrations, not an isolated test of unguided planning.
-- Walker: joint observations, contacts, lidar and privileged torso position; explicit gait/balance guidance. Python supplied no gait phase or computed action target. Both episodes fell.
-- Box2D physics runs at 50 Hz. Car actions are held for 10 frames; Lander and Walker for 5. MountainCar actions are held for 4 discrete transitions. Its displayed seconds use a 30-fps rendering convention, not a separately defined physical timestep.
-- Simulation pauses during API inference. Videos omit network waits and show simulation-speed frames; short crashes therefore produce short clips. GIFs are excerpts of at most 10–12 seconds. Mean action latency includes the sequential tree requests, excluding simulation and rendering. These are not real-time-control demonstrations.
+Every ledger row links the recorded requests/responses, executed actions, original summary, and source snapshots. Media are separate for direct playback. Authentication headers are excluded. Source snapshots retain original local import paths and require adaptation outside the original workspace; they are evidence, not a packaged portable benchmark.
 
-## Audit artifacts
+- Revised racing: [report](evidence/control/prompt-racing-REPORT.md), [all five reconstruction/replay audits](evidence/control/prompt-racing-verification.json).
+- Revised Lander: [report with all 16 attempts](evidence/control/prompt-lunarlander-REPORT.md), [audit manifest](evidence/control/prompt-lunarlander-verification-manifest.json).
+- Walker follow-ups: [development report](evidence/control/prompt-bipedalwalker-README.md), [action reconstruction and replay](evidence/control/prompt-bipedalwalker-audit.json).
+- Earlier additional games: [action/recording checks](evidence/control/games-verification.json), [source semantics](evidence/control/games-smoke-semantics.json).
+- Earlier racing comparison: [independent replay](evidence/control/racing-verification.json).
+- All exact prompts and controls, including Walker follow-ups: each row's **Recorded trace** link. Offline arithmetic/reference-controller probes are diagnostics, never counted as model episodes.
 
-Each ledger row links a compressed archive with the complete API requests/responses, executed actions, original summary, and available rules/source snapshots. Request archives contain no authorization headers. Media are provided separately for direct playback. Runner snapshots retain original experiment paths for provenance; their local imports and credential-loading paths require adaptation outside the original workspace. They are not a packaged portable benchmark.
-
-- [Additional games: action provenance and recording checks](evidence/control/games-verification.json)
-- [Additional games: source semantics and diagnostic probes](evidence/control/games-smoke-semantics.json)
-- [Four K/precision runs: action reconstruction and independent replay](evidence/control/racing-verification.json)
-- [Earlier racing recovery: report](evidence/control/racing-recovery-report.md) and [all four summaries](evidence/control/racing-recovery-results.json)
-
-Offline reconstruction checks whether Jev's selected options produced the saved actions. Replay checks whether those actions reproduce the recorded environment outcome. Neither establishes that an action was optimal.
+Reconstruction checks that recorded Jev choices produced the executed actions. Fresh deterministic replay checks that those actions reproduce the reported observations, reward, and termination. Neither establishes that a selected action was optimal.

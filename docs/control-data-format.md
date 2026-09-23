@@ -1,6 +1,6 @@
 # NumericJev control experiment data
 
-The static page loads `results.json` relative to `index.html`. Put only actual measured outcomes in that file. The included empty file is an unpublished development scaffold; replace it before deployment.
+The static page loads `results.json` relative to `index.html`. It contains actual measured outcomes and the complete development history, including unsuccessful attempts.
 
 ## Top-level fields
 
@@ -12,6 +12,7 @@ The static page loads `results.json` relative to `index.html`. Put only actual m
 | `protocol_notes` | string[] | Input access, prompts, control frequency, timing definitions, success criteria, and limitations. |
 | `games` | game[] | Displayed in supplied order. Four intended games: CarRacing-v3, LunarLander-v3 with continuous=true, MountainCarContinuous-v0, BipedalWalker-v3. |
 | `racing_ablation` | run[] | Flat array of comparison runs, shown separately from the four-game summaries. Same row schema as other runs. |
+| `historical_racing_ablation` | run[], optional | Earlier comparisons using a different prompt. Preserved separately; also retained in the racing ledger. |
 | `config` | object, optional | Experiment configuration; shown as expandable formatted JSON. |
 | `source_url` | string, optional | Repository or experiment code link. Defaults to Bring-AI/jev-numeric. |
 | `measurement_url` | string, optional | Human-inspectable measurements link. Defaults to results.json. |
@@ -53,16 +54,18 @@ The static page loads `results.json` relative to `index.html`. Put only actual m
 | `media` | media object, optional | Per-run recording links. Required for recorded unsuccessful attempts that have media. |
 | `trace` | string, optional | Relative or HTTPS link to a complete raw trace. JSON, JSONL, and compressed .gz files all work. Labeled “Recorded trace.” |
 | `config` | object, optional | Prompt version, max steps, action repeats, range, rates, source revision, actions/control count, overrides, privileged input access, and other settings. |
+| `experiment_stage` | string, optional | Marks the prompt-development round; does not alter the recorded outcome. |
 
 Media objects contain optional relative or HTTPS paths: `gif`, `video`, and `poster`. MP4/H.264 is the intended full-video format. Use relative paths such as `media/car-racing-seed19.mp4` to keep GitHub Pages project URLs and future root-domain hosting working. A poster is strongly recommended so reduced-motion mode can display a still image. GIFs animate by default unless the operating system requests reduced motion; visitors can pause previews with the page-level checkbox. Videos never autoplay and use native accessible controls.
 
 ## Display rules
 
 - Every supplied run appears in the game ledger. Ablation runs appear in their own full table and are not silently added to game totals.
-- Success summary is `successful / assessed`; unknown outcomes are counted and explicitly marked separately.
-- Reward range includes all numeric rewards supplied for that game, including unsuccessful and partial runs. Non-numeric and missing values are not converted to zero.
+- The main result belongs to the explicitly featured recording: completion status, coverage (racing), or episode reward (other games). Unknown results remain unassessed.
+- The expandable ledger retains every attempt and counts successful recordings across development. This count is not presented as an estimated success rate.
 - The shown run's branching, resolution, and mean action latency are labeled as belonging to that recording. They are not presented as averages over different settings.
 - Featured run selection never changes all-run statistics. Mark illustrative or diagnostic prompts in the run config; retain earlier unsuccessful variants.
+- Walker configurations disclose intermediate gait decisions, target-angle templates, and the number of planning calls in addition to motor-refinement calls. Angle goals are distinct from the executed motor commands.
 - All rows expose available video, GIF, and trace links. Direct video links use the browser's native player; visitors can inspect unsuccessful attempts as well as the featured one.
 - Empty games or missing featured videos leave a visible development/missing-recording notice. Do not deploy an empty scaffold.
 - Text is inserted as DOM text, not HTML. Links accept HTTP and HTTPS URLs only, including relative URLs resolved under the current page.

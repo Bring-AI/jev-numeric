@@ -1,0 +1,322 @@
+[
+  {
+    "id": "bipedalwalker-seed19-v15_fixed0_inequality-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 246,
+    "all_api_calls": 738,
+    "motor_api_calls": 492,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -109.3890466572484,
+    "replay_steps": 246,
+    "replay_x": 4.583085536956787,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.998290538821282e-07,
+    "sha256": {
+      "actions.jsonl": "bf456d45e40c603de08d24592f3a907586283e6fc3c6e4e164a70190669463d8",
+      "api-records.jsonl": "33c07aa248ad4cbdbc2ca98a059b78a3cbd39cf0c0ea045a66888c0d40fc5974",
+      "replay.mp4": "6bce87b13576d19d530408931e005839371e0939bf72eaa258610f001676988c",
+      "prompt-runner-snapshot.py": "0fa0ab487f228da6a037c594c4b3fe7b464475be05892b1562cc61f6ac23625d"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed19-v7_reference_cases-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 81,
+    "all_api_calls": 324,
+    "motor_api_calls": 162,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -96.46983417654701,
+    "replay_steps": 81,
+    "replay_x": 7.084435939788818,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.998493194352527e-07,
+    "sha256": {
+      "actions.jsonl": "1c0bdc3fe8b382adda2b6567d1444756f410fd34419f1d730c56a36bf4f0a9fc",
+      "api-records.jsonl": "ef87507c0a91a004a2e5b02f1a44aa0f12c55759defb29525fbfc30213ccc7be",
+      "replay.mp4": "46663150bdf69b62ca6fcb44bf4b3114a209482187755197097300f46e8e34f4",
+      "prompt-runner-snapshot.py": "4f9101883eb23caf189457da6237df0fd2ac1b3da0c6ae381a2ac3c664d7edc1"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed19-v9_sequential-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 162,
+    "all_api_calls": 810,
+    "motor_api_calls": 324,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -78.76980806328356,
+    "replay_steps": 162,
+    "replay_x": 11.70780086517334,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.994316100681573e-07,
+    "sha256": {
+      "actions.jsonl": "51e324cb2e24ef1b5768f07d2fb0b497f9d4ccf17b6378a2dd68bd12972bfac9",
+      "api-records.jsonl": "7051109d6b5650b78e78b456cd30e12bba5aa483fc592e8046f78772449d2f10",
+      "replay.mp4": "88adf212273557c612e51fdb8d1425ff27351ed8d58c838c3384393d92a06be8",
+      "prompt-runner-snapshot.py": "eb70d038925c412aa1d797586b4719c25447592aa6b74e55ccfe626791db5b0d"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v10_rounded-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 100,
+    "all_api_calls": 500,
+    "motor_api_calls": 200,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -120.46207710728049,
+    "replay_steps": 100,
+    "replay_x": 1.668828010559082,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.995346069569528e-07,
+    "sha256": {
+      "actions.jsonl": "962656cbe93fc917c5ac09df68a1a448af1e930e513ad99590a6dd9df4b75f9f",
+      "api-records.jsonl": "f2aa700e3f6908f164f68e84f09a4c1c94b32353a16a5c7dc8943ad77dcc13b1",
+      "replay.mp4": "738e29197f10832f9ae387ebf97393dd7be44fbeabaa0eca88efe5ed072caca4",
+      "prompt-runner-snapshot.py": "eb70d038925c412aa1d797586b4719c25447592aa6b74e55ccfe626791db5b0d"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v12_fall_extension-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 224,
+    "all_api_calls": 1120,
+    "motor_api_calls": 448,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -118.24615696561523,
+    "replay_steps": 224,
+    "replay_x": 2.8108110427856445,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.995040893684966e-07,
+    "sha256": {
+      "actions.jsonl": "a81bdaae8442336cafb97cb69c2db7236dab60169dc983b2b6ec26e567556af9",
+      "api-records.jsonl": "7ae370a659610af0e98bfc1886fa36bac72607db2106e57d4e107fbab495edac",
+      "replay.mp4": "d6dab23184eb7ceac70a2dfc324fbae7835ed05fbdf74647d96886510d289e07",
+      "prompt-runner-snapshot.py": "51a9635bd607cadf544005904429cf384db27c3390f0d0f7cacf3a2d3837ac7c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v13_phase_predicates-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 128,
+    "all_api_calls": 640,
+    "motor_api_calls": 256,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -82.66514899674803,
+    "replay_steps": 128,
+    "replay_x": 10.643691062927246,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.991416930888448e-07,
+    "sha256": {
+      "actions.jsonl": "468f636c110baa906d0a880fa9b3533b5aef27d04a25d88636ee35f8feb4c39e",
+      "api-records.jsonl": "67a036def6279ddd5484764a90daf6c56176b774e89f980139128d00a0b5fa73",
+      "replay.mp4": "6f438b25427a8eb26146cb85fe6790dce230417f9a152bce39ff3a8811cba4b2",
+      "prompt-runner-snapshot.py": "51a9635bd607cadf544005904429cf384db27c3390f0d0f7cacf3a2d3837ac7c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v14_inequality-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 296,
+    "all_api_calls": 1480,
+    "motor_api_calls": 592,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -113.84564179193694,
+    "replay_steps": 296,
+    "replay_x": 3.60615611076355,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.998245239917765e-07,
+    "sha256": {
+      "actions.jsonl": "c4ca01eec697513a4b576f4a8426d3b5e5e95c88871c8f593d3395bea44fd94f",
+      "api-records.jsonl": "dfaefe7809a94f29d7410ed217ecdaceeb7ced66cf79e190cd4bce46f1a021d1",
+      "replay.mp4": "84ce20c52bc80a4f85c272b1783802132306a8245253fa19be4d3c1ad079be0c",
+      "prompt-runner-snapshot.py": "d232a593b44b3d9411cb4106717333fa20827e586fea045b949f495fe4db0983"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v15_fixed0_inequality-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 359,
+    "all_api_calls": 1077,
+    "motor_api_calls": 718,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -112.74905214784667,
+    "replay_steps": 359,
+    "replay_x": 4.062178134918213,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.99847412099852e-07,
+    "sha256": {
+      "actions.jsonl": "10c7ae605cb0d0d8160162d011618143c9c52be3ba1df2528d49eef9a1031d32",
+      "api-records.jsonl": "654b87b1700a0140399ec3f73d361b7bfcea95482c42fb1bb02d436968f1c26f",
+      "replay.mp4": "4419344a6a94e759f7af22b607819455f421e080cce80a44ec4c4205755ad5d2",
+      "prompt-runner-snapshot.py": "0fa0ab487f228da6a037c594c4b3fe7b464475be05892b1562cc61f6ac23625d"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v17_simple_coefficients-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 158,
+    "all_api_calls": 474,
+    "motor_api_calls": 316,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -90.96695509785786,
+    "replay_steps": 158,
+    "replay_x": 8.724275588989258,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.98441696139551e-07,
+    "sha256": {
+      "actions.jsonl": "1e02b3b3ea21b1379b7d10c8b01b34a1e9d4a8dbb955a090412f6d93a42aa051",
+      "api-records.jsonl": "00f408daba0234c788c3c81bb3e8959b802acab1d6c1141c5af9bece4d1f5327",
+      "replay.mp4": "cd259702a7e2e1ae0caee6d3743ff0a4cc45ed9daa694bf475121f9f6a6de292",
+      "prompt-runner-snapshot.py": "e40323e5d2551b8548387f6cbdb3a3f0ac0bb89ab9abb16b230a87b138bc520e"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v2_literal",
+    "pass": true,
+    "errors": [],
+    "decisions": 11,
+    "all_api_calls": 33,
+    "motor_api_calls": 22,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -108.52906171046197,
+    "replay_steps": 55,
+    "replay_x": 4.272006988525391,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.994964599713825e-07,
+    "sha256": {
+      "actions.jsonl": "462315714998b8859b82c87481c35c0ef4380b71bd3c56df130e49dfb568709a",
+      "api-records.jsonl": "603e943d305b6d961609607b37cfe9de67d6ab9a5c6ee0895d0f4ffdff86575e",
+      "replay.mp4": "e573acb13459edb7966875cf77e9dd55f4481e2832bd4c5911491228b5773ee3",
+      "prompt-runner-snapshot.py": "9d49698fc25118e2b2faf8df490f173e5dfac8f28e77ac3ee99681e85f46160c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v3_verbal",
+    "pass": true,
+    "errors": [],
+    "decisions": 11,
+    "all_api_calls": 33,
+    "motor_api_calls": 22,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -108.0222893897444,
+    "replay_steps": 54,
+    "replay_x": 4.3498945236206055,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.994964599713825e-07,
+    "sha256": {
+      "actions.jsonl": "3b4551d6e69b68ba001e52f514cf530b4edf1548ea9b76067bbfe9b1bc53ae0a",
+      "api-records.jsonl": "0626896614d87eb38058fa49aa2b709cd8f53e807af6b701b9d277d92781db77",
+      "replay.mp4": "1b838aa798f6545477f278c910e165174a0631a9d393d7d993ee4866079c0ae5",
+      "prompt-runner-snapshot.py": "9d49698fc25118e2b2faf8df490f173e5dfac8f28e77ac3ee99681e85f46160c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v4_tuned",
+    "pass": true,
+    "errors": [],
+    "decisions": 14,
+    "all_api_calls": 42,
+    "motor_api_calls": 28,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -114.32394179329276,
+    "replay_steps": 70,
+    "replay_x": 3.0679240226745605,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.987287521296402e-07,
+    "sha256": {
+      "actions.jsonl": "285dd8974b1b2826b76d15ad34ac1e544ad54ceab541de5eff6d4d7f4846db7b",
+      "api-records.jsonl": "8f00a6640bc7bb445fa04eeb2da611ee0be43e89b30a6135fe8572d2f2c94ee5",
+      "replay.mp4": "2c666a966be07dcca956fc5a99f85422e061da010fa7c2638b39f903219de179",
+      "prompt-runner-snapshot.py": "9d49698fc25118e2b2faf8df490f173e5dfac8f28e77ac3ee99681e85f46160c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v5_tuned_verbal",
+    "pass": true,
+    "errors": [],
+    "decisions": 12,
+    "all_api_calls": 36,
+    "motor_api_calls": 24,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -111.8787462245673,
+    "replay_steps": 59,
+    "replay_x": 3.6498196125030518,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.976196288919432e-07,
+    "sha256": {
+      "actions.jsonl": "ba0f50d90b17d2a1706dca60184df2c18fda116f2851d30d44317b78579ae6a3",
+      "api-records.jsonl": "2779808ec2c409d5959008f6837ff66aca49a0a0c535172e6d58e7fe6d3052b4",
+      "replay.mp4": "d503c972ace39ae7bef33fd84bf3aa9b9d8a8ef2f9630c30a6c300567918e419",
+      "prompt-runner-snapshot.py": "9d49698fc25118e2b2faf8df490f173e5dfac8f28e77ac3ee99681e85f46160c"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v6_reference-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 89,
+    "all_api_calls": 356,
+    "motor_api_calls": 178,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -96.42424397123978,
+    "replay_steps": 89,
+    "replay_x": 7.116665363311768,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.994421005238836e-07,
+    "sha256": {
+      "actions.jsonl": "0c2b4873464be65154abcbaa84f84d9501138e118d33017353e2118339fc6b64",
+      "api-records.jsonl": "18b5fa3501ab696e03607f74d8cd24fd75379b38a51c90f66027f402e25f08d6",
+      "replay.mp4": "46a4d6a176137248d4a2a12bd6d62c4d12fb124ad77af533e4161f5d920cebc6",
+      "prompt-runner-snapshot.py": "da3797e1827bd6f694587f8189fc2476820f5948ae4721842d8556d9b316a787"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v8_focused_reference-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 303,
+    "all_api_calls": 1212,
+    "motor_api_calls": 606,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -130.66139252949506,
+    "replay_steps": 303,
+    "replay_x": -0.03278050199151039,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.999977350240992e-07,
+    "sha256": {
+      "actions.jsonl": "a15ddac8263a9da4691214dbf1b2d5b2e45a0748a4df99968f0c4e73689cfd31",
+      "api-records.jsonl": "deb54d59f741c11d26c83360ba5040701b9c7b1da893b6708f5a6499b305ead5",
+      "replay.mp4": "fd6da3b3a5c6c4c689ded82c58f7f95a7375343d577b180750910d3ed4393840",
+      "prompt-runner-snapshot.py": "4f9101883eb23caf189457da6237df0fd2ac1b3da0c6ae381a2ac3c664d7edc1"
+    }
+  },
+  {
+    "id": "bipedalwalker-seed7-v9_sequential-hold1",
+    "pass": true,
+    "errors": [],
+    "decisions": 336,
+    "all_api_calls": 1680,
+    "motor_api_calls": 672,
+    "all_actions_exactly_decoded_from_api_choices": true,
+    "replay_reward": -55.2583392271772,
+    "replay_steps": 336,
+    "replay_x": 18.411693572998047,
+    "replay_terrain_finished": false,
+    "max_observation_error": 4.998807907052871e-07,
+    "sha256": {
+      "actions.jsonl": "fdcdad94d314bb2e33d50da102b7d3b965f430bae6f0257cab13b429cd854842",
+      "api-records.jsonl": "2d492b9679d2213f29b64777f21470db0365cab8b41ef7d83edbe1deeea6b550",
+      "replay.mp4": "2a019b97538cbaab76f097a036159c19510161fde7ba1200257622b67ff98c3d",
+      "prompt-runner-snapshot.py": "eb70d038925c412aa1d797586b4719c25447592aa6b74e55ccfe626791db5b0d"
+    }
+  }
+]

@@ -111,29 +111,22 @@ function createMedia(game, featured) {
 }
 
 function createResult(game, runs, featured) {
-  const successes = runs.filter(run => run.success === true).length;
-  const failures = runs.filter(run => run.success === false).length;
-  const assessed = successes + failures;
-  const unknown = runs.length - assessed;
-  const rewards = runs.map(run => run.reward).filter(numeric);
-  const rewardRange = rewards.length ? `${format(Math.min(...rewards))} to ${format(Math.max(...rewards))}` : '—';
-  const statusText = !runs.length ? 'Pending' : unknown ? 'Includes unassessed' : failures && successes ? 'Mixed outcomes' : successes ? 'All successful' : 'Unsuccessful';
-  const statusClass = !runs.length || unknown ? '' : failures && successes ? '' : successes ? 'success' : 'failure';
+  const success = featured?.success === true;
+  const statusText = !featured ? 'Pending' : success ? 'Completed' : featured.success === false ? 'Not completed' : 'Not assessed';
+  const statusClass = !featured || typeof featured.success !== 'boolean' ? '' : success ? 'success' : 'failure';
+  const hasCoverage = numeric(featured?.coverage_percent);
+  const value = hasCoverage ? `${format(featured.coverage_percent, 2)}%` : format(featured?.reward, 1);
   const stats = node('dl', { class: 'mini-stats' });
   for (const [label, value] of [
-    ['Reward range · all runs', rewardRange],
-    ['Recorded attempts', runs.length ? String(runs.length) : '—'],
+    ['Shown run · simulation seconds', format(featured?.sim_seconds, 2)],
+    ['Shown run · API calls', format(featured?.api_calls, 0)],
     ['Shown run · K / resolution', featured ? `${setting(featured.branching)} / ${setting(featured.resolution)}` : '—'],
     ['Shown run · mean action latency', numeric(featured?.mean_action_latency_s) ? `${format(featured.mean_action_latency_s, 2)} s` : '—']
   ]) stats.append(node('div', {}, node('dt', {}, label), node('dd', {}, value)));
   const result = node('div', { class: 'game-result' },
-    node('div', { class: 'result-heading' }, node('span', { class: 'result-label' }, 'RECORDED OUTCOMES'), node('span', { class: `status-badge ${statusClass}` }, statusText)),
-    node('div', { class: 'result-value' }, assessed ? `${successes} / ${assessed}` : '—', node('span', {}, assessed ? 'successful' : 'awaiting assessment')),
-    node('p', { class: 'result-criterion' }, game.success_criterion || 'Success is reported by the experiment runner.', unknown ? ` ${unknown} run${unknown === 1 ? '' : 's'} not assessed.` : ''),
-    node('div', { class: 'outcome-bar', 'aria-hidden': 'true' },
-      node('span', { class: 'success', style: `width:${runs.length ? successes / runs.length * 100 : 0}%` }),
-      node('span', { class: 'failure', style: `width:${runs.length ? failures / runs.length * 100 : 0}%` }),
-      node('span', { class: 'unknown', style: `width:${runs.length ? unknown / runs.length * 100 : 0}%` })), stats);
+    node('div', { class: 'result-heading' }, node('span', { class: 'result-label' }, 'FEATURED RECORDING'), node('span', { class: `status-badge ${statusClass}` }, statusText)),
+    node('div', { class: 'result-value' }, value, node('span', {}, hasCoverage ? 'track covered' : 'episode reward')),
+    node('p', { class: 'result-criterion' }, game.success_criterion || 'Success is reported by the experiment runner.'), stats);
   if (list(game.notes).length) result.append(node('ul', { class: 'game-notes' }, game.notes.map(note => node('li', {}, note))));
   return result;
 }
@@ -162,7 +155,8 @@ function createRunTable(runs, label) {
 function createLedger(game, runs) {
   const body = node('div', { class: 'run-ledger-body' });
   if (runs.length) {
-    body.append(node('p', { class: 'table-hint' }, 'All recorded attempts, in source order. Scroll the table to inspect timing and evidence. “—” means not recorded.'), createRunTable(runs, game.title));
+    const successes = runs.filter(run => run.success === true).length;
+    body.append(node('p', { class: 'table-hint' }, `${successes} successful recordings among ${runs.length} development attempts across settings. This is an experiment history, not an estimated success rate. All attempts appear below; “—” means not recorded.`), createRunTable(runs, game.title));
   } else body.append(node('p', { class: 'empty-ledger' }, 'No measurements have been supplied for this environment.'));
   const config = { environment: game.environment, action_dimensions: game.action_dimensions, success_criterion: game.success_criterion, ...game.config };
   const perRun = runs.filter(run => run.config).map(run => ({ id: run.id, seed: run.seed, reverse_options: run.reverse_options, ...run.config }));
