@@ -1,6 +1,11 @@
 # A simple algorithm that turns Jev decisions into accurate numerical outputs
 
 <p align="center">
+  <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
+  <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+</p>
+
+<p align="center">
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 

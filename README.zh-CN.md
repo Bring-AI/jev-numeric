@@ -1,5 +1,10 @@
 # A simple algorithm that turns Jev decisions into accurate numerical outputs
 
+<p align="center">
+  <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
+  <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+</p>
+
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
 <p align="center"><strong>一个简单算法，把 Jev 的离散决策变成数值输出。</strong></p>
