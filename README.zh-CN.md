@@ -1,10 +1,22 @@
+# A simple algorithm that turns Jev decisions into numerical outputs.
+
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
-<h1 align="center">A simple algorithm that turns Jev decisions into numerical outputs.</h1>
 <p align="center"><strong>一个简单算法，把 Jev 的离散决策变成数值输出。</strong></p>
 <p align="center"><a href="README.md">English</a> · <a href="#实测结果">实测结果</a> · <a href="#快速开始">快速开始</a> · <a href="artifacts/metrics.json">可核对的指标</a></p>
 
 **Jev 擅长结构化决策。我们利用这种能力，加上多叉数值决策树，构建一个可指定范围与精度的数值输出接口。** 每次只问“答案落在哪个区间”，再在选中的区间中继续细分。不训练模型，也不添加回归头。
+
+## 增加了什么能力？
+
+| 能力 | Jev<br>Decision-only（官方） | Jev-numeric（本方法） |
+|---|:---:|:---:|
+| 决策与选项概率 | ✅ | ✅ |
+| 等级评分 | ✅ | ✅ |
+| 数值解码 | ❌ | ✅ |
+| CDF / 直方图构造 | ❌ | ✅* |
+
+原生接口：[Choice](https://docs.typesafe.ai/primitives/choice)、[Score](https://docs.typesafe.ai/primitives/score)。*实验性，尚未验证概率校准。
 
 ## 输入什么，输出什么？
 
@@ -32,17 +44,6 @@ print(result["value"])  # 实测输出：11.00
 ```
 
 [安装后](#快速开始)运行 `python scripts/run_examples.py` 可以重跑全部三个例子。[原始题目与结果](artifacts/readme-examples-20260923T090329Z/results.json)。这三个例子各测一次，用于直观展示接口；更多方法对照和失败情况见后文。
-
-## 增加了什么能力？
-
-| 能力 | Jev | Jev + 本方法 |
-|---|:---:|:---:|
-| 决策与选项概率 | ✅ | ✅ |
-| 等级评分 | ✅ | ✅ |
-| 数值解码 | ❌ | ✅ |
-| CDF / 直方图构造 | ❌ | ✅* |
-
-原生接口：[Choice](https://docs.typesafe.ai/primitives/choice)、[Score](https://docs.typesafe.ai/primitives/score)。*实验性，尚未验证概率校准。
 
 ## 方法：划分、选择、再细分
 

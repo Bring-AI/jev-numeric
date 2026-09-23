@@ -1,8 +1,9 @@
+# A simple algorithm that turns Jev decisions into numerical outputs.
+
 <p align="center">
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<h1 align="center">A simple algorithm that turns Jev decisions into numerical outputs.</h1>
 <p align="center"><strong>Jev Numeric · Multiway interval decoding</strong></p>
 <p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
 <p align="center">
@@ -15,6 +16,17 @@
 </p>
 
 **Jev is built for structured decisions. We use those decisions to construct a numerical output interface.** Ask which interval contains a value, keep the selected interval, and repeat. A multiway decision tree turns categorical choices into a finite-precision number—without training a model or adding a regression head.
+
+## What this adds
+
+| Capability | Jev<br>Decision-only (official) | Jev-numeric (Ours) |
+|---|:---:|:---:|
+| Decisions & option probabilities | ✅ | ✅ |
+| Rubric scores | ✅ | ✅ |
+| Numeric decoding | ❌ | ✅ |
+| CDF / histogram construction | ❌ | ✅* |
+
+Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
 
 ## What goes in. What comes out.
 
@@ -42,17 +54,6 @@ print(result["value"])  # Recorded output: 11.00
 ```
 
 After [installation](#quick-start), run `python scripts/run_examples.py` to try all three. [Exact prompts and recorded outputs →](artifacts/readme-examples-20260923T090329Z/results.json) These three one-shot examples illustrate the interface; the broader comparisons and failures are reported below.
-
-## What this adds
-
-| Capability | Jev | Jev + Ours |
-|---|:---:|:---:|
-| Decisions & option probabilities | ✅ | ✅ |
-| Rubric scores | ✅ | ✅ |
-| Numeric decoding | ❌ | ✅ |
-| CDF / histogram construction | ❌ | ✅* |
-
-Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
 
 ## The algorithm
 
