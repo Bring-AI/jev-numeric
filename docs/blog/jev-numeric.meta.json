@@ -1,0 +1,7 @@
+{
+  "title": "A simple algorithm that turns Jev decisions into numerical outputs.",
+  "slug": "jev-numeric",
+  "excerpt": "Split, choose, zoom in. Jev Numeric uses a multiway interval tree to decode numbers through Jev decisions: 4.58% mean relative error in a small historical index recall experiment, and 0% when the reference values are supplied.",
+  "category": "Research",
+  "cover": "terminal"
+}
