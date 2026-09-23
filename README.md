@@ -51,6 +51,26 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 <sub>Actual runs with an illustrative input-only rate; expected answers were not supplied. Forward/reverse means option order. Each output used seven ten-way decisions at $0.000001 resolution. [Full results, including tiered and cached pricing](artifacts/token-billing-20260923/summary.json).</sub>
 
+## Application example: continuous game control
+
+**[Watch GIFs, full videos, and all 26 attempts →](https://bring-ai.github.io/jev-numeric/)**
+
+| Game | Numeric controls | Recorded result | GIF |
+|---|---|---|---|
+| CarRacing | Steering + signed throttle/brake | **100% track coverage**, K=10, resolution 0.005, seed 7 | [![CarRacing](docs/media/control/racing-K10-resolution0.005-seed7/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-1) |
+| LunarLander | Main + lateral engine | Crash; all 8 attempts unsuccessful | [![LunarLander](docs/media/control/lunarlander-seed7-v4/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-2) |
+| MountainCar | Motor force | **Goal reached**, both seeds | [![MountainCar](docs/media/control/mountaincar-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-3) |
+| BipedalWalker | Four joint commands | Both attempts fell | [![BipedalWalker](docs/media/control/bipedalwalker-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
+
+Jev receives structured telemetry and explicit control guidance; NumericJev decodes the actual actions. No training or fallback controller. Videos omit API waiting. Racing features a completed run; its other 13 attempts and every additional-game attempt remain available.
+
+| CarRacing, seed 7 | Resolution 0.020 | Resolution 0.005 |
+|---|---:|---:|
+| K=10 | 99.69% covered | **100% — completed** |
+| K=20 | 97.18% covered | 94.36% covered |
+
+<sub>Same prompt, forward option order, 180-second horizon; one rollout per setting. The finer K=10 setting uses three tree calls per action; the others use two. These are exploratory outcomes, not a general success-rate estimate. [Protocol, latency, and evidence](docs/experiment-notes.md).</sub>
+
 ## Turning Jev to Numerical Output
 
 | Your question | Numerical output |

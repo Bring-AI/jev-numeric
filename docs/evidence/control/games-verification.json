@@ -1,0 +1,101 @@
+{
+  "checks": "Every action component reconstructed from recorded Jev responses; step/reward accounting; videos decoded; GIF width/size verified. No network calls in audit.",
+  "runs": [
+    {
+      "run": "bipedalwalker-seed19-v1",
+      "decisions": 20,
+      "verified_action_components": 80,
+      "verified_api_records": 40,
+      "gif_bytes": 70916,
+      "video_bytes": 51399
+    },
+    {
+      "run": "bipedalwalker-seed7-v1",
+      "decisions": 15,
+      "verified_action_components": 60,
+      "verified_api_records": 30,
+      "gif_bytes": 59148,
+      "video_bytes": 44817
+    },
+    {
+      "run": "lunarlander-seed19-v1",
+      "decisions": 15,
+      "verified_action_components": 30,
+      "verified_api_records": 30,
+      "gif_bytes": 28081,
+      "video_bytes": 34273
+    },
+    {
+      "run": "lunarlander-seed19-v2",
+      "decisions": 15,
+      "verified_action_components": 30,
+      "verified_api_records": 30,
+      "gif_bytes": 25968,
+      "video_bytes": 26716
+    },
+    {
+      "run": "lunarlander-seed19-v3",
+      "decisions": 25,
+      "verified_action_components": 50,
+      "verified_api_records": 50,
+      "gif_bytes": 43723,
+      "video_bytes": 47774
+    },
+    {
+      "run": "lunarlander-seed19-v4",
+      "decisions": 16,
+      "verified_action_components": 32,
+      "verified_api_records": 32,
+      "gif_bytes": 33136,
+      "video_bytes": 32549
+    },
+    {
+      "run": "lunarlander-seed7-v1",
+      "decisions": 13,
+      "verified_action_components": 26,
+      "verified_api_records": 26,
+      "gif_bytes": 26399,
+      "video_bytes": 32309
+    },
+    {
+      "run": "lunarlander-seed7-v2",
+      "decisions": 14,
+      "verified_action_components": 28,
+      "verified_api_records": 28,
+      "gif_bytes": 27605,
+      "video_bytes": 27274
+    },
+    {
+      "run": "lunarlander-seed7-v3",
+      "decisions": 19,
+      "verified_action_components": 38,
+      "verified_api_records": 38,
+      "gif_bytes": 35347,
+      "video_bytes": 37772
+    },
+    {
+      "run": "lunarlander-seed7-v4",
+      "decisions": 14,
+      "verified_action_components": 28,
+      "verified_api_records": 28,
+      "gif_bytes": 29243,
+      "video_bytes": 29693
+    },
+    {
+      "run": "mountaincar-seed19-v1",
+      "decisions": 21,
+      "verified_action_components": 21,
+      "verified_api_records": 42,
+      "gif_bytes": 40036,
+      "video_bytes": 36780
+    },
+    {
+      "run": "mountaincar-seed7-v1",
+      "decisions": 21,
+      "verified_action_components": 21,
+      "verified_api_records": 42,
+      "gif_bytes": 38725,
+      "video_bytes": 36359
+    }
+  ]
+}

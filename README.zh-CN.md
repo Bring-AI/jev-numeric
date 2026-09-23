@@ -41,6 +41,26 @@
 
 <sub>自定义费率的实际调用，仅计算输入费用，未向模型提供正确答案。正序／倒序指选项顺序；每个结果使用七次十叉决策，分辨率为 $0.000001。[完整结果，含分段计费和缓存折扣](artifacts/token-billing-20260923/summary.json)。</sub>
 
+## 应用示例：连续游戏控制
+
+**[查看 GIF、完整视频和全部 26 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
+
+| 游戏 | 数值控制 | 实测结果 | GIF |
+|---|---|---|---|
+| CarRacing 赛车 | 转向 + 带符号的油门/刹车 | **100% 覆盖赛道**，K=10，精度 0.005，种子 7 | [![赛车](docs/media/control/racing-K10-resolution0.005-seed7/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-1) |
+| LunarLander 登月 | 主引擎 + 侧向引擎 | 坠毁，8 次尝试均未成功 | [![登月](docs/media/control/lunarlander-seed7-v4/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-2) |
+| MountainCar 山地车 | 电机推力 | **两个种子都到达目标** | [![山地车](docs/media/control/mountaincar-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-3) |
+| BipedalWalker 双足行走 | 四个关节控制量 | 两次尝试均跌倒 | [![双足行走](docs/media/control/bipedalwalker-seed7-v1/preview.gif)](https://bring-ai.github.io/jev-numeric/#game-4) |
+
+模型接收结构化状态和明确的控制指导，实际动作由 NumericJev 解码产生，无训练、无备用控制器。视频省略 API 等待。赛车展示完成的实例，其余 13 次赛车尝试及新增游戏的全部尝试均保留。
+
+| 赛车，种子 7 | 精度 0.020 | 精度 0.005 |
+|---|---:|---:|
+| K=10 | 覆盖 99.69% | **100%，完成** |
+| K=20 | 覆盖 97.18% | 覆盖 94.36% |
+
+<sub>相同提示词、正序选项、180 秒模拟时限，每种设置一次。K=10、精度 0.005 每个动作需要三层请求，其余为两层。这些探索性结果不代表一般成功率。[实验设置、延迟和原始记录](docs/experiment-notes.md)。</sub>
+
 ## Turning Jev to Numerical Output
 
 | 输入问题 | 数值输出 |

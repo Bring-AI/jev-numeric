@@ -1,0 +1,1289 @@
+{
+  "updated_at": "2026-09-23T15:20:39.892978+00:00",
+  "model": "typesafe/jev-1.13-20260917",
+  "method": "Training-free multiway interval decoding with explicit control guidance",
+  "source_url": "https://github.com/Bring-AI/jev-numeric",
+  "measurement_url": "results.json",
+  "configuration_url": "experiment-notes.md",
+  "games": [
+    {
+      "id": "car-racing",
+      "title": "Car Racing",
+      "description": "Numeric steering and signed throttle/brake around a procedural track.",
+      "environment": "CarRacing-v3",
+      "action_dimensions": 2,
+      "runs": [
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "reward": -8.3571428571433,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 655,
+          "sim_seconds": 13.1,
+          "api_calls": 132,
+          "decision_count": 66,
+          "mean_action_latency_s": 0.5574597548693419,
+          "p95_action_latency_s": 0.7471695821732283,
+          "coverage_percent": 5.714285714285714,
+          "wall_seconds": 47.61403326690197,
+          "id": "racing-initial-seed19",
+          "media": {
+            "gif": "media/control/racing-initial-seed19/preview.gif",
+            "video": "media/control/racing-initial-seed19/replay.mp4",
+            "poster": "media/control/racing-initial-seed19/poster.png"
+          },
+          "trace": "evidence/control/racing-initial-seed19.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Initial prompt",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 0,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "reward": -5.238871473354731,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 648,
+          "sim_seconds": 12.96,
+          "api_calls": 130,
+          "decision_count": 65,
+          "mean_action_latency_s": 0.5465565562821352,
+          "p95_action_latency_s": 0.6663959354162216,
+          "coverage_percent": 5.956112852664577,
+          "wall_seconds": 45.63113794103265,
+          "id": "racing-initial-seed7",
+          "media": {
+            "gif": "media/control/racing-initial-seed7/preview.gif",
+            "video": "media/control/racing-initial-seed7/replay.mp4",
+            "poster": "media/control/racing-initial-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-initial-seed7.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Initial prompt",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 0,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": true,
+          "reward": -2.4040752351102803,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 651,
+          "sim_seconds": 13.02,
+          "api_calls": 132,
+          "decision_count": 66,
+          "mean_action_latency_s": 0.5132722025454948,
+          "p95_action_latency_s": 0.6170042548328638,
+          "coverage_percent": 6.269592476489028,
+          "wall_seconds": 44.689852103590965,
+          "id": "racing-initial-seed7-reverse",
+          "media": {
+            "gif": "media/control/racing-initial-seed7-reverse/preview.gif",
+            "video": "media/control/racing-initial-seed7-reverse/replay.mp4",
+            "poster": "media/control/racing-initial-seed7-reverse/poster.png"
+          },
+          "trace": "evidence/control/racing-initial-seed7-reverse.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Initial prompt",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 0,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "reward": 439.08571428568064,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 2552,
+          "sim_seconds": 51.04,
+          "api_calls": 512,
+          "decision_count": 256,
+          "mean_action_latency_s": 0.5234663660958176,
+          "p95_action_latency_s": 0.6533153653144836,
+          "coverage_percent": 69.42857142857143,
+          "wall_seconds": 174.15524589270353,
+          "id": "racing-explicit-leaf-seed19",
+          "media": {
+            "gif": "media/control/racing-explicit-leaf-seed19/preview.gif",
+            "video": "media/control/racing-explicit-leaf-seed19/replay.mp4",
+            "poster": "media/control/racing-explicit-leaf-seed19/poster.png"
+          },
+          "trace": "evidence/control/racing-explicit-leaf-seed19.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Explicit action labels",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "reward": 175.984012539192,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 1469,
+          "sim_seconds": 29.38,
+          "api_calls": 294,
+          "decision_count": 147,
+          "mean_action_latency_s": 0.5549490560023558,
+          "p95_action_latency_s": 0.6829715363681315,
+          "coverage_percent": 32.288401253918494,
+          "wall_seconds": 104.12714655697346,
+          "id": "racing-explicit-leaf-seed7",
+          "media": {
+            "gif": "media/control/racing-explicit-leaf-seed7/preview.gif",
+            "video": "media/control/racing-explicit-leaf-seed7/replay.mp4",
+            "poster": "media/control/racing-explicit-leaf-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-explicit-leaf-seed7.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Explicit action labels",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": true,
+          "reward": 4.5655172413786556,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 644,
+          "sim_seconds": 12.88,
+          "api_calls": 130,
+          "decision_count": 65,
+          "mean_action_latency_s": 0.5405579584149214,
+          "p95_action_latency_s": 0.6803978979587555,
+          "coverage_percent": 6.896551724137931,
+          "wall_seconds": 45.13883242756128,
+          "id": "racing-explicit-leaf-seed7-reverse",
+          "media": {
+            "gif": "media/control/racing-explicit-leaf-seed7-reverse/preview.gif",
+            "video": "media/control/racing-explicit-leaf-seed7-reverse/replay.mp4",
+            "poster": "media/control/racing-explicit-leaf-seed7-reverse/poster.png"
+          },
+          "trace": "evidence/control/racing-explicit-leaf-seed7-reverse.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Explicit action labels",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 60,
+            "preview_start_seconds": 0,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "reward": 601.2999999999536,
+          "stop_reason": "lap_finished",
+          "steps": 3987,
+          "sim_seconds": 79.74,
+          "api_calls": 798,
+          "decision_count": 399,
+          "mean_action_latency_s": 0.5494133981509615,
+          "p95_action_latency_s": 0.6963357135653495,
+          "coverage_percent": 100.0,
+          "wall_seconds": 284.14744763821363,
+          "id": "racing-recovery-seed19",
+          "media": {
+            "gif": "media/control/racing-recovery-seed19/preview.gif",
+            "video": "media/control/racing-recovery-seed19/replay.mp4",
+            "poster": "media/control/racing-recovery-seed19/poster.png"
+          },
+          "trace": "evidence/control/racing-recovery-seed19.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": true,
+          "config": {
+            "variant": "Recovery policy",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": true,
+          "reward": 533.4857142856574,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 4608,
+          "sim_seconds": 92.16,
+          "api_calls": 922,
+          "decision_count": 461,
+          "mean_action_latency_s": 0.5241778677010226,
+          "p95_action_latency_s": 0.6524578370153904,
+          "coverage_percent": 99.42857142857143,
+          "wall_seconds": 316.38815600052476,
+          "id": "racing-recovery-seed19-reverse",
+          "media": {
+            "gif": "media/control/racing-recovery-seed19-reverse/preview.gif",
+            "video": "media/control/racing-recovery-seed19-reverse/replay.mp4",
+            "poster": "media/control/racing-recovery-seed19-reverse/poster.png"
+          },
+          "trace": "evidence/control/racing-recovery-seed19-reverse.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Recovery policy",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "reward": 570.865203761696,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 4260,
+          "sim_seconds": 85.2,
+          "api_calls": 852,
+          "decision_count": 426,
+          "mean_action_latency_s": 0.5568357453257405,
+          "p95_action_latency_s": 0.68635643273592,
+          "coverage_percent": 99.68652037617555,
+          "wall_seconds": 304.1518506258726,
+          "id": "racing-recovery-seed7",
+          "media": {
+            "gif": "media/control/racing-recovery-seed7/preview.gif",
+            "video": "media/control/racing-recovery-seed7/replay.mp4",
+            "poster": "media/control/racing-recovery-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-recovery-seed7.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Recovery policy",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": true,
+          "reward": 419.92978056422464,
+          "stop_reason": "no_new_tiles_for_10_sim_seconds",
+          "steps": 4296,
+          "sim_seconds": 85.92,
+          "api_calls": 860,
+          "decision_count": 430,
+          "mean_action_latency_s": 0.5204035638290089,
+          "p95_action_latency_s": 0.64887036960572,
+          "coverage_percent": 84.95297805642633,
+          "wall_seconds": 291.65981625393033,
+          "id": "racing-recovery-seed7-reverse",
+          "media": {
+            "gif": "media/control/racing-recovery-seed7-reverse/preview.gif",
+            "video": "media/control/racing-recovery-seed7-reverse/replay.mp4",
+            "poster": "media/control/racing-recovery-seed7-reverse/poster.png"
+          },
+          "trace": "evidence/control/racing-recovery-seed7-reverse.tar.gz",
+          "branching": 10,
+          "resolution": "0.02",
+          "success": false,
+          "config": {
+            "variant": "Recovery policy",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": true,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 10,
+          "resolution": "0.005",
+          "reward": 363.39999999988896,
+          "success": true,
+          "stop_reason": "lap_finished",
+          "steps": 6366,
+          "sim_seconds": 127.32,
+          "api_calls": 1911,
+          "decision_count": 637,
+          "mean_action_latency_s": 0.7562503841481928,
+          "p95_action_latency_s": 0.9105632968246936,
+          "coverage_percent": 100.0,
+          "wall_seconds": 583.7283112108707,
+          "id": "racing-K10-resolution0.005-seed7",
+          "media": {
+            "gif": "media/control/racing-K10-resolution0.005-seed7/preview.gif",
+            "video": "media/control/racing-K10-resolution0.005-seed7/replay.mp4",
+            "poster": "media/control/racing-K10-resolution0.005-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-K10-resolution0.005-seed7.tar.gz",
+          "config": {
+            "variant": "K/resolution comparison",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": false,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 10,
+          "resolution": "0.02",
+          "reward": 96.86520376163139,
+          "success": false,
+          "stop_reason": "time_limit",
+          "steps": 9000,
+          "sim_seconds": 180.0,
+          "api_calls": 1800,
+          "decision_count": 900,
+          "mean_action_latency_s": 0.5065685228258371,
+          "p95_action_latency_s": 0.6312136875465512,
+          "coverage_percent": 99.68652037617555,
+          "wall_seconds": 599.2627740353346,
+          "id": "racing-K10-resolution0.02-seed7",
+          "media": {
+            "gif": "media/control/racing-K10-resolution0.02-seed7/preview.gif",
+            "video": "media/control/racing-K10-resolution0.02-seed7/replay.mp4",
+            "poster": "media/control/racing-K10-resolution0.02-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-K10-resolution0.02-seed7.tar.gz",
+          "config": {
+            "variant": "K/resolution comparison",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": false,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 43.57366771159874,
+          "success": false,
+          "stop_reason": "time_limit",
+          "steps": 9000,
+          "sim_seconds": 180.0,
+          "api_calls": 1800,
+          "decision_count": 900,
+          "mean_action_latency_s": 0.5430171558881799,
+          "p95_action_latency_s": 0.6799716632813214,
+          "coverage_percent": 94.35736677115987,
+          "wall_seconds": 632.1329509802163,
+          "id": "racing-K20-resolution0.005-seed7",
+          "media": {
+            "gif": "media/control/racing-K20-resolution0.005-seed7/preview.gif",
+            "video": "media/control/racing-K20-resolution0.005-seed7/replay.mp4",
+            "poster": "media/control/racing-K20-resolution0.005-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-K20-resolution0.005-seed7.tar.gz",
+          "config": {
+            "variant": "K/resolution comparison",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": false,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.02",
+          "reward": 71.78683385578668,
+          "success": false,
+          "stop_reason": "time_limit",
+          "steps": 9000,
+          "sim_seconds": 180.0,
+          "api_calls": 1800,
+          "decision_count": 900,
+          "mean_action_latency_s": 0.5104396943085724,
+          "p95_action_latency_s": 0.6495014121755958,
+          "coverage_percent": 97.17868338557994,
+          "wall_seconds": 602.9779545292258,
+          "id": "racing-K20-resolution0.02-seed7",
+          "media": {
+            "gif": "media/control/racing-K20-resolution0.02-seed7/preview.gif",
+            "video": "media/control/racing-K20-resolution0.02-seed7/replay.mp4",
+            "poster": "media/control/racing-K20-resolution0.02-seed7/poster.png"
+          },
+          "trace": "evidence/control/racing-K20-resolution0.02-seed7.tar.gz",
+          "config": {
+            "variant": "K/resolution comparison",
+            "action_hold_frames": 10,
+            "control_dimensions": 2,
+            "physical_actuators": 3,
+            "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+            "grid": "[-1,1), lower endpoint",
+            "no_new_tiles_guard": false,
+            "sim_time_limit_s": 180,
+            "preview_start_seconds": 8,
+            "preview_max_duration_seconds": 10
+          }
+        }
+      ],
+      "featured_run_id": "racing-K10-resolution0.005-seed7",
+      "success_criterion": "Environment reports lap_finished after visiting every track tile.",
+      "config": {
+        "continuous": true,
+        "state_access": "Privileged car telemetry and future centerline waypoints; no pixels."
+      },
+      "notes": [
+        "Featured: K=10, resolution 0.005, seed 7; all 319 tiles visited at 127.32 simulation seconds.",
+        "Includes all 14 Jev episodes across the initial, explicit-label, recovery, and K/precision experiments. Two completed; mixed settings are not a success-rate estimate.",
+        "The four K/precision comparisons share the recovery prompt and 180-second horizon; the earlier 10-second no-new-tile guard is disabled for all four.",
+        "The featured successful run is chosen to show completion. Every unsuccessful recording remains in the ledger."
+      ]
+    },
+    {
+      "id": "lunarlander",
+      "title": "Lunar Lander",
+      "description": "Two engine commands; land softly on the central pad.",
+      "environment": "LunarLander-v3",
+      "action_dimensions": 2,
+      "runs": [
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -458.24575468717114,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 62,
+          "sim_seconds": 1.24,
+          "api_calls": 26,
+          "decision_count": 13,
+          "mean_action_latency_s": 0.6420899523565402,
+          "p95_action_latency_s": 1.3875583834946144,
+          "wall_seconds": 8.997375521808863,
+          "id": "lunarlander-seed7-v1",
+          "media": {
+            "gif": "media/control/lunarlander-seed7-v1/preview.gif",
+            "video": "media/control/lunarlander-seed7-v1/replay.mp4",
+            "poster": "media/control/lunarlander-seed7-v1/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed7-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Explicit arithmetic control guidance adapted from the Gymnasium lunar-lander heuristic; targets are computed by Jev through choices, not by Python.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.4
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -508.56137741433656,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 71,
+          "sim_seconds": 1.42,
+          "api_calls": 30,
+          "decision_count": 15,
+          "mean_action_latency_s": 0.48028379355867706,
+          "p95_action_latency_s": 0.5560893375426531,
+          "wall_seconds": 7.9018395356833935,
+          "id": "lunarlander-seed19-v1",
+          "media": {
+            "gif": "media/control/lunarlander-seed19-v1/preview.gif",
+            "video": "media/control/lunarlander-seed19-v1/replay.mp4",
+            "poster": "media/control/lunarlander-seed19-v1/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed19-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Explicit arithmetic control guidance adapted from the Gymnasium lunar-lander heuristic; targets are computed by Jev through choices, not by Python.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.6
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -100.63963241127243,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 66,
+          "sim_seconds": 1.32,
+          "api_calls": 28,
+          "decision_count": 14,
+          "mean_action_latency_s": 0.5108114143035242,
+          "p95_action_latency_s": 0.6741098066791892,
+          "wall_seconds": 7.820860270410776,
+          "id": "lunarlander-seed7-v2",
+          "media": {
+            "gif": "media/control/lunarlander-seed7-v2/preview.gif",
+            "video": "media/control/lunarlander-seed7-v2/replay.mp4",
+            "poster": "media/control/lunarlander-seed7-v2/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed7-v2.tar.gz",
+          "config": {
+            "attempt": "v2",
+            "guidance": "Expanded explicit arithmetic control guidance adapted from the Gymnasium lunar-lander heuristic, with sign/deadzone reminders; Jev computes all choices from raw observations.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.5
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -128.29755466185338,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 73,
+          "sim_seconds": 1.46,
+          "api_calls": 30,
+          "decision_count": 15,
+          "mean_action_latency_s": 0.5133292074004809,
+          "p95_action_latency_s": 0.5967529281973838,
+          "wall_seconds": 8.332958430051804,
+          "id": "lunarlander-seed19-v2",
+          "media": {
+            "gif": "media/control/lunarlander-seed19-v2/preview.gif",
+            "video": "media/control/lunarlander-seed19-v2/replay.mp4",
+            "poster": "media/control/lunarlander-seed19-v2/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed19-v2.tar.gz",
+          "config": {
+            "attempt": "v2",
+            "guidance": "Expanded explicit arithmetic control guidance adapted from the Gymnasium lunar-lander heuristic, with sign/deadzone reminders; Jev computes all choices from raw observations.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.6
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -36.41998268444928,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 92,
+          "sim_seconds": 1.84,
+          "api_calls": 38,
+          "decision_count": 19,
+          "mean_action_latency_s": 0.533511042006706,
+          "p95_action_latency_s": 0.6480286024510861,
+          "wall_seconds": 10.8947062343359,
+          "id": "lunarlander-seed7-v3",
+          "media": {
+            "gif": "media/control/lunarlander-seed7-v3/preview.gif",
+            "video": "media/control/lunarlander-seed7-v3/replay.mp4",
+            "poster": "media/control/lunarlander-seed7-v3/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed7-v3.tar.gz",
+          "config": {
+            "attempt": "v3",
+            "guidance": "Verbal braking/tilt heuristic and per-interval physical-effect labels. No computed target commands or hidden controller.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 2.0
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -256.98230756097735,
+          "success": false,
+          "stop_reason": "out_of_bounds",
+          "steps": 125,
+          "sim_seconds": 2.5,
+          "api_calls": 50,
+          "decision_count": 25,
+          "mean_action_latency_s": 0.5093735641241074,
+          "p95_action_latency_s": 0.6297016762197016,
+          "wall_seconds": 13.63199158385396,
+          "id": "lunarlander-seed19-v3",
+          "media": {
+            "gif": "media/control/lunarlander-seed19-v3/preview.gif",
+            "video": "media/control/lunarlander-seed19-v3/replay.mp4",
+            "poster": "media/control/lunarlander-seed19-v3/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed19-v3.tar.gz",
+          "config": {
+            "attempt": "v3",
+            "guidance": "Verbal braking/tilt heuristic and per-interval physical-effect labels. No computed target commands or hidden controller.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 2.6
+          }
+        },
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -105.97308357749482,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 66,
+          "sim_seconds": 1.32,
+          "api_calls": 28,
+          "decision_count": 14,
+          "mean_action_latency_s": 0.488266259431839,
+          "p95_action_latency_s": 0.5721129259094596,
+          "wall_seconds": 7.497998420149088,
+          "id": "lunarlander-seed7-v4",
+          "media": {
+            "gif": "media/control/lunarlander-seed7-v4/preview.gif",
+            "video": "media/control/lunarlander-seed7-v4/replay.mp4",
+            "poster": "media/control/lunarlander-seed7-v4/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed7-v4.tar.gz",
+          "config": {
+            "attempt": "v4",
+            "guidance": "Verbal braking/tilt heuristic and per-interval physical-effect labels. No computed target commands or hidden controller.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.5
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -114.63515058061371,
+          "success": false,
+          "stop_reason": "crash",
+          "steps": 77,
+          "sim_seconds": 1.54,
+          "api_calls": 32,
+          "decision_count": 16,
+          "mean_action_latency_s": 0.5102335715200752,
+          "p95_action_latency_s": 0.5754562085494399,
+          "wall_seconds": 8.838476411998272,
+          "id": "lunarlander-seed19-v4",
+          "media": {
+            "gif": "media/control/lunarlander-seed19-v4/preview.gif",
+            "video": "media/control/lunarlander-seed19-v4/replay.mp4",
+            "poster": "media/control/lunarlander-seed19-v4/poster.png"
+          },
+          "trace": "evidence/control/lunarlander-seed19-v4.tar.gz",
+          "config": {
+            "attempt": "v4",
+            "guidance": "Verbal braking/tilt heuristic and per-interval physical-effect labels. No computed target commands or hidden controller.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "main_engine",
+              "lateral_engine"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated, lander asleep, and no body crash",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.7
+          }
+        }
+      ],
+      "featured_run_id": "lunarlander-seed7-v4",
+      "success_criterion": "environment terminated, lander asleep, and no body crash",
+      "config": {
+        "continuous": true
+      },
+      "notes": [
+        "Verbal braking/tilt heuristic and per-interval physical-effect labels. No computed target commands or hidden controller.",
+        "K=20, resolution 0.005: 400 values per component, two batched choice calls per control.",
+        "Featured: seed 7 of the latest prompt version. All prompt versions and both seeds are retained.",
+        "Eight failures across four prompt versions; the latest two episodes crashed."
+      ]
+    },
+    {
+      "id": "mountaincar",
+      "title": "Continuous Mountain Car",
+      "description": "One continuous motor force; build momentum and reach the right hilltop.",
+      "environment": "MountainCarContinuous-v0",
+      "action_dimensions": 1,
+      "runs": [
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 91.7155498902321,
+          "success": true,
+          "stop_reason": "goal_reached",
+          "steps": 84,
+          "sim_seconds": 2.8,
+          "api_calls": 42,
+          "decision_count": 21,
+          "mean_action_latency_s": 0.526194113173655,
+          "p95_action_latency_s": 0.6588711403310299,
+          "wall_seconds": 12.421686306595802,
+          "id": "mountaincar-seed7-v1",
+          "media": {
+            "gif": "media/control/mountaincar-seed7-v1/preview.gif",
+            "video": "media/control/mountaincar-seed7-v1/replay.mp4",
+            "poster": "media/control/mountaincar-seed7-v1/poster.png"
+          },
+          "trace": "evidence/control/mountaincar-seed7-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Explicit qualitative energy-pumping heuristic and exact environment transition equation, with no precomputed action supplied.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "motor_force"
+            ],
+            "action_hold_frames": 4,
+            "success_definition": "environment terminated with position >=0.45 and velocity >=0",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 2.9
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": 91.91553989025118,
+          "success": true,
+          "stop_reason": "goal_reached",
+          "steps": 82,
+          "sim_seconds": 2.7333333333333334,
+          "api_calls": 42,
+          "decision_count": 21,
+          "mean_action_latency_s": 0.5693970521291097,
+          "p95_action_latency_s": 0.7072482816874981,
+          "wall_seconds": 12.926541551947594,
+          "id": "mountaincar-seed19-v1",
+          "media": {
+            "gif": "media/control/mountaincar-seed19-v1/preview.gif",
+            "video": "media/control/mountaincar-seed19-v1/replay.mp4",
+            "poster": "media/control/mountaincar-seed19-v1/poster.png"
+          },
+          "trace": "evidence/control/mountaincar-seed19-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Explicit qualitative energy-pumping heuristic and exact environment transition equation, with no precomputed action supplied.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "motor_force"
+            ],
+            "action_hold_frames": 4,
+            "success_definition": "environment terminated with position >=0.45 and velocity >=0",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 2.9
+          }
+        }
+      ],
+      "featured_run_id": "mountaincar-seed7-v1",
+      "success_criterion": "environment terminated with position >=0.45 and velocity >=0",
+      "config": {
+        "continuous": true
+      },
+      "notes": [
+        "Explicit qualitative energy-pumping heuristic and exact environment transition equation, with no precomputed action supplied.",
+        "K=20, resolution 0.005: 400 values per component, two batched choice calls per control.",
+        "Featured: seed 7 of the latest prompt version. All prompt versions and both seeds are retained.",
+        "Both seeds reached the goal; dynamics and energy-pumping guidance were supplied in the prompt."
+      ]
+    },
+    {
+      "id": "bipedalwalker",
+      "title": "Bipedal Walker",
+      "description": "Four continuous joint commands; attempt forward walking on normal terrain.",
+      "environment": "BipedalWalker-v3",
+      "action_dimensions": 4,
+      "runs": [
+        {
+          "seed": 7,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -115.31374030560255,
+          "success": false,
+          "stop_reason": "fall",
+          "steps": 75,
+          "sim_seconds": 1.5,
+          "api_calls": 30,
+          "decision_count": 15,
+          "mean_action_latency_s": 0.6882053166627884,
+          "p95_action_latency_s": 1.1769910987466565,
+          "wall_seconds": 11.186496336013079,
+          "id": "bipedalwalker-seed7-v1",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed7-v1/preview.gif",
+            "video": "media/control/bipedalwalker-seed7-v1/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed7-v1/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed7-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Qualitative alternating support/swing gait, joint tracking, and balance guidance; Jev infers gait and all four commands from observations/history.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 1.6
+          }
+        },
+        {
+          "seed": 19,
+          "reverse_options": false,
+          "branching": 20,
+          "resolution": "0.005",
+          "reward": -117.58299421425909,
+          "success": false,
+          "stop_reason": "fall",
+          "steps": 99,
+          "sim_seconds": 1.98,
+          "api_calls": 40,
+          "decision_count": 20,
+          "mean_action_latency_s": 0.5722152026370168,
+          "p95_action_latency_s": 0.6760897224768999,
+          "wall_seconds": 12.397700611501932,
+          "id": "bipedalwalker-seed19-v1",
+          "media": {
+            "gif": "media/control/bipedalwalker-seed19-v1/preview.gif",
+            "video": "media/control/bipedalwalker-seed19-v1/replay.mp4",
+            "poster": "media/control/bipedalwalker-seed19-v1/poster.png"
+          },
+          "trace": "evidence/control/bipedalwalker-seed19-v1.tar.gz",
+          "config": {
+            "attempt": "v1",
+            "guidance": "Qualitative alternating support/swing gait, joint tracking, and balance guidance; Jev infers gait and all four commands from observations/history.",
+            "grid": {
+              "low_inclusive": -1,
+              "high_exclusive": 1,
+              "points_per_dimension": 400,
+              "depth": 2,
+              "conditional_candidates": "min(K, remaining points)",
+              "execution": "final interval lower endpoint"
+            },
+            "action_names": [
+              "leg0_hip",
+              "leg0_knee",
+              "leg1_hip",
+              "leg1_knee"
+            ],
+            "action_hold_frames": 5,
+            "success_definition": "environment terminated beyond the right terrain finish without falling",
+            "simulation_time_note": "MountainCar has discrete steps, displayed seconds use its 30-fps render rate; Box2D games integrate at 50 Hz.",
+            "preview_start_seconds": 0,
+            "preview_duration_seconds": 2.1
+          }
+        }
+      ],
+      "featured_run_id": "bipedalwalker-seed7-v1",
+      "success_criterion": "environment terminated beyond the right terrain finish without falling",
+      "config": {
+        "continuous": true,
+        "hardcore": false
+      },
+      "notes": [
+        "Qualitative alternating support/swing gait, joint tracking, and balance guidance; Jev infers gait and all four commands from observations/history.",
+        "K=20, resolution 0.005: 400 values per component, two batched choice calls per control.",
+        "Featured: seed 7 of the latest prompt version. All prompt versions and both seeds are retained.",
+        "Both seeds fell. State includes joint observations, contacts, lidar, and privileged torso position."
+      ]
+    }
+  ],
+  "racing_ablation": [
+    {
+      "seed": 7,
+      "reverse_options": false,
+      "branching": 10,
+      "resolution": "0.02",
+      "reward": 96.86520376163139,
+      "success": false,
+      "stop_reason": "time_limit",
+      "steps": 9000,
+      "sim_seconds": 180.0,
+      "api_calls": 1800,
+      "decision_count": 900,
+      "mean_action_latency_s": 0.5065685228258371,
+      "p95_action_latency_s": 0.6312136875465512,
+      "coverage_percent": 99.68652037617555,
+      "wall_seconds": 599.2627740353346,
+      "id": "racing-K10-resolution0.02-seed7",
+      "media": {
+        "gif": "media/control/racing-K10-resolution0.02-seed7/preview.gif",
+        "video": "media/control/racing-K10-resolution0.02-seed7/replay.mp4",
+        "poster": "media/control/racing-K10-resolution0.02-seed7/poster.png"
+      },
+      "trace": "evidence/control/racing-K10-resolution0.02-seed7.tar.gz",
+      "config": {
+        "variant": "K/resolution comparison",
+        "action_hold_frames": 10,
+        "control_dimensions": 2,
+        "physical_actuators": 3,
+        "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+        "grid": "[-1,1), lower endpoint",
+        "no_new_tiles_guard": false,
+        "sim_time_limit_s": 180,
+        "preview_start_seconds": 8,
+        "preview_max_duration_seconds": 10
+      }
+    },
+    {
+      "seed": 7,
+      "reverse_options": false,
+      "branching": 20,
+      "resolution": "0.02",
+      "reward": 71.78683385578668,
+      "success": false,
+      "stop_reason": "time_limit",
+      "steps": 9000,
+      "sim_seconds": 180.0,
+      "api_calls": 1800,
+      "decision_count": 900,
+      "mean_action_latency_s": 0.5104396943085724,
+      "p95_action_latency_s": 0.6495014121755958,
+      "coverage_percent": 97.17868338557994,
+      "wall_seconds": 602.9779545292258,
+      "id": "racing-K20-resolution0.02-seed7",
+      "media": {
+        "gif": "media/control/racing-K20-resolution0.02-seed7/preview.gif",
+        "video": "media/control/racing-K20-resolution0.02-seed7/replay.mp4",
+        "poster": "media/control/racing-K20-resolution0.02-seed7/poster.png"
+      },
+      "trace": "evidence/control/racing-K20-resolution0.02-seed7.tar.gz",
+      "config": {
+        "variant": "K/resolution comparison",
+        "action_hold_frames": 10,
+        "control_dimensions": 2,
+        "physical_actuators": 3,
+        "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+        "grid": "[-1,1), lower endpoint",
+        "no_new_tiles_guard": false,
+        "sim_time_limit_s": 180,
+        "preview_start_seconds": 8,
+        "preview_max_duration_seconds": 10
+      }
+    },
+    {
+      "seed": 7,
+      "reverse_options": false,
+      "branching": 10,
+      "resolution": "0.005",
+      "reward": 363.39999999988896,
+      "success": true,
+      "stop_reason": "lap_finished",
+      "steps": 6366,
+      "sim_seconds": 127.32,
+      "api_calls": 1911,
+      "decision_count": 637,
+      "mean_action_latency_s": 0.7562503841481928,
+      "p95_action_latency_s": 0.9105632968246936,
+      "coverage_percent": 100.0,
+      "wall_seconds": 583.7283112108707,
+      "id": "racing-K10-resolution0.005-seed7",
+      "media": {
+        "gif": "media/control/racing-K10-resolution0.005-seed7/preview.gif",
+        "video": "media/control/racing-K10-resolution0.005-seed7/replay.mp4",
+        "poster": "media/control/racing-K10-resolution0.005-seed7/poster.png"
+      },
+      "trace": "evidence/control/racing-K10-resolution0.005-seed7.tar.gz",
+      "config": {
+        "variant": "K/resolution comparison",
+        "action_hold_frames": 10,
+        "control_dimensions": 2,
+        "physical_actuators": 3,
+        "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+        "grid": "[-1,1), lower endpoint",
+        "no_new_tiles_guard": false,
+        "sim_time_limit_s": 180,
+        "preview_start_seconds": 8,
+        "preview_max_duration_seconds": 10
+      }
+    },
+    {
+      "seed": 7,
+      "reverse_options": false,
+      "branching": 20,
+      "resolution": "0.005",
+      "reward": 43.57366771159874,
+      "success": false,
+      "stop_reason": "time_limit",
+      "steps": 9000,
+      "sim_seconds": 180.0,
+      "api_calls": 1800,
+      "decision_count": 900,
+      "mean_action_latency_s": 0.5430171558881799,
+      "p95_action_latency_s": 0.6799716632813214,
+      "coverage_percent": 94.35736677115987,
+      "wall_seconds": 632.1329509802163,
+      "id": "racing-K20-resolution0.005-seed7",
+      "media": {
+        "gif": "media/control/racing-K20-resolution0.005-seed7/preview.gif",
+        "video": "media/control/racing-K20-resolution0.005-seed7/replay.mp4",
+        "poster": "media/control/racing-K20-resolution0.005-seed7/poster.png"
+      },
+      "trace": "evidence/control/racing-K20-resolution0.005-seed7.tar.gz",
+      "config": {
+        "variant": "K/resolution comparison",
+        "action_hold_frames": 10,
+        "control_dimensions": 2,
+        "physical_actuators": 3,
+        "physical_mapping": "[steering, max(signed_pedal, 0), max(-signed_pedal, 0)]",
+        "grid": "[-1,1), lower endpoint",
+        "no_new_tiles_guard": false,
+        "sim_time_limit_s": 180,
+        "preview_start_seconds": 8,
+        "preview_max_duration_seconds": 10
+      }
+    }
+  ],
+  "config": {
+    "gymnasium": "1.3.0",
+    "gateway": "OpenRouter/systemone",
+    "trained": false,
+    "action_override_or_fallback": false,
+    "video_time": "Simulation steps only; API waits omitted"
+  },
+  "protocol_notes": [
+    "26 recorded Jev episodes, including failed prompt-development attempts. Counts across settings are descriptive, not statistical success rates.",
+    "The model receives structured telemetry and explicit control guidance, not gameplay images. CarRacing includes future centerline waypoints; Walker additionally includes torso position.",
+    "NumericJev alone decodes each action component on [-1,1). The final grid lower endpoint is executed. Python does not replace Jev decisions with a fallback controller.",
+    "All components share one request per tree level. K=10 / 0.005 uses three sequential requests per action; the other tested settings use two.",
+    "Simulation pauses for API calls. Videos omit those waits; they do not demonstrate real-time control. Mean action latency includes all sequential tree calls but excludes rendering/physics.",
+    "Box2D games integrate at 50 Hz. CarRacing holds actions for 10 frames; Lander/Walker for 5. MountainCar holds 4 discrete steps and displays seconds at its 30-fps rendering rate.",
+    "GIFs are unaccelerated short excerpts; the full-video tab shows the entire recorded episode. Per-run archives contain full requests/responses, executed actions, rules or source snapshots, and original summaries.",
+    "K/precision comparison uses one fixed track seed, option order, and prompt per setting. It supports a local comparison, not a general claim that more precision helps or larger K hurts."
+  ]
+}

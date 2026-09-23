@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f6f5ee">
+  <meta name="description" content="NumericJev in continuous-control games. Explore actual rollouts, finite-grid numeric actions, experiment settings, and every recorded attempt.">
+  <title>NumericJev — Decisions into control</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#experiments">Skip to experiments</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="./" class="wordmark" aria-label="NumericJev home"><img src="assets/mark.svg" width="30" height="30" alt="">Numeric<span>Jev</span></a>
+      <nav aria-label="Main navigation"><a href="#experiments">Experiments</a><a href="#method">Method</a><a class="source-link" href="https://github.com/Bring-AI/jev-numeric">Source <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-square" aria-hidden="true"></span> A CONTINUOUS-CONTROL NOTEBOOK</p>
+          <h1 id="hero-title">Small decisions.<br><em>Continuous control.</em></h1>
+          <p class="intro">From choosing an interval to steering a car. NumericJev turns Jev’s discrete choices into numeric actions, one refinement at a time.</p>
+          <div class="hero-links"><a class="button button-dark" href="#experiments">Explore the recordings <span aria-hidden="true">↓</span></a><a class="text-link" href="#method">How it works <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <aside class="decoding-card" aria-label="Illustration of interval decoding, not a measured game action">
+          <div class="diagram-heading"><span class="eyebrow">THE CONTROL LOOP</span><span class="diagram-tag">No training</span></div>
+          <div class="flow-line"><span class="flow-number">01</span><div><strong>Read the state</strong><span>Structured game telemetry</span></div><span class="flow-icon" aria-hidden="true">{ }</span></div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-line"><span class="flow-number">02</span><div><strong>Split. Choose. Refine.</strong><span>Jev selects an interval at each level</span></div></div>
+          <div class="interval-illustration" aria-hidden="true"><div class="interval-labels"><span>lower bound</span><span>upper bound</span></div><div class="interval-row"><i></i><i class="chosen"></i><i></i><i></i></div><div class="interval-guide"></div><div class="interval-row finer"><i></i><i></i><i class="chosen"></i><i></i></div></div>
+          <div class="flow-connector" aria-hidden="true"></div>
+          <div class="flow-line"><span class="flow-number">03</span><div><strong>Act. Observe. Repeat.</strong><span>Finite-grid numbers drive the controls</span></div><span class="flow-icon" aria-hidden="true">↻</span></div>
+          <p class="diagram-caption">Illustrated decoding path · game frames are for viewers</p>
+        </aside>
+      </section>
+
+      <section class="overview" aria-label="Experiment summary">
+        <div><span class="overview-value" id="game-count">4</span><span class="overview-label">environments</span></div>
+        <div><span class="overview-value" id="run-count">—</span><span class="overview-label">recorded attempts</span></div>
+        <div><span class="overview-value" id="action-count">1–4</span><span class="overview-label">control dimensions</span></div>
+        <div class="overview-note"><span class="small-square" aria-hidden="true"></span><span>Real rollouts.<br>Outcomes and settings included.</span></div>
+      </section>
+
+      <section id="experiments" class="experiments" aria-labelledby="experiments-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / IN THE ENVIRONMENTS</p><h2 id="experiments-title">Decisions, in motion.</h2></div><label class="motion-control"><input id="animate-previews" type="checkbox" checked><span>Animate GIF previews</span></label></div>
+        <p class="section-intro">Watch a recorded rollout, then inspect the settings and every attempt. Videos show simulation time; API waits are omitted. Counts describe the recorded attempts across settings, not estimated success rates.</p>
+        <p id="load-status" class="notice" role="status">Loading experiment records…</p>
+        <div class="experiment-table-head" aria-hidden="true"><span>ENVIRONMENT</span><span>RECORDED ROLLOUT</span><span>RESULTS & OBSERVATIONS</span></div>
+        <div id="games" aria-live="polite"></div>
+        <noscript><p class="notice">JavaScript is needed to display the experiment table. All measurements are available in <a href="results.json">results.json</a>.</p></noscript>
+      </section>
+
+      <section id="ablation" class="ablation" aria-labelledby="ablation-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">A CLOSER LOOK</p><h2 id="ablation-title">Branching and precision.</h2></div></div>
+        <p class="section-intro">CarRacing measurements across decoding settings. These runs are listed separately from the four-game summaries above.</p>
+        <div id="ablation-results"></div>
+      </section>
+
+      <section id="method" class="method" aria-labelledby="method-title">
+        <div class="method-intro"><p class="eyebrow">02 / BEHIND THE ACTIONS</p><h2 id="method-title">A number made<br>of choices.</h2><p>NumericJev subdivides a numeric range, asks Jev which interval to keep, and refines it until one grid cell remains.</p><a class="text-link" href="https://github.com/Bring-AI/jev-numeric#the-algorithm">Read the algorithm <span aria-hidden="true">↗</span></a></div>
+        <div class="method-notes">
+          <article><span class="note-index">A</span><div><h3>Branching ≠ resolution</h3><p><strong>K</strong> is the number of choices at a refinement step. <strong>Resolution</strong> is the final grid spacing. A larger K changes the tree’s depth, not the requested precision.</p></div></article>
+          <article><span class="note-index">B</span><div><h3>Telemetry in. Controls out.</h3><p>The controller receives structured state information. Numeric outputs drive the game’s continuous action space on a finite grid. The model does not receive the rendered gameplay.</p></div></article>
+          <article><span class="note-index">C</span><div><h3>No training. Inspectable attempts.</h3><p>These are inference-time control experiments with no model training. Each game’s run ledger includes recorded unsuccessful attempts, settings, timing, and available media.</p></div></article>
+        </div>
+      </section>
+
+      <section class="protocol" aria-labelledby="protocol-title">
+        <div class="protocol-heading"><p class="eyebrow">03 / THE EXPERIMENT RECORD</p><h2 id="protocol-title">Enough detail to inspect.</h2></div>
+        <dl class="protocol-meta"><div><dt>Model</dt><dd id="model-name">Pending experiment data</dd></div><div><dt>Method</dt><dd id="method-name">Multiway interval decoding</dd></div><div><dt>Last updated</dt><dd id="updated-at">Not yet published</dd></div></dl>
+        <ul id="protocol-notes" class="protocol-notes"></ul>
+        <div class="resource-links"><a id="source-url" href="https://github.com/Bring-AI/jev-numeric">Source code <span aria-hidden="true">↗</span></a><a id="measurement-url" href="results.json">Measurements JSON <span aria-hidden="true">↗</span></a><a id="configuration-url" href="docs/data-contract.md">Data & configuration format <span aria-hidden="true">↗</span></a></div>
+        <details id="experiment-config" class="config-block" hidden><summary>Experiment configuration</summary><pre></pre></details>
+      </section>
+    </main>
+    <footer><a href="./" class="footer-brand">NumericJev</a><p>Discrete choices. Numeric actions. Inspectable experiments.</p><a href="#hero-title">Back to top <span aria-hidden="true">↑</span></a></footer>
+  </div>
+</body>
+</html>
