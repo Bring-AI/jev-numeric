@@ -9,8 +9,8 @@
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<p align="center"><strong>NumericJev · Interval &amp; digit-by-digit decoding</strong></p>
-<p align="center">Numerical output through interval decisions or decimal-digit choices.</p>
+<p align="center"><strong>NumericJev · Numerical decoding with multiway decision trees</strong></p>
+<p align="center">One tree-based approach, with interval or decimal-digit branches.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
   <a href="#turning-jev-to-numerical-output">Examples</a> ·
@@ -20,7 +20,7 @@
   <a href="artifacts/metrics.json">Recorded metrics</a>
 </p>
 
-**Jev is built for structured decisions. We use those decisions to construct a numerical output interface.** Choose a containing interval, or choose the next decimal digit from `0–9`. Repeat to obtain a finite-precision number. **Both methods use ordinary Jev Choice calls—no training, regression head, or access to token logits.**
+**Jev is built for structured decisions. NumericJev turns them into numerical outputs through a multiway decision tree.** Each Choice selects a branch; the final leaf identifies a finite-precision value. Branches can be described as numerical intervals or decimal digits. **Both representations use ordinary Jev Choice calls—no training, regression head, or access to token logits.**
 
 ## What this adds
 
@@ -34,12 +34,12 @@
 
 Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
 
-| Method | Each decision | Model returns |
+| Branch representation | Each decision | Model returns |
 |---|---|---|
 | **`interval`** (default) | Which interval contains the value? | Interval label |
 | **[`digits`](#digit-by-digit-decoding-no-logits)** | Given the selected prefix, what is the next decimal digit? | Digit `0–9` |
 
-The digit is a **Choice option**, not a vocabulary token. Both methods receive option probabilities directly from Jev.
+**Both are multiway decision trees; decimal-digit decoding is a ten-way instance.** On an aligned decimal grid, they can have identical branches and leaves, expressed through different prompts. The digit is a **Choice option**, not a vocabulary token; Jev returns the option probabilities directly.
 
 ## Even Better Performance Than Choosing from an Answer List
 
@@ -135,6 +135,8 @@ jev-numeric --request examples/stock-price.json
 
 ## The algorithm
 
+Follow a multiway tree from root to leaf, using one Jev Choice per branch. The `interval` and `digits` settings select how those branches are described to the model.
+
 **Split → choose → zoom in.** Given bounds `[L, U)`, resolution `ε`, and branching factor `K`:
 
 1. Divide the current interval into up to `K` non-overlapping subintervals.
@@ -188,7 +190,7 @@ jev-numeric --request examples/stock-price-digits.json --details
 
 The adapter inserts the decimal point and preserves leading zeros. The supported format is `[0, 10ⁿ)` at resolution `10⁻ᵈ`, with nonnegative integers `n,d`; it takes `n+d` sequential Choice calls. Extra fractional digits are truncated, not rounded. Signed values or other ranges can use `interval`. [JSON API and Python usage](docs/json-api.md#digit-by-digit-choice).
 
-On this decimal grid, selecting prefix `0.81` and selecting interval `[0.81, 0.82)` describe the same branch. **The difference is how the decision is presented to the model.** Choosing digit labels does not require a digit to be one tokenizer token, and does not establish that this prompt better matches Jev's training. Neither method guarantees accurate or calibrated predictions.
+With ten equal branches on this decimal grid, both representations describe the same tree: prefix `0.81` identifies interval `[0.81, 0.82)`. **The difference is how the decision is presented to the model, not the tree structure.** Equivalent partitions do not imply identical model choices or probabilities. Choosing digit labels does not require a digit to be one tokenizer token, and does not establish that this prompt better matches Jev's training. Neither representation guarantees accurate or calibrated predictions.
 
 [Live smoke check, including prompt revisions and all outputs](artifacts/digit-decoding-place-prompt-20260924/report.md). Historical accuracy results below remain tied to their original interval and digit prompts.
 

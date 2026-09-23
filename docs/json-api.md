@@ -6,6 +6,11 @@ The CLI translates them into multiple Jev Choice calls. No HTTP service is requi
 
 ## Number
 
+NumericJev traverses a multiway decision tree. The `method` field selects the branch
+representation: explicit intervals or decimal digits. Decimal digits give a ten-way
+tree; on an aligned decimal grid it has the same partitions as ten-way interval
+decoding, although the different prompts can produce different model decisions.
+
 Input: [stock-price.json](../examples/stock-price.json)
 
 ```json
@@ -45,7 +50,7 @@ Recorded output:
 | `instructions` | Which quantity to determine | Required |
 | `range` | `[lower, upper)` for number decoding | Required |
 | `resolution` | Final cell width | `0.01` |
-| `method` | `interval` or `digits` | `interval` |
+| `method` | Tree branch representation: `interval` or `digits` | `interval` |
 | `branching` | Interval choices per level; digits requires `10` | `10` |
 
 Bounds/resolution may be JSON numbers or decimal strings. Width must be an integer multiple
