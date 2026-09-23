@@ -45,15 +45,14 @@ After [installation](#quick-start), run `python scripts/run_examples.py` to try 
 
 ## What this adds
 
-| Capability | Native Jev primitives | This project |
-|---|---|---|
-| Decisions and probabilities over named options | **Yes** | Used as the building block |
-| Numeric scores on a specified rubric | **Yes** | Already supported by Jev |
-| A general numerical readout with caller-selected bounds and precision | No dedicated primitive in the documented API | **Multiway interval decoding** |
-| A distribution over a numerical grid | Requires defining numeric options or another mapping | **Experimental threshold-to-histogram interface** |
-| Guaranteed accuracy or calibrated uncertainty | No such guarantee established here | **Not established** |
+| Capability | Jev | Jev + Ours |
+|---|:---:|:---:|
+| Decisions & option probabilities | ✅ | ✅ |
+| Rubric scores | ✅ | ✅ |
+| Numeric decoding | ❌ | ✅ |
+| CDF / histogram construction | ❌ | ✅* |
 
-Jev already returns numeric scores and categorical probability distributions. Our contribution is the **mapping from decisions to a numerical domain**, not the claim that Jev never returns numbers. See the official [Choice](https://docs.typesafe.ai/primitives/choice) and [Score](https://docs.typesafe.ai/primitives/score) documentation.
+Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
 
 ## The algorithm
 
