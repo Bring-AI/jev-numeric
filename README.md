@@ -38,6 +38,19 @@ Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https:
 
 <sub>Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
 
+## Application example: token billing
+
+Give Jev a pricing rule and an input-token count, and ask for the request's total cost. Example flat rate: **$2 per million input tokens**.
+
+| Input tokens | Exact cost ($) | Jev forward / reverse ($) | Relative error |
+|---:|---:|---:|---:|
+| 1,000 | 0.002000 | 0.002000 / 0.002000 | 0% |
+| 12,345 | 0.024690 | 0.024690 / 0.024690 | 0% |
+| 123,456 | 0.246912 | 0.246900 / 0.246910 | 0.00081%–0.00486% |
+| 987,654 | 1.975308 | 1.975200 / 1.975200 | 0.00547% |
+
+<sub>Actual runs with an illustrative input-only rate; expected answers were not supplied. Forward/reverse means option order. Each output used seven ten-way decisions at $0.000001 resolution. [Full results, including tiered and cached pricing](artifacts/token-billing-20260923/summary.json).</sub>
+
 ## Turning Jev to Numerical Output
 
 | Your question | Numerical output |

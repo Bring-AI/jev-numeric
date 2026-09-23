@@ -1,0 +1,172 @@
+{
+  "model": "typesafe/jev-1.13-20260917",
+  "hypothetical_pricing": true,
+  "range_usd": [
+    "0",
+    "10"
+  ],
+  "resolution_usd": "0.000001",
+  "branching": 10,
+  "answer_provided": false,
+  "total_calls": 84,
+  "results": [
+    {
+      "case": "cached-200000",
+      "order": "forward",
+      "state": {
+        "billing_rules": "Non-cached input tokens cost USD 2 per 1,000,000 tokens. Cached input tokens cost USD 0.50 per 1,000,000 tokens. The cached tokens are included in the total input-token count; do not bill them again at the non-cached rate. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "total_input_tokens": 200000,
+        "cached_input_tokens": 150000
+      },
+      "expected_usd": "0.175",
+      "predicted_usd": "0.090000",
+      "absolute_percentage_error": 48.57142857142857,
+      "calls_attempted": 7,
+      "seconds": 1.791
+    },
+    {
+      "case": "cached-200000",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "Non-cached input tokens cost USD 2 per 1,000,000 tokens. Cached input tokens cost USD 0.50 per 1,000,000 tokens. The cached tokens are included in the total input-token count; do not bill them again at the non-cached rate. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "total_input_tokens": 200000,
+        "cached_input_tokens": 150000
+      },
+      "expected_usd": "0.175",
+      "predicted_usd": "0.000900",
+      "absolute_percentage_error": 99.48571428571428,
+      "calls_attempted": 7,
+      "seconds": 1.68
+    },
+    {
+      "case": "flat-1000",
+      "order": "forward",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 1000
+      },
+      "expected_usd": "0.002",
+      "predicted_usd": "0.002000",
+      "absolute_percentage_error": 0.0,
+      "calls_attempted": 7,
+      "seconds": 2.029
+    },
+    {
+      "case": "flat-1000",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 1000
+      },
+      "expected_usd": "0.002",
+      "predicted_usd": "0.002000",
+      "absolute_percentage_error": 0.0,
+      "calls_attempted": 7,
+      "seconds": 2.012
+    },
+    {
+      "case": "flat-12345",
+      "order": "forward",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 12345
+      },
+      "expected_usd": "0.02469",
+      "predicted_usd": "0.024690",
+      "absolute_percentage_error": 0.0,
+      "calls_attempted": 7,
+      "seconds": 3.465
+    },
+    {
+      "case": "flat-12345",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 12345
+      },
+      "expected_usd": "0.02469",
+      "predicted_usd": "0.024690",
+      "absolute_percentage_error": 0.0,
+      "calls_attempted": 7,
+      "seconds": 1.859
+    },
+    {
+      "case": "flat-123456",
+      "order": "forward",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 123456
+      },
+      "expected_usd": "0.246912",
+      "predicted_usd": "0.246900",
+      "absolute_percentage_error": 0.004860031104199067,
+      "calls_attempted": 7,
+      "seconds": 1.9
+    },
+    {
+      "case": "flat-123456",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 123456
+      },
+      "expected_usd": "0.246912",
+      "predicted_usd": "0.246910",
+      "absolute_percentage_error": 0.0008100051840331778,
+      "calls_attempted": 7,
+      "seconds": 2.069
+    },
+    {
+      "case": "flat-987654",
+      "order": "forward",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 987654
+      },
+      "expected_usd": "1.975308",
+      "predicted_usd": "1.975200",
+      "absolute_percentage_error": 0.005467501776938078,
+      "calls_attempted": 7,
+      "seconds": 1.953
+    },
+    {
+      "case": "flat-987654",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "Every 1,000,000 input tokens costs USD 2. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 987654
+      },
+      "expected_usd": "1.975308",
+      "predicted_usd": "1.975200",
+      "absolute_percentage_error": 0.005467501776938078,
+      "calls_attempted": 7,
+      "seconds": 2.425
+    },
+    {
+      "case": "tiered-250000",
+      "order": "forward",
+      "state": {
+        "billing_rules": "For this request, the first 100,000 input tokens cost USD 2 per 1,000,000 tokens. Each input token beyond the first 100,000 costs USD 1.50 per 1,000,000 tokens. Apply the tiers separately and add the charges. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 250000
+      },
+      "expected_usd": "0.425",
+      "predicted_usd": "0.540000",
+      "absolute_percentage_error": 27.058823529411764,
+      "calls_attempted": 7,
+      "seconds": 1.741
+    },
+    {
+      "case": "tiered-250000",
+      "order": "reverse",
+      "state": {
+        "billing_rules": "For this request, the first 100,000 input tokens cost USD 2 per 1,000,000 tokens. Each input token beyond the first 100,000 costs USD 1.50 per 1,000,000 tokens. Apply the tiers separately and add the charges. All amounts are in USD. Charges are prorated per token, with no minimum charge, tax, or monetary rounding. Only input tokens are billable; there are no output-token or other charges.",
+        "input_tokens": 250000
+      },
+      "expected_usd": "0.425",
+      "predicted_usd": "0.450000",
+      "absolute_percentage_error": 5.882352941176471,
+      "calls_attempted": 7,
+      "seconds": 2.51
+    }
+  ]
+}
