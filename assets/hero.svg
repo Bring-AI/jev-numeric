@@ -61,10 +61,10 @@
 <rect x="64" y="669" width="716" height="151" rx="20" fill="white" stroke="#d4e3df"/>
 <text x="89" y="704" class="label muted">HISTORICAL INDEX RECALL</text>
 <text x="88" y="766" font-size="51" font-weight="700">4.58% <tspan font-size="25" font-weight="400">mean relative error</tspan></text>
-<text x="90" y="798" font-size="17" class="muted">3 dates · 12 runs · 11/12 within 5% · maximum 6.49%</text>
+<text x="90" y="798" font-size="17" class="muted">3 dates · 12 runs · median 4.83% · maximum 6.49%</text>
 <rect x="804" y="669" width="732" height="151" rx="20" fill="white" stroke="#d4e3df"/>
 <text x="830" y="704" class="label muted">GROUND-TRUTH ORACLE INPUT</text>
 <text x="829" y="766" font-size="51" font-weight="700" style="fill:#187c69">0% <tspan font-size="25" font-weight="400">readout error</tspan></text>
-<text x="831" y="798" font-size="17" class="muted">Correct value supplied in context · 12/12 exact at 0.01 points</text>
+<text x="831" y="798" font-size="17" class="muted">Value supplied in context · 3 values · 12 runs · resolution 0.01</text>
 <text x="64" y="862" font-size="17" class="muted">Small controlled experiments. Jev already returns scores and categorical probabilities; this adds a numeric decoding interface.</text>
 </svg>

@@ -38,10 +38,10 @@ For truth y and decoded lower endpoint y_hat:
 `APE = 100 * abs(y_hat - y) / abs(y)`; MAPE averages APE over runs, equally weighted.
 
 Three dates have the same four repetitions each. MAPE is therefore also the mean of the
-three per-date mean APEs. 11/12 is a descriptive within-5% count, not an independent-sample
-success probability. Exact success at 0.01 means the final cell contains the two-decimal truth.
+three per-date mean APEs. The README reports mean, median, and maximum relative error.
 
-Arithmetic correctness is exact equality on the stated finite grid. Decimal predictions are
+Arithmetic is also summarized with MAPE; all targets in this suite are nonzero. The original
+exact-equality counts remain in the archived records. Decimal predictions are
 not snapped onto that grid. Parallel thresholds are normalized, repaired with equal-weight
 PAVA, converted to grid masses, and decoded using their mode with lower-value tie breaking.
 Raw monotonicity violations are always retained. Calibration was not measured.
@@ -58,8 +58,8 @@ Dates being historical does not establish inclusion in any model's pretraining d
 | Claim | Evidence | Scope |
 |---|---|---|
 | 4.58% MAPE | 12 ten-way recall runs | Three unique dates; max 6.49% |
-| 0% readout error | 12 oracle-input runs, 72 correct branches | Answer is supplied; three unique values |
-| Interval selection competitive | 39/48 versus direct 40/48 | Reused 12-case arithmetic suite |
+| 0% readout error | 12 oracle-input runs | Answer is supplied; three unique values |
+| Lower arithmetic relative error | Interval MAPE 2.42% versus direct 3.37% | Reused 12-case arithmetic suite |
 | Distribution construction | Implemented thresholds + PAVA + histogram | Not validated calibrated uncertainty |
 | Universally best method / OOD | No evidence | Not claimed |
 

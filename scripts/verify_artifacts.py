@@ -57,11 +57,23 @@ def main():
     assert sum(r["correct"]["interval_selection"] for r in alternatives) == 39
     assert sum(r["correct"]["direct"] for r in alternatives) == 40
     assert sum(r["cdf_adjacent_violations"] > 0 for r in alternatives) == 25
+    metrics = json.loads((A / "metrics.json").read_text())
+    for method, groups in metrics["arithmetic_mape_percent"].items():
+        for group, recorded in groups.items():
+            rows = [r for r in alternatives if group == "all" or r["kind"] == group]
+            assert all(r["target"] != 0 for r in rows)
+            measured = sum(
+                abs(r["predictions"][method] - r["target"]) / abs(r["target"]) * 100
+                for r in rows
+            ) / len(rows)
+            assert abs(measured - recorded) < 1e-10, (method, group)
+    assert round(metrics["arithmetic_mape_percent"]["interval_selection"]["all"], 2) == 2.42
+    assert round(metrics["arithmetic_mape_percent"]["direct"]["all"], 2) == 3.37
     print(
         f"{len(manifest)} artifact hashes verified; oracle-input state isolation and all 72 branches checked."
     )
     print(
-        "Verified recall MAPE 4.58%, oracle 12/12, arithmetic 39/48 vs 40/48, CDF violations 25/48."
+        "Verified MAPE: recall 4.58%, oracle 0%, arithmetic intervals 2.42% vs direct 3.37%."
     )
 
 

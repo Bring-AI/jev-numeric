@@ -3,6 +3,7 @@
     "n": 12,
     "unique_dates": 3,
     "mape_percent": 4.581184332561361,
+    "median_ape_percent": 4.825329204604773,
     "max_ape_percent": 6.494021676912294,
     "within_5_percent": 11,
     "mean_absolute_error_points": 180.5325,
@@ -11,6 +12,9 @@
   "oracle_input": {
     "n": 12,
     "unique_values": 3,
+    "mape_percent": 0.0,
+    "median_ape_percent": 0.0,
+    "max_ape_percent": 0.0,
     "exact": 12,
     "correct_steps": 72
   },
@@ -23,11 +27,54 @@
     "decimal_digits": 32,
     "interval_selection": 39
   },
+  "arithmetic_mape_percent": {
+    "direct": {
+      "integer": 0.0,
+      "fraction": 6.730769230769231,
+      "all": 3.3653846153846154
+    },
+    "explicit_bits": {
+      "integer": 23.333333333333332,
+      "fraction": 27.214452214452216,
+      "all": 25.273892773892776
+    },
+    "explicit_groups": {
+      "integer": 0.0,
+      "fraction": 16.95804195804196,
+      "all": 8.47902097902098
+    },
+    "adaptive_bisection": {
+      "integer": 0.0,
+      "fraction": 24.62364024864025,
+      "all": 12.311820124320125
+    },
+    "parallel_thresholds": {
+      "integer": 0.0,
+      "fraction": 22.58401320901321,
+      "all": 11.292006604506605
+    },
+    "decimal_digits": {
+      "integer": 0.0,
+      "fraction": 31.698057498057498,
+      "all": 15.849028749028749
+    },
+    "interval_selection": {
+      "integer": 0.0,
+      "fraction": 4.833187645687646,
+      "all": 2.416593822843823
+    }
+  },
   "cdf_nonmonotone_runs": 25,
   "prompt_controls": {
     "original_False": 6,
     "original_True": 7,
     "explicit_False": 15,
     "explicit_True": 14
+  },
+  "prompt_controls_mape_percent": {
+    "original_False": 46.50932400932401,
+    "original_True": 40.953768453768454,
+    "explicit_False": 20.145687645687644,
+    "explicit_True": 24.312354312354312
   }
 }

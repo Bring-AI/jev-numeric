@@ -8,7 +8,7 @@
 <p align="center">Exploring numerical output with Jev through discrete choices and hierarchical interval decoding.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
-  <a href="#what-goes-in-what-comes-out">Examples</a> ·
+  <a href="#turning-jev-to-numerical-output">Examples</a> ·
   <a href="#the-algorithm">How it works</a> ·
   <a href="#results">Results</a> ·
   <a href="#quick-start">Quick start</a> ·
@@ -28,7 +28,7 @@
 
 Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score). *Experimental; calibration unverified.
 
-## What goes in. What comes out.
+## Turning Jev to Numerical Output
 
 | Your question | Numerical output |
 |---|---:|
@@ -114,9 +114,8 @@ We asked for the S&P 500 **price index's official close on the last trading day*
 | 2020-12-31 | 3756.07 | 3891.00–3999.99 | 3.59%–6.49% |
 | 2023-12-29 | 4769.83 | 4999.99 in all four runs | 4.83% |
 
-- **Mean absolute percentage error: 4.58%.** Eleven of twelve runs were within 5%; the maximum error was 6.49%.
+- **Mean absolute percentage error: 4.58%.** Median: 4.83%; maximum: 6.49%.
 - All twelve decoded values were too high. Fine decimal output did not imply fine accuracy.
-- At 100-point resolution, both direct 100-bin selection and hierarchical selection missed the correct bin in all twelve runs.
 
 This is **historical factual recall**, not stock forecasting. Ground truth comes from [FRED](https://fred.stlouisfed.org/data/SP500), cross-checked against contemporaneous [2019](https://www.investing.com/news/stock-market-news/futures-dip-as-yearend-rally-cools-off-2050358), [2020](https://www.upi.com/Top_News/US/2020/12/31/Dow-SP-500-hit-record-highs-on-final-day-of-trading-in-2020/8081609454170/), and [2023](https://apnews.com/article/c8fbba7de1750cac49d770c8c7440710) reports. [Raw experiment and report →](artifacts/jev-index-history-20260923T081058Z/report.md)
 
@@ -137,10 +136,11 @@ Question wording, model, initial bounds, branching factor, and order controls st
 
 | Measurement | Historical recall | Ground-truth oracle input |
 |---|---:|---:|
-| Direct 100-point bin correct | 0/12 | **12/12** |
-| Hierarchical 0.01-point cell correct | 0/12 | **12/12** |
 | Mean absolute percentage error | 4.58% | **0%** |
-| Correct individual tree decisions | — | **72/72** |
+| Median absolute percentage error | 4.83% | **0%** |
+| Maximum absolute percentage error | 6.49% | **0%** |
+
+Relative error = `100 × |decoded value − ground truth| / |ground truth|`, using the final cell's lower endpoint.
 
 **Jev could read these supplied values and select the right intervals.** This supports separating factual recall from numerical readout. “Oracle input” means the correct answer is deliberately supplied in context; it is a readout control, not a prediction benchmark or evidence of universal numerical reasoning. Only three unique values were tested. [Raw control and report →](artifacts/jev-index-provided-20260923T081655Z/report.md)
 
@@ -148,22 +148,24 @@ Question wording, model, initial bounds, branching factor, and order controls st
 
 We tried that too. Twelve hand-picked arithmetic problems—six integers and six exact binary fractions—were evaluated with two option orders and two repeats: **48 evaluations per method**.
 
-| Method | Integer correct /24 | Fraction correct /24 | Total correct /48 | Sequential rounds |
-|---|---:|---:|---:|---:|
-| Direct 16-value choice | 24 | 16 | **40** | 1 |
-| **Four-way interval decoding** | **24** | **15** | **39** | **2** |
-| Explicit candidate-set membership | 24 | 14 | 38 | 1 |
-| Decimal digits with previous-digit prefix | 24 | 8 | 32 | 2 / 4 |
-| Adaptive threshold search | 24 | 4 | 28 | 4 |
-| Parallel thresholds + monotonic repair | 24 | 4 | 28 | 1 |
-| Independent binary bits, explicit prompt | 16 | 12 | 28 | 1 |
+Mean absolute percentage error (MAPE); all targets are nonzero.
 
-**Direct selection was slightly better on this tiny fixed grid.** Multiway refinement's attraction is that it can address a finer grid without listing every possible value in a single question. We have not established superior accuracy or latency at scale. Methods shared API calls for efficiency; rounds measure dependency depth, not isolated latency.
+| Method | Integers | Fractions | Overall | Sequential rounds |
+|---|---:|---:|---:|---:|
+| Direct 16-value choice | 0% | 6.73% | 3.37% | 1 |
+| **Four-way interval decoding** | **0%** | **4.83%** | **2.42%** | **2** |
+| Explicit candidate-set membership | 0% | 16.96% | 8.48% | 1 |
+| Decimal digits with previous-digit prefix | 0% | 31.70% | 15.85% | 2 / 4 |
+| Adaptive threshold search | 0% | 24.62% | 12.31% | 4 |
+| Parallel thresholds + monotonic repair | 0% | 22.58% | 11.29% | 1 |
+| Independent binary bits, explicit prompt | 23.33% | 27.21% | 25.27% | 1 |
+
+**Multiway refinement had the lowest mean relative error on this tiny fixed grid.** It can also address a finer grid without listing every possible value in a single question. We have not established superior accuracy or latency at scale. Methods shared API calls for efficiency; rounds measure dependency depth, not isolated latency.
 
 What these experiments suggest:
 
-- **Encoding is another task.** Asking which explicit set contains the result scored 38/48; asking for its bit representation scored 28/48. The representations are mathematically related, but the prompts impose different demands.
-- **Prompt clarity matters.** In an earlier crossed control, clearer bit instructions improved 6–7/24 to 14–15/24. This change included an explicit computation rule, not just cleaner phrasing.
+- **Encoding is another task.** Explicit-set questions had 8.48% MAPE; bit representation had 25.27%. The representations are mathematically related, but the prompts impose different demands.
+- **Prompt clarity matters.** In an earlier crossed control, clearer bit instructions reduced MAPE from 40.95%–46.51% to 20.15%–24.31% across option orders. This change included an explicit computation rule, not just cleaner phrasing.
 - **Fractions were harder.** Threshold comparisons and decimal-digit decoding performed much worse on fractions than on integers in this suite.
 - **An ordering constraint is not automatic.** Threshold probabilities were nonmonotone in **25/48** runs. For one query, `P(Y ≤ 0.4375)=0.57` but `P(Y ≤ 0.5)=0.01`.
 
@@ -171,7 +173,7 @@ These are failure observations, not proofs that the other methods cannot work. [
 
 ### A note on robustness
 
-We also recorded a follow-up with **two branches and a different prompt** using the reusable decoder: closed-book recall had **31.17% MAPE** across six runs, while the six supplied-value runs were exact. This was not a controlled branching-factor ablation. It shows why the 4.58% result must stay attached to the recorded **ten-way protocol**, rather than being advertised as a general accuracy guarantee. [Follow-up evidence →](artifacts/binary-api-20260923T085013Z/summary.json)
+We also recorded a follow-up with **two branches and a different prompt** using the reusable decoder: closed-book recall had **31.17% MAPE** across six runs, while the six supplied-value runs had **0% MAPE**. This was not a controlled branching-factor ablation. It shows why the 4.58% result must stay attached to the recorded **ten-way protocol**, rather than being advertised as a general accuracy guarantee. [Follow-up evidence →](artifacts/binary-api-20260923T085013Z/summary.json)
 
 ## What about distributions?
 
