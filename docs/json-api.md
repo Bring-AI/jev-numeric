@@ -11,11 +11,11 @@ Input: [stock-price.json](../examples/stock-price.json)
 ```json
 {
   "model": "typesafe/jev-1.13-20260917",
-  "state": "A stock costs 10 yuan. It rises by 1 yuan.",
+  "state": "A stock costs USD 10. It rises by USD 1.",
   "questions": {
     "new_price": {
       "type": "number",
-      "instructions": "What is the new stock price in yuan?",
+      "instructions": "What is the new stock price in USD?",
       "range": [0, 100],
       "resolution": 0.01
     }

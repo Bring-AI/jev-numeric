@@ -23,8 +23,8 @@
 | 输入问题 | 数值输出 |
 |---|---:|
 | **1 + 1 等于多少？** | **`2.00`** |
-| **一只股票现在 10 元，上涨 1 元后，价格是多少？** | **`11.00`** |
-| **一只股票现在 10.50 元，上涨 1.25 元后，价格是多少？** | **`11.75`** |
+| **一只股票现在 10 美元，上涨 1 美元后，价格是多少？** | **`11.00`** |
+| **一只股票现在 10.50 美元，上涨 1.25 美元后，价格是多少？** | **`11.75`** |
 
 以上是**实际调用结果**，不是预设的期望答案。测试使用英文问题，表中为中文翻译。三个例子统一在 `[0,100)` 上十叉细分，分辨率 `0.01`，每题四次 Choice 调用。**输入只包含题目，没有提供答案。** Jev 负责选择区间，JSON 接口直接返回数值。
 
@@ -33,11 +33,11 @@
 ```json
 {
   "model": "typesafe/jev-1.13-20260917",
-  "state": "A stock costs 10 yuan. It rises by 1 yuan.",
+  "state": "A stock costs USD 10. It rises by USD 1.",
   "questions": {
     "new_price": {
       "type": "number",
-      "instructions": "What is the new stock price in yuan?",
+      "instructions": "What is the new stock price in USD?",
       "range": [0, 100],
       "resolution": 0.01
     }
@@ -63,7 +63,7 @@
 jev-numeric --request examples/stock-price.json
 ```
 
-`number` 是本项目增加的本地类型；底层仍调用 Jev Choice。[JSON 接口说明](docs/json-api.md) · [本次实测记录](artifacts/json-api-20260923T091437Z/stock-price.json) · [原来三个例子的记录](artifacts/readme-examples-20260923T090329Z/results.json)。
+`number` 是本项目增加的本地类型；底层仍调用 Jev Choice。[JSON 接口说明](docs/json-api.md) · [本次实测记录](artifacts/json-api-usd-20260923T091856Z/stock-price.json) · [三个例子的记录](artifacts/readme-examples-20260923T091853Z/results.json)。
 
 ## 方法：划分、选择、再细分
 

@@ -33,8 +33,8 @@ Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https:
 | Your question | Numerical output |
 |---|---:|
 | **What is 1 + 1?** | **`2.00`** |
-| **A stock costs 10 yuan. It rises by 1 yuan. What is its new price?** | **`11.00`** |
-| **A stock costs 10.50 yuan. It rises by 1.25 yuan. What is its new price?** | **`11.75`** |
+| **A stock costs USD 10. It rises by USD 1. What is its new price?** | **`11.00`** |
+| **A stock costs USD 10.50. It rises by USD 1.25. What is its new price?** | **`11.75`** |
 
 These are **actual Jev runs**, not expected-output placeholders. Each used ten-way interval decoding over `[0,100)` at `0.01` resolution: four Choice calls per answer. The input contained the question, **not the answer**. The JSON interface returns a number; Jev selects the branches underneath.
 
@@ -43,11 +43,11 @@ These are **actual Jev runs**, not expected-output placeholders. Each used ten-w
 ```json
 {
   "model": "typesafe/jev-1.13-20260917",
-  "state": "A stock costs 10 yuan. It rises by 1 yuan.",
+  "state": "A stock costs USD 10. It rises by USD 1.",
   "questions": {
     "new_price": {
       "type": "number",
-      "instructions": "What is the new stock price in yuan?",
+      "instructions": "What is the new stock price in USD?",
       "range": [0, 100],
       "resolution": 0.01
     }
@@ -73,7 +73,7 @@ These are **actual Jev runs**, not expected-output placeholders. Each used ten-w
 jev-numeric --request examples/stock-price.json
 ```
 
-`number` is this project's local adapter type; upstream Jev still receives Choice questions. [JSON API reference](docs/json-api.md) · [Live request/response](artifacts/json-api-20260923T091437Z/stock-price.json) · [All three original examples](artifacts/readme-examples-20260923T090329Z/results.json).
+`number` is this project's local adapter type; upstream Jev still receives Choice questions. [JSON API reference](docs/json-api.md) · [Live request/response](artifacts/json-api-usd-20260923T091856Z/stock-price.json) · [All three examples](artifacts/readme-examples-20260923T091853Z/results.json).
 
 ## The algorithm
 

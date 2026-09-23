@@ -9,8 +9,8 @@ from jev_numeric import JevClient, decode_number
 
 EXAMPLES = [
     ("What is 1 + 1?", "2.00"),
-    ("A stock costs 10 yuan. It rises by 1 yuan. What is its new price in yuan?", "11.00"),
-    ("A stock costs 10.50 yuan. It rises by 1.25 yuan. What is its new price in yuan?", "11.75"),
+    ("A stock costs USD 10. It rises by USD 1. What is its new price in USD?", "11.00"),
+    ("A stock costs USD 10.50. It rises by USD 1.25. What is its new price in USD?", "11.75"),
 ]
 TARGET = "the numerical answer to the question, in the stated units"
 
