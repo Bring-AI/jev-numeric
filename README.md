@@ -3,7 +3,6 @@
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
   <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Noncommercial-f59e0b?style=flat-square" alt="License: PolyForm Noncommercial 1.0.0"></a>
 </p>
 
 <p align="center">
