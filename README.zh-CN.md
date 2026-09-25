@@ -1,4 +1,4 @@
-# A simple algorithm that turns Jev decisions into accurate numerical outputs
+# JevNeo · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
 
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
@@ -8,8 +8,7 @@
 
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
-<p align="center"><strong>JevNeo · More than Choice</strong></p>
-<p align="center">一个简单算法，把 Jev 的离散决策变成数值输出。</p>
+<p align="center">一个简单算法，为 Jev 类模型赋予数值控制能力。</p>
 <p align="center"><a href="README.md">English</a> · <a href="#实测结果">实测结果</a> · <a href="#快速开始">快速开始</a> · <a href="artifacts/metrics.json">可核对的指标</a></p>
 
 **Jev 擅长结构化决策。JevNeo 通过多叉决策树，将这种能力转化为数值输出。** 每次 Choice 选择一条分支，最终叶节点对应一个有限精度的数值。分支既可以描述为数值区间，也可以描述为十进制数字。**两种表示都只调用 Jev Choice，无需训练、连续头或底层 token logits。**

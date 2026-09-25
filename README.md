@@ -1,4 +1,4 @@
-# A simple algorithm that turns Jev decisions into accurate numerical outputs
+# JevNeo · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
 
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
@@ -10,7 +10,6 @@
   <img src="assets/hero.svg" alt="JevNeo: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<p align="center"><strong>JevNeo · More than Choice</strong></p>
 <p align="center">Numerical decoding with multiway decision trees, using interval or decimal-digit branches.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
