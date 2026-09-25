@@ -1,8 +1,8 @@
 # JevNext · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
 
 <p align="center">
-  <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
-  <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://bring-ai.github.io/JevNext/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
+  <a href="https://github.com/Bring-AI/JevNext/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/JevNext?style=flat-square" alt="GitHub stars"></a>
   <a href="https://arxiv.org/abs/2609.28587"><img src="https://img.shields.io/badge/arXiv-2609.28587-b31b1b?style=flat-square" alt="arXiv: 2609.28587"></a>
 </p>
 
@@ -66,7 +66,7 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 
 ## Application example: continuous game control
 
-**[Watch full videos and all 69 attempts →](https://bring-ai.github.io/jev-numeric/)**
+**[Watch full videos and all 69 attempts →](https://bring-ai.github.io/JevNext/)**
 
 | Game | Numeric controls | Featured result | Video |
 |---|---|---|---|
@@ -296,8 +296,8 @@ The existing repository URL, `jev-numeric` command, and `jev_numeric` Python pac
 Python 3.11+; an existing Jev API credential is required only for live calls.
 
 ```bash
-git clone https://github.com/Bring-AI/jev-numeric.git
-cd jev-numeric
+git clone https://github.com/Bring-AI/JevNext.git
+cd JevNext
 python -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'

@@ -126,8 +126,8 @@ There is more work to do here. Raw threshold probabilities were nonmonotone in 2
 The repository currently requires organization access. With access, run the included stock-price example:
 
 ```bash
-git clone https://github.com/Bring-AI/jev-numeric.git
-cd jev-numeric
+git clone https://github.com/Bring-AI/JevNext.git
+cd JevNext
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
@@ -138,4 +138,4 @@ jev-numeric --request examples/stock-price.json
 
 All reported experiments used `typesafe/jev-1.13-20260917` through OpenRouter. The repository includes recorded requests and responses, metric-recomputation scripts, and the original experiment prompts. The reusable adapter uses a general prompt; use the experiment scripts to reproduce the reported protocols.
 
-[Explore JevNext on GitHub](https://github.com/Bring-AI/jev-numeric) · [JSON API](https://github.com/Bring-AI/jev-numeric/blob/main/docs/json-api.md) · [Recorded metrics](https://github.com/Bring-AI/jev-numeric/blob/main/artifacts/metrics.json)
+[Explore JevNext on GitHub](https://github.com/Bring-AI/JevNext) · [JSON API](https://github.com/Bring-AI/JevNext/blob/main/docs/json-api.md) · [Recorded metrics](https://github.com/Bring-AI/JevNext/blob/main/artifacts/metrics.json)

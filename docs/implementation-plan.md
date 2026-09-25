@@ -1,6 +1,6 @@
 # Publication plan
 
-Publish to Bring-AI/jev-numeric, retaining its existing visibility.
+Publish to Bring-AI/JevNext, retaining its existing visibility.
 
 - Export the five completed experiment suites, exact requests, responses and metrics.
 - Build a small portable Jev client and numeric interval decoder; multiway splitting is the default,

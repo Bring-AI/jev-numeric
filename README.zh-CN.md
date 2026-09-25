@@ -1,8 +1,8 @@
 # JevNext · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
 
 <p align="center">
-  <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
-  <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://bring-ai.github.io/JevNext/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
+  <a href="https://github.com/Bring-AI/JevNext/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/JevNext?style=flat-square" alt="GitHub stars"></a>
   <a href="https://arxiv.org/abs/2609.28587"><img src="https://img.shields.io/badge/arXiv-2609.28587-b31b1b?style=flat-square" alt="arXiv: 2609.28587"></a>
 </p>
 
@@ -57,7 +57,7 @@
 
 ## 应用示例：连续游戏控制
 
-**[查看完整视频和全部 69 次尝试 →](https://bring-ai.github.io/jev-numeric/)**
+**[查看完整视频和全部 69 次尝试 →](https://bring-ai.github.io/JevNext/)**
 
 | 游戏 | 数值控制 | 展示实例的结果 | 视频 |
 |---|---|---|---|
@@ -256,8 +256,8 @@ jev-numeric --request examples/stock-price-digits.json --details
 现有仓库地址、`jev-numeric` 命令及 `jev_numeric` Python 包保持兼容。
 
 ```bash
-git clone https://github.com/Bring-AI/jev-numeric.git
-cd jev-numeric
+git clone https://github.com/Bring-AI/JevNext.git
+cd JevNext
 python -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'

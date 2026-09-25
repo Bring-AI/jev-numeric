@@ -14,7 +14,7 @@ The static page loads `results.json` relative to `index.html`. It contains actua
 | `racing_ablation` | run[] | Flat array of comparison runs, shown separately from the four-game summaries. Same row schema as other runs. |
 | `historical_racing_ablation` | run[], optional | Earlier comparisons using a different prompt. Preserved separately; also retained in the racing ledger. |
 | `config` | object, optional | Experiment configuration; shown as expandable formatted JSON. |
-| `source_url` | string, optional | Repository or experiment code link. Defaults to Bring-AI/jev-numeric. |
+| `source_url` | string, optional | Repository or experiment code link. Defaults to Bring-AI/JevNext. |
 | `measurement_url` | string, optional | Human-inspectable measurements link. Defaults to results.json. |
 | `configuration_url` | string, optional | Experiment source/configuration link. Defaults to this document. |
 

@@ -2,7 +2,7 @@
   "updated_at": "2026-09-23T17:52:03.451146+00:00",
   "model": "typesafe/jev-1.13-20260917",
   "method": "Training-free multiway interval decoding with explicit control guidance",
-  "source_url": "https://github.com/Bring-AI/jev-numeric",
+  "source_url": "https://github.com/Bring-AI/JevNext",
   "measurement_url": "results.json",
   "configuration_url": "experiment-notes.md",
   "games": [
