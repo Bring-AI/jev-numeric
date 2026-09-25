@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-<title id="title">A simple algorithm that turns Jev decisions into numerical outputs</title>
+<title id="title">JevNeo: A simple algorithm that turns Jev decisions into numerical outputs</title>
 <desc id="desc">Jev structured choices repeatedly select smaller intervals. A ten-way decision tree resolves a supplied value of 3230.78 in six decisions. Historical recall: 4.58 percent mean absolute percentage error on three dates. Oracle-input control: zero error on twelve runs with the value supplied.</desc>
 <defs>
  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8faf8"/><stop offset="1" stop-color="#edf5f4"/></linearGradient>
@@ -9,7 +9,7 @@
 </defs>
 <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
 <circle cx="1495" cy="64" r="210" fill="#dcefe9" opacity=".6"/>
-<text x="64" y="65" class="label" fill="#187c69">BRING-AI / JEV-NUMERIC</text>
+<text x="64" y="65" class="label" fill="#187c69">JevNeo / More than Choice</text>
 <text x="64" y="125" font-size="62" font-weight="750">A simple algorithm</text>
 <text x="64" y="190" font-size="46" font-weight="650">that turns Jev decisions into numerical outputs.</text>
 <!-- Input -->

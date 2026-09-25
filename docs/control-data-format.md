@@ -1,4 +1,4 @@
-# NumericJev control experiment data
+# JevNeo control experiment data
 
 The static page loads `results.json` relative to `index.html`. It contains actual measured outcomes and the complete development history, including unsuccessful attempts.
 

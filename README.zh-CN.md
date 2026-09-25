@@ -8,15 +8,15 @@
 
 <p align="center"><img src="assets/hero.svg" alt="Jev 决策通过多叉区间树转化为数值输出" width="100%"></p>
 
-<p align="center"><strong>NumericJev · More than Choice</strong></p>
+<p align="center"><strong>JevNeo · More than Choice</strong></p>
 <p align="center">一个简单算法，把 Jev 的离散决策变成数值输出。</p>
 <p align="center"><a href="README.md">English</a> · <a href="#实测结果">实测结果</a> · <a href="#快速开始">快速开始</a> · <a href="artifacts/metrics.json">可核对的指标</a></p>
 
-**Jev 擅长结构化决策。NumericJev 通过多叉决策树，将这种能力转化为数值输出。** 每次 Choice 选择一条分支，最终叶节点对应一个有限精度的数值。分支既可以描述为数值区间，也可以描述为十进制数字。**两种表示都只调用 Jev Choice，无需训练、连续头或底层 token logits。**
+**Jev 擅长结构化决策。JevNeo 通过多叉决策树，将这种能力转化为数值输出。** 每次 Choice 选择一条分支，最终叶节点对应一个有限精度的数值。分支既可以描述为数值区间，也可以描述为十进制数字。**两种表示都只调用 Jev Choice，无需训练、连续头或底层 token logits。**
 
 ## 增加了什么能力？
 
-| 能力 | Jev<br>Decision-only（官方） | Jev-numeric（本方法） |
+| 能力 | Jev<br>Decision-only（官方） | JevNeo（本方法） |
 |---|:---:|:---:|
 | 决策与选项概率 | ✅ | ✅ |
 | 等级评分 | ✅ | ✅ |
@@ -36,12 +36,12 @@
 ## 甚至优于从包含正确答案的列表中直接选择
 
 <p align="center">
-  <img src="assets/performance.svg" alt="256 道算术题中，相对误差不超过 5% 的比例：NumericJev 为 83.40%，直接选择为 80.47%" width="100%">
+  <img src="assets/performance.svg" alt="256 道算术题中，相对误差不超过 5% 的比例：JevNeo 为 83.40%，直接选择为 80.47%" width="100%">
 </p>
 
 256 道算术题中，相对误差不超过 5% 的比例：**83.40% vs. 80.47%（提高 2.93 个百分点）**，直接选择的候选列表已包含正确答案。
 
-<sub>图中 NumericJev 使用区间解码。误差线为 95% 题目族自助法区间。LoRA 连续头是在因果分布上训练、使用不同骨干模型的迁移基线；斜线柱为输入中提供答案的对照。</sub>
+<sub>图中 JevNeo 使用区间解码。误差线为 95% 题目族自助法区间。LoRA 连续头是在因果分布上训练、使用不同骨干模型的迁移基线；斜线柱为输入中提供答案的对照。</sub>
 
 ## 应用示例：Token 费用计算
 
@@ -67,7 +67,7 @@
 | MountainCar 山地车 | 电机推力 | **两个种子都到达目标** | https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec |
 | BipedalWalker 双足行走 | 四个关节控制量 | **走完全程**，得分 315.16 | https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44 |
 
-模型接收结构化状态和明确的控制指导，实际电机控制量由 NumericJev 解码产生，无训练、无备用控制器。展示录像选自提示词与控制规则调试后的真实运行，之前的失败记录全部保留。视频省略 API 等待。
+模型接收结构化状态和明确的控制指导，实际电机控制量由 JevNeo 解码产生，无训练、无备用控制器。展示录像选自提示词与控制规则调试后的真实运行，之前的失败记录全部保留。视频省略 API 等待。
 
 区间比较版 Walker 的 2 条调试轨迹中，1 条走完全程；API 中断的轨迹通过精确重放已有记录后续跑。固定反馈规则被编译成输入区间，由 Jev 选择每个数值分项，再由程序明确地加总、限幅为关节指令。[Walker 协议和核验记录](docs/evidence/control/walker-redesign-REPORT.md)。
 
@@ -254,6 +254,8 @@ jev-numeric --request examples/stock-price-digits.json --details
 
 ## 快速开始
 
+现有仓库地址、`jev-numeric` 命令及 `jev_numeric` Python 包保持兼容。
+
 ```bash
 git clone https://github.com/Bring-AI/jev-numeric.git
 cd jev-numeric
@@ -293,6 +295,12 @@ python scripts/probe_jev_binary_controls.py
 [artifacts](artifacts/) 保留原始请求、选项排列、返回概率及模型标识；不含鉴权头。新实验写入被忽略的 `runs/`。[指标](artifacts/metrics.json)由已保存结果重新计算，[哈希清单](artifacts/manifest.json)用于核对文件完整性。
 
 本项目是基于决策接口的数值输出探索，不是训练出的新回归模型，也尚未验证 OOD 或概率校准。非 TypeSafe 官方项目。
+
+## 论文
+
+JevNeo 原名 NumericJev，已发表论文和归档实验录像保留原名。
+
+[NumericJev: Jev-like LLM Numerical Decoding with Multiway Decision Trees](https://arxiv.org/abs/2609.28587) — Weiwei Ye、Hangchen Liu、Renhe Jiang。
 
 ## 许可证
 

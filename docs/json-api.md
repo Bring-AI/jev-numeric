@@ -6,7 +6,7 @@ The CLI translates them into multiple Jev Choice calls. No HTTP service is requi
 
 ## Number
 
-NumericJev traverses a multiway decision tree. The `method` field selects the branch
+JevNeo traverses a multiway decision tree. The `method` field selects the branch
 representation: explicit intervals or decimal digits. Decimal digits give a ten-way
 tree; on an aligned decimal grid it has the same partitions as ten-way interval
 decoding, although the different prompts can produce different model decisions.
