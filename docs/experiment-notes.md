@@ -1,4 +1,4 @@
-# JevNeo continuous-control experiments
+# JevNext continuous-control experiments
 
 [Interactive recordings](./) · [All measurements](results.json) · [Data format](control-data-format.md)
 

@@ -9,7 +9,7 @@
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>JevNeo figure generator</dc:title>
+      <dc:title>JevNext figure generator</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -89,7 +89,7 @@ z
     <g id="xtick_8">
      <g id="line2d_8"/>
      <g id="text_8">
-      <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(334.058664 165.946461)">JevNeo</text>
+      <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(334.058664 165.946461)">JevNext</text>
       <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(340.932117 175.187965)">(K = 10)</text>
      </g>
     </g>
@@ -103,7 +103,7 @@ z
     <g id="xtick_10">
      <g id="line2d_10"/>
      <g id="text_10">
-      <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(444.896664 165.946461)">JevNeo</text>
+      <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(444.896664 165.946461)">JevNext</text>
       <text style="font-weight: 700; font-size: 7.7px; font-family: 'DejaVu Sans'; fill: #2864a5" transform="translate(451.770117 175.187965)">(K = 10)</text>
      </g>
     </g>

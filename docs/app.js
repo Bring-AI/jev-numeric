@@ -230,5 +230,5 @@ try {
   status.hidden = false;
   status.classList.add('error');
   status.replaceChildren('Experiment data could not be loaded. ', link('Open the measurement file', 'results.json'), '.');
-  console.error('JevNeo data load failed:', error);
+  console.error('JevNext data load failed:', error);
 }

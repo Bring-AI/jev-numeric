@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "jev-numeric"
 version = "0.1.0"
-description = "JevNeo: numerical output from Jev through multiway decision trees"
+description = "JevNext: numerical output from Jev through multiway decision trees"
 license = "PolyForm-Noncommercial-1.0.0"
 license-files = ["LICENSE"]
 requires-python = ">=3.11"

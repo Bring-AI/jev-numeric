@@ -1,4 +1,4 @@
-# JevNeo · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
+# JevNext · More than Choice — A simple algorithm that equips any Jev-like model with numerical control
 
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/hero.svg" alt="JevNeo: decisions become numerical outputs through a multiway interval tree" width="100%">
+  <img src="assets/hero.svg" alt="JevNext: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
 <p align="center">Numerical decoding with multiway decision trees, using interval or decimal-digit branches.</p>
@@ -20,11 +20,11 @@
   <a href="artifacts/metrics.json">Recorded metrics</a>
 </p>
 
-**Jev is built for structured decisions. JevNeo turns them into numerical outputs through a multiway decision tree.** Each Choice selects a branch; the final leaf identifies a finite-precision value. Branches can be described as numerical intervals or decimal digits. **Both representations use ordinary Jev Choice calls—no training, regression head, or access to token logits.**
+**Jev is built for structured decisions. JevNext turns them into numerical outputs through a multiway decision tree.** Each Choice selects a branch; the final leaf identifies a finite-precision value. Branches can be described as numerical intervals or decimal digits. **Both representations use ordinary Jev Choice calls—no training, regression head, or access to token logits.**
 
 ## What this adds
 
-| Capability | Jev<br>Decision-only (official) | JevNeo (Ours) |
+| Capability | Jev<br>Decision-only (official) | JevNext (Ours) |
 |---|:---:|:---:|
 | Decisions & option probabilities | ✅ | ✅ |
 | Rubric scores | ✅ | ✅ |
@@ -44,12 +44,12 @@ Native API: [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https:
 ## Even Better Performance Than Choosing from an Answer List
 
 <p align="center">
-  <img src="assets/performance.svg" alt="JevNeo reaches 83.40% within 5% relative error versus 80.47% for direct choice on 256 arithmetic expressions" width="100%">
+  <img src="assets/performance.svg" alt="JevNext reaches 83.40% within 5% relative error versus 80.47% for direct choice on 256 arithmetic expressions" width="100%">
 </p>
 
 **83.40% vs. 80.47% (+2.93 percentage points)** within 5% relative error on 256 arithmetic expressions—even when the direct-choice list contains the correct answer.
 
-<sub>JevNeo bars use interval decoding. Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
+<sub>JevNext bars use interval decoding. Error bars: 95% family-bootstrap intervals. LoRA heads are transfer baselines trained on causal distributions with different backbones; hatched bars supply the answer.</sub>
 
 ## Application example: token billing
 
@@ -75,7 +75,7 @@ Give Jev a pricing rule and an input-token count, and ask for the request's tota
 | MountainCar | Motor force | **Goal reached**, both seeds | https://github.com/user-attachments/assets/bd18b739-557c-4048-b5d9-84a7385246ec |
 | BipedalWalker | Four joint commands | **Terrain completed**, reward 315.16 | https://github.com/user-attachments/assets/b61fb921-8549-4cf5-8bd1-71c62d175b44 |
 
-Jev receives structured telemetry and explicit control guidance; JevNeo decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt and controller development; all earlier failures remain available. Videos omit API waiting.
+Jev receives structured telemetry and explicit control guidance; JevNext decodes the actual motor commands. No training or fallback controller. These recordings are selected after prompt and controller development; all earlier failures remain available. Videos omit API waiting.
 
 Comparison-table Walker completed 1 of 2 development trajectories; an API-interrupted trajectory was continued from its exact recorded prefix. Its fixed feedback rules are compiled into input intervals; Jev selects each term bin, and the adapter explicitly sums and clips those values into joint commands. [Walker protocol and audits](docs/evidence/control/walker-redesign-REPORT.md).
 
@@ -363,7 +363,7 @@ Every archived API record includes the submitted state, question text, option or
 
 ## Paper
 
-JevNeo was previously named NumericJev. The paper and archived experiment recordings retain the original name.
+JevNext was previously named NumericJev. The paper and archived experiment recordings retain the original name.
 
 [NumericJev: Jev-like LLM Numerical Decoding with Multiway Decision Trees](https://arxiv.org/abs/2609.28587) — Weiwei Ye, Hangchen Liu, Renhe Jiang.
 

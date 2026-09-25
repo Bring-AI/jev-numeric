@@ -1,6 +1,6 @@
 **Jev makes structured decisions. A simple multiway interval tree turns those decisions into numerical outputs.** No fine-tuning, no extra regression head: choose an interval, zoom in, repeat.
 
-![JevNeo: choose an interval, refine it, and read a finite-precision number. Historical index recall: 4.58% mean relative error. Supplied-value control: 0%.](https://bringai.io/assets/jev-numeric/hero-v1.png)
+![JevNext: choose an interval, refine it, and read a finite-precision number. Historical index recall: 4.58% mean relative error. Supplied-value control: 0%.](https://bringai.io/assets/jev-numeric/hero-v1.png)
 
 ## Turning Jev to Numerical Output
 
@@ -138,4 +138,4 @@ jev-numeric --request examples/stock-price.json
 
 All reported experiments used `typesafe/jev-1.13-20260917` through OpenRouter. The repository includes recorded requests and responses, metric-recomputation scripts, and the original experiment prompts. The reusable adapter uses a general prompt; use the experiment scripts to reproduce the reported protocols.
 
-[Explore JevNeo on GitHub](https://github.com/Bring-AI/jev-numeric) · [JSON API](https://github.com/Bring-AI/jev-numeric/blob/main/docs/json-api.md) · [Recorded metrics](https://github.com/Bring-AI/jev-numeric/blob/main/artifacts/metrics.json)
+[Explore JevNext on GitHub](https://github.com/Bring-AI/jev-numeric) · [JSON API](https://github.com/Bring-AI/jev-numeric/blob/main/docs/json-api.md) · [Recorded metrics](https://github.com/Bring-AI/jev-numeric/blob/main/artifacts/metrics.json)
