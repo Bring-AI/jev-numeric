@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://bring-ai.github.io/jev-numeric/"><img src="https://img.shields.io/badge/Website-Live%20Demo-2563eb?style=flat-square" alt="Website: Live Demo"></a>
   <a href="https://github.com/Bring-AI/jev-numeric/stargazers"><img src="https://img.shields.io/github/stars/Bring-AI/jev-numeric?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://arxiv.org/abs/2609.28587"><img src="https://img.shields.io/badge/arXiv-2609.28587-b31b1b?style=flat-square" alt="arXiv: 2609.28587"></a>
 </p>
 
 <p align="center">
