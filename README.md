@@ -10,8 +10,8 @@
   <img src="assets/hero.svg" alt="Jev Numeric: decisions become numerical outputs through a multiway interval tree" width="100%">
 </p>
 
-<p align="center"><strong>NumericJev · Numerical decoding with multiway decision trees</strong></p>
-<p align="center">One tree-based approach, with interval or decimal-digit branches.</p>
+<p align="center"><strong>NumericJev · More than Choice</strong></p>
+<p align="center">Numerical decoding with multiway decision trees, using interval or decimal-digit branches.</p>
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
   <a href="#turning-jev-to-numerical-output">Examples</a> ·
